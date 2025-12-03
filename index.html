@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WATransChat - WhatsApp 跨语言智能翻译助手</title>
+    <meta
+      name="description"
+      content="WATransChat 是一款为 WhatsApp Web 打造的智能翻译与跨时区沟通助手，支持实时翻译、国家识别、当地时间显示与快捷短语，一站式提升跨境沟通效率。"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-icon">
+            <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+          </span>
+          <span class="logo-text">WATransChat</span>
+        </div>
+        <nav class="nav">
+          <a href="#features">功能亮点</a>
+          <a href="#gallery">界面预览</a>
+          <a href="#platforms">下载版本</a>
+          <a href="#scenarios">适用人群</a>
+          <a href="#guide">安装与使用</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+        <button class="btn-theme-toggle" id="themeToggle" aria-label="切换主题">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1><span class="accent">在WhatsApp中使用中文就能与外国人交谈</span></h1>
+            <p class="hero-subtitle">
+              <strong>WATransChat</strong> 是一款为
+              <strong>WhatsApp Web</strong> 打造的智能翻译助手。
+              只需用<strong>中文输入</strong>，自动翻译成对方语言发送；收到外语消息，<strong>自动翻译成中文</strong>显示。
+              集成 <strong>实时翻译 / 国家识别 / 当地时间显示 / 快捷短语</strong>，
+              让外贸、客服、跨境社交都能高效回复全球用户。
+            </p>
+            <div class="hero-ctas">
+              <a href="#platforms" class="btn btn-primary">立即下载与安装</a>
+              <a href="#guide" class="btn btn-outline">查看安装与教学视频</a>
+            </div>
+            <div class="hero-meta">
+              <span>支持 200+ 种语言</span>
+              <span>覆盖浏览器扩展 & 安卓 & 苹果</span>
+              <span>专为跨境电商与国际客服优化</span>
+            </div>
+          </div>
+          <div class="hero-preview">
+            <div class="preview-card">
+              <div class="preview-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="preview-title">WhatsApp Web</span>
+              </div>
+              <div class="preview-body">
+                <div class="chat-meta-row">
+                  <div class="chat-meta-avatar">U</div>
+                  <div class="chat-meta-text">
+                    <div class="chat-meta-name">+598 99 160 876</div>
+                    <div class="chat-meta-sub">
+                      <span class="chat-meta-lang">乌拉圭 · 西班牙语 · UYU</span>
+                      <span class="chat-meta-dot">·</span>
+                      <span class="chat-meta-time">12:44</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="chat-messages" id="heroChatMessages">
+                </div>
+
+                <div class="chat-input">
+                  <div class="chat-input-main">
+                    <div class="chat-input-preview"></div>
+                  </div>
+                  <button class="chat-input-send" type="button" aria-label="发送消息">
+                    ➤
+                  </button>
+                  <div class="chat-input-hint">翻译 Enter，原文 Ctrl+Enter</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section" id="features">
+        <div class="container">
+          <h2 class="section-title">核心功能，一站式解决跨语言与跨时区沟通</h2>
+          <p class="section-subtitle">
+            WATransChat 是一款轻量、智能的插件，为 WhatsApp Web 深度优化，从翻译、时区到高频话术，全面提升你的沟通效率。
+          </p>
+          <div class="grid features-grid">
+            <div class="card feature-card">
+              <h3>实时双向翻译 · 支持 200+ 语言</h3>
+              <p>
+                无需切换翻译工具，自动将收到的外语消息翻译成你的语言，发送时将你的输入翻译为对方语言。
+              </p>
+              <ul>
+                <li>支持 200+ 种语言，覆盖全球主流市场</li>
+                <li>集成 Google、Bing、火山等多家翻译引擎</li>
+                <li>仅翻译可见内容，减小资源占用</li>
+              </ul>
+            </div>
+            <div class="card feature-card">
+              <h3>国家信息 & 当地时间自动识别</h3>
+              <p>
+                打开聊天窗口，自动显示对方国家、语言、货币和当地时间，快速判断是否在对方工作时间。
+              </p>
+              <ul>
+                <li>示例：日本 · 日语 · JPY · 当地时间 10:45</li>
+                <li>外贸场景下，快速了解客户背景</li>
+                <li>提高首响率与回复体验</li>
+              </ul>
+            </div>
+            <div class="card feature-card">
+              <h3>智能翻译记忆 & 语言偏好</h3>
+              <p>
+                自动记录每个联系人的语言偏好，下次聊天自动应用，无需反复设置。
+              </p>
+              <ul>
+                <li>联系人语言偏好自动记忆</li>
+                <li>可手动切换目标语言，界面简洁直观</li>
+                <li>支持自定义翻译语言和引擎</li>
+              </ul>
+            </div>
+            <div class="card feature-card">
+              <h3>快捷短语库 · 高频话术一键发送</h3>
+              <p>
+                将常用话术（如欢迎语、报价模板、售后话术）保存为短语，一键插入输入框。
+              </p>
+              <ul>
+                <li>自定义短语内容</li>
+                <li>外贸、客服、社交场景均适用</li>
+                <li>配合自动翻译，节省大量重复输入时间</li>
+              </ul>
+            </div>
+            <div class="card feature-card">
+              <h3>快速聊天 · 无需保存号码</h3>
+              <p>
+                只需输入带区号的手机号（如 +86 / +1），即可直接发起 WhatsApp 聊天，无需先保存到通讯录。
+              </p>
+              <ul>
+                <li>适合临时沟通与批量联系方式管理</li>
+                <li>一步到位跳转 WhatsApp 会话页面</li>
+                <li>减少保存号码的繁琐操作</li>
+              </ul>
+            </div>
+            <div class="card feature-card">
+              <h3>多平台兼容 & 高性能架构</h3>
+              <p>
+                支持电脑浏览器、安卓手机、苹果设备三大平台，无论你在哪里都能使用 WATransChat 与全球客户沟通。
+              </p>
+              <ul>
+                <li>电脑端：Chrome 浏览器扩展，支持 WhatsApp Web</li>
+                <li>安卓端：原生应用，扫码登录即可使用</li>
+                <li>苹果端：提供 IPA 安装包（需自签证书）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UI Gallery -->
+      <section class="section section-alt" id="gallery">
+        <div class="container">
+          <h2 class="section-title">真实界面预览 · 更直观了解 WATransChat</h2>
+          <p class="section-subtitle">
+            下方图片为 WATransChat 在电脑浏览器和手机端的真实界面示意，你可以直接将自己的最新版截图替换根目录中的图片文件。
+          </p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item gallery-desktop">
+              <div class="device-label">电脑端 · WhatsApp Web 插件界面</div>
+              <button class="device-frame desktop-frame" data-full-image="images/desktop-ui.jpg" type="button">
+                <img src="images/desktop-ui.jpg" alt="WATransChat 电脑端 WhatsApp Web 插件界面预览" />
+              </button>
+              <p class="device-desc">
+                展示在浏览器中打开 WhatsApp Web 后，WATransChat 插件在页面中的布局、
+                翻译面板、国家与时区信息等关键元素。
+              </p>
+            </div>
+
+            <div class="gallery-item gallery-mobile">
+              <div class="device-label">手机端 · 会话列表</div>
+              <button class="device-frame phone-frame" data-full-image="images/mobile-list.jpg" type="button">
+                <div class="phone-notch"></div>
+                <img src="images/mobile-list.jpg" alt="WATransChat 手机端 WhatsApp 会话列表界面预览" />
+              </button>
+              <p class="device-desc">
+                展示在安卓/苹果手机中，WATransChat 登录后看到的 WhatsApp 会话列表，
+                可用于呈现多国家、多语言客户分布。
+              </p>
+            </div>
+
+            <div class="gallery-item gallery-mobile">
+              <div class="device-label">手机端 · 聊天窗口</div>
+              <button class="device-frame phone-frame" data-full-image="images/mobile-chat.jpg" type="button">
+                <div class="phone-notch"></div>
+                <img src="images/mobile-chat.jpg" alt="WATransChat 手机端 WhatsApp 聊天页面界面预览" />
+              </button>
+              <p class="device-desc">
+                展示实际聊天时的翻译效果与对话形式，让用户直观感受到跨语言聊天的真实体验。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Image Lightbox -->
+      <div class="lightbox-backdrop" id="lightbox" aria-hidden="true">
+        <div class="lightbox-inner" role="dialog" aria-modal="true">
+          <button class="lightbox-close" type="button" aria-label="关闭预览">✕</button>
+          <div class="lightbox-body">
+            <img src="" alt="WATransChat 界面大图预览" id="lightboxImage" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Platforms / Downloads -->
+      <section class="section section-alt" id="platforms">
+        <div class="container">
+          <h2 class="section-title">多平台版本 · 选择最适合你的安装方式</h2>
+          <p class="section-subtitle">
+            无论你在电脑浏览器、安卓手机还是苹果设备上，都能用 WATransChat 轻松跨语言聊天。
+          </p>
+
+          <div class="grid platform-grid">
+            <!-- Browser Extension -->
+            <div class="card platform-card">
+              <div class="platform-badge">桌面端 · 浏览器扩展</div>
+              <h3>WATransChat 浏览器扩展</h3>
+              <p>
+                适用于电脑端 WhatsApp Web，支持 Chrome 及兼容内核浏览器（Edge、360、Brave 等），也支持通过
+                CRX 方式在其他浏览器中安装。
+              </p>
+              <div class="platform-actions">
+                <a
+                  href="https://www.bilibili.com/video/BV1VrUSBEEw1"
+                  target="_blank"
+                  class="btn btn-primary"
+                  rel="noopener noreferrer"
+                >
+                  安装视频教程（必看）
+                </a>
+              </div>
+              <div class="download-list">
+                <div class="download-item">
+                  <div class="download-label">Chrome 及兼容浏览器版本</div>
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat3.80.zip"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="download-link"
+                  >
+                    下载 ZIP 安装包（WATransChat3.80.zip）
+                  </a>
+                </div>
+                <div class="download-item">
+                  <div class="download-label">其他浏览器版本（CRX）</div>
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat3.80.crx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="download-link"
+                  >
+                    下载 CRX 安装包（WATransChat3.80.crx）
+                  </a>
+                </div>
+              </div>
+              <ul class="hint-list">
+                <li>建议先完整观看安装视频，再开始操作</li>
+                <li>如遇浏览器安全提示，请选择“允许/继续安装”</li>
+              </ul>
+            </div>
+
+            <!-- Android -->
+            <div class="card platform-card">
+              <div class="platform-badge platform-badge-green">移动端 · 安卓</div>
+              <h3>WATransChat 安卓版</h3>
+              <p>
+                适用于安卓手机，扫码登录 WhatsApp 后即可在手机上使用翻译与辅助功能，非常适合随时随地回复客户。
+              </p>
+              <div class="platform-actions">
+                <a
+                  href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat2.39.apk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                >
+                  下载 APK 安装包
+                </a>
+              </div>
+              <ol class="step-list">
+                <li>点击上方按钮下载 <strong>WATransChat2.39.apk</strong></li>
+                <li>在手机中找到下载的 APK 文件，允许安装来自未知来源的应用</li>
+                <li>打开应用，按提示扫描 WhatsApp 登录二维码即可使用</li>
+              </ol>
+              <ul class="hint-list">
+                <li>如安装后提示“无法打开网页”，请在你的 VPN 中将 WATransChat 添加为允许代理的应用</li>
+                <li>
+                  扫码登录没有反应？请参考视频教程：
+                  <a
+                    href="https://www.bilibili.com/video/BV1qoU8BiEiY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    安卓版扫码问题教学
+                  </a>
+                </li>
+                <li>
+                  不清楚如何设置语言？请看：
+                  <a
+                    href="https://www.bilibili.com/video/BV1okUYBkEh2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    安卓版语言设置教学
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- iOS -->
+            <div class="card platform-card">
+              <div class="platform-badge platform-badge-dark">移动端 · 苹果</div>
+              <h3>WATransChat 苹果版（需自签安装）</h3>
+              <p>
+                适用于 iOS 设备，目前暂时只支持苹果最新的操作系统版本。由于未上架 App Store，需要通过自签证书方式安装。
+              </p>
+              <div class="platform-actions">
+                <a
+                  href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat.ipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                >
+                  下载 IPA 安装包
+                </a>
+              </div>
+              <div class="ios-guide">
+                <h4>如何获取自签证书？</h4>
+                <ol class="step-list">
+                  <li>
+                    前往淘宝购买自签证书，例如推荐店铺：
+                    <a
+                      href="https://item.taobao.com/item.htm?id=883017640945"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      推荐证书店铺
+                    </a>
+                  </li>
+                  <li>
+                    向店家说明需求，例如可以直接复制发送：
+                    <code>老板我要在手机装一个 ipa，要在你这买签名证书，要怎么装，你们提供安装方法吗？</code>
+                  </li>
+                  <li>按照商家提供的工具与教程，对 WATransChat.ipa 进行签名并安装到手机。</li>
+                </ol>
+                <h4>商家提供的教程链接</h4>
+                <ul class="hint-list">
+                  <li>
+                    视频教程：
+                    <a
+                      href="https://sign.iappos.com/video"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sign.iappos.com/video
+                    </a>
+                  </li>
+                  <li>
+                    如提示需开启开发者模式，请查看：
+                    <a
+                      href="https://sign.iappos.com/kfz.png"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      开发者模式开启教程
+                    </a>
+                  </li>
+                  <li>
+                    兑换链接：
+                    <a
+                      href="https://sign.iappos.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sign.iappos.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scenarios -->
+      <section class="section" id="scenarios">
+        <div class="container">
+          <h2 class="section-title">谁最适合使用 WATransChat？</h2>
+          <p class="section-subtitle">
+            只要你需要和不同国家、不同语言的用户在 WhatsApp 上沟通，WATransChat 都能帮你节省大量时间与精力。
+          </p>
+          <div class="grid scenarios-grid">
+            <div class="card scenario-card">
+              <h3>跨境电商卖家</h3>
+              <ul>
+                <li>高频回复来自全球买家的咨询与售后</li>
+                <li>通过快捷短语快速发送报价与说明</li>
+                <li>自动识别客户时区，合理安排跟进时间</li>
+              </ul>
+            </div>
+            <div class="card scenario-card">
+              <h3>国际客服团队</h3>
+              <ul>
+                <li>多语言消息自动翻译，减少人工使用翻译器</li>
+                <li>统一维护常用服务话术，保证服务质量</li>
+                <li>一键切换多账号、多语言客户会话</li>
+              </ul>
+            </div>
+            <div class="card scenario-card">
+              <h3>外贸销售/BD</h3>
+              <ul>
+                <li>在全球时区中高效跟进潜在客户</li>
+                <li>结合国家信息与货币，进行个性化报价</li>
+                <li>使用电话直聊功能，快速触达新线索</li>
+              </ul>
+            </div>
+            <div class="card scenario-card">
+              <h3>留学生 / 海外生活用户</h3>
+              <ul>
+                <li>与不同语言的同学、朋友自然聊天</li>
+                <li>无需担心语法与拼写，先用母语再交给翻译</li>
+                <li>在陌生语言环境中保持顺畅沟通</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guide -->
+      <section class="section section-alt" id="guide">
+        <div class="container">
+          <h2 class="section-title">安装与快速上手</h2>
+          <p class="section-subtitle">
+            按照以下步骤，你可以在几分钟内完成安装并开始体验 WATransChat 带来的效率提升。
+          </p>
+
+          <div class="guide-grid">
+            <div class="guide-column">
+              <h3>电脑浏览器（WhatsApp Web）</h3>
+              <ol class="step-list">
+                <li>
+                  先完整观看安装视频：
+                  <a
+                    href="https://www.bilibili.com/video/BV1VrUSBEEw1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    浏览器插件安装教学
+                  </a>
+                </li>
+                <li>
+                  根据你使用的浏览器，下载对应安装包：
+                  <ul>
+                    <li>
+                      Chrome 及兼容浏览器：
+                      <a
+                        href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat3.80.zip"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        WATransChat3.80.zip
+                      </a>
+                    </li>
+                    <li>
+                      其他浏览器（CRX）：
+                      <a
+                        href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat3.80.crx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        WATransChat3.80.crx
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>在浏览器扩展管理页面中，开启“开发者模式”，加载或拖拽安装扩展。</li>
+                <li>打开 WhatsApp Web，按页面内引导完成首次配置。</li>
+              </ol>
+            </div>
+
+            <div class="guide-column">
+              <h3>安卓手机</h3>
+              <ol class="step-list">
+                <li>
+                  下载安卓安装包：
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat2.39.apk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WATransChat2.39.apk
+                  </a>
+                </li>
+                <li>启用“允许安装未知来源应用”，完成安装。</li>
+                <li>打开 WATransChat，按提示扫描 WhatsApp 登录二维码。</li>
+                <li>根据需要在设置中配置语言与翻译引擎。</li>
+              </ol>
+
+              <h3>苹果手机（iOS，自签安装）</h3>
+              <ol class="step-list">
+                <li>
+                  下载 IPA 安装包：
+                  <a
+                    href="https://cdn.shopify.com/s/files/1/0073/3813/1519/files/WATransChat.ipa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WATransChat.ipa
+                  </a>
+                </li>
+                <li>
+                  在淘宝购买自签证书（推荐：
+                  <a
+                    href="https://item.taobao.com/item.htm?id=883017640945"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    推荐证书店铺
+                  </a>
+                  ），将上面的说明发给商家。
+                </li>
+                <li>按照商家提供的 sign 工具与教程签名并安装。</li>
+                <li>如果系统提示开发者相关限制，按教程开启开发者模式后重试。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="container">
+          <h2 class="section-title">常见问题解答</h2>
+          <p class="section-subtitle">
+            如果你在安装或使用中遇到问题，可以先查看这里是否已有答案。
+          </p>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>安卓安装后显示无法打开网页怎么办？</summary>
+              <p>
+                很可能是你的 VPN 或网络工具阻止了 WATransChat 的网络访问。
+                请在 VPN 或网络加速软件中，将 WATransChat
+                添加为“允许代理”或“信任应用”，然后重新打开再试。
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>扫码登录总是没有反应怎么办？</summary>
+              <p>
+                推荐使用电话号码方式登录，更简单快捷。如果必须使用扫码登录，请参考详细视频教学：
+                <a
+                  href="https://www.bilibili.com/video/BV1qoU8BiEiY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  安卓扫码问题教学视频
+                </a>
+                。
+                一般建议：确保网络稳定、相机对准二维码、避免反光，并在二维码刷新后尽快扫码。
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>苹果手机在消息框输入中文没有显示怎么办？</summary>
+              <p>
+                这通常与输入法兼容性有关。请尝试切换到其他输入法，例如
+                <strong>百度输入法</strong> 等，再重新尝试输入。
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>苹果扫码登录时提示“请同时保持在两台设备上运行 WhatsApp”怎么办？</summary>
+              <p>
+                这是 WhatsApp 多设备登录机制导致的提示。请先在另一台设备（如手机上的原装
+                WhatsApp）保持登录状态，然后再在 WATransChat 中扫码，一般即可正常登录。
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>不知道在哪里设置翻译语言，怎么办？</summary>
+              <p>
+                建议先观看教学视频了解设置入口：
+                <a
+                  href="https://www.bilibili.com/video/BV1okUYBkEh2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  语言设置教学视频
+                </a>
+                。安装成功后，通常可以在扩展图标或 WhatsApp
+                页面内浮动面板中找到语言设置界面。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="logo footer-logo">
+            <span class="logo-icon">
+              <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+            </span>
+            <span class="logo-text">WATransChat</span>
+          </div>
+          <p class="footer-desc">
+            专为 WhatsApp 跨语言沟通打造的智能翻译助手，帮助跨境电商、国际客服、外贸销售和海外用户高效沟通全球。
+          </p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>产品</h4>
+            <a href="#features">功能介绍</a>
+            <a href="#gallery">界面预览</a>
+            <a href="#scenarios">适用人群</a>
+          </div>
+          <div>
+            <h4>下载</h4>
+            <a href="#platforms">浏览器扩展</a>
+            <a href="#platforms">安卓版本</a>
+            <a href="#platforms">苹果版本</a>
+          </div>
+          <div>
+            <h4>帮助</h4>
+            <a href="#guide">安装与教学</a>
+            <a href="#faq">常见问题</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+          <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
+
+
