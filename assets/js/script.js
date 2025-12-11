@@ -44,7 +44,7 @@ if (lightbox && lightboxImg) {
   };
 
   document.querySelectorAll('.device-frame[data-full-image]').forEach((frame) => {
-    frame.addEventListener('mouseenter', () => {
+    frame.addEventListener('click', () => {
       const src = frame.getAttribute('data-full-image');
       if (!src) return;
       openLightbox(src);
@@ -261,5 +261,49 @@ if (heroChatBody && heroSendBtn && heroInputPreview) {
     startConversation();
   }, 3000);
 }
+
+// Copy link functionality
+document.querySelectorAll('.copy-link').forEach((link) => {
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const textToCopy = link.getAttribute('data-copy');
+    if (!textToCopy) return;
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      // 临时改变文本显示"已复制"
+      const originalText = link.textContent;
+      link.textContent = '已复制！';
+      link.style.color = '#22c55e';
+      
+      setTimeout(() => {
+        link.textContent = originalText;
+        link.style.color = '';
+      }, 1500);
+    } catch (err) {
+      // 如果 clipboard API 不可用，使用传统方法
+      const textArea = document.createElement('textarea');
+      textArea.value = textToCopy;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        const originalText = link.textContent;
+        link.textContent = '已复制！';
+        link.style.color = '#22c55e';
+        
+        setTimeout(() => {
+          link.textContent = originalText;
+          link.style.color = '';
+        }, 1500);
+      } catch (err) {
+        alert('复制失败，请手动复制：' + textToCopy);
+      }
+      document.body.removeChild(textArea);
+    }
+  });
+});
 
 
