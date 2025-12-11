@@ -24,6 +24,26 @@ a {
   text-decoration: none;
 }
 
+.link-blue {
+  color: #0066cc !important;
+  text-decoration: underline;
+}
+
+.link-blue:hover {
+  color: #0052a3 !important;
+}
+
+.step-list .link-blue,
+.ios-guide .link-blue {
+  color: #0066cc !important;
+  text-decoration: underline;
+}
+
+.step-list .link-blue:hover,
+.ios-guide .link-blue:hover {
+  color: #0052a3 !important;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -666,6 +686,34 @@ main {
   font-size: 13px;
 }
 
+.ios-guide a,
+.step-list a,
+.platform-card a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.copy-link {
+  color: #22d3ee;
+  cursor: pointer;
+  text-decoration: underline;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
+  transition: color 0.2s ease;
+}
+
+.copy-link:hover {
+  color: #22c55e;
+}
+
+.copy-link:active {
+  opacity: 0.7;
+}
+
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
@@ -723,7 +771,7 @@ code {
   position: relative;
   width: 100%;
   border: none;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .desktop-frame img {
@@ -761,10 +809,6 @@ code {
   font-size: 12px;
   color: #9ca3af;
   line-height: 1.7;
-}
-
-.device-frame:hover img {
-  transform: scale(1.04);
 }
 
 .gallery-tip {
