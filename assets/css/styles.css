@@ -625,6 +625,31 @@ main {
 
 .platform-actions {
   margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.google-play-btn {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.google-play-btn img {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+
+.google-play-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.google-play-btn:active {
+  transform: translateY(0);
 }
 
 .download-list {
