@@ -262,6 +262,37 @@ main {
   box-shadow: 0 0 24px rgba(37, 99, 235, 0.7);
 }
 
+.btn-chrome-install {
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #000000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.btn-chrome-install:hover {
+  background: #1a1a1a !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-chrome-install .chrome-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.btn-chrome-install span {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
