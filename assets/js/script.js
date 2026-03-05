@@ -256,10 +256,8 @@ if (heroChatBody && heroSendBtn && heroInputPreview) {
     }, 1500);
   };
 
-  // 页面加载完成后，延迟3秒开始自动演示
-  setTimeout(() => {
-    startConversation();
-  }, 3000);
+  // 页面加载完成后立即开始自动演示
+  startConversation();
 }
 
 // Copy link functionality
@@ -305,5 +303,70 @@ document.querySelectorAll('.copy-link').forEach((link) => {
     }
   });
 });
+
+// Platform tabs (浏览器 / 安卓 / 苹果 安装方式切换)
+const platformTabs = document.querySelectorAll('[data-platform-tab]');
+const platformPanels = document.querySelectorAll('[data-platform-panel]');
+
+if (platformTabs.length && platformPanels.length) {
+  platformTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-platform-tab');
+      if (!target) return;
+
+      platformTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      platformPanels.forEach((panel) => {
+        const isMatch = panel.getAttribute('data-platform-panel') === target;
+        panel.classList.toggle('is-active', isMatch);
+        panel.hidden = !isMatch;
+      });
+    });
+  });
+}
+
+// Contact modal (联系客服)
+const contactBtn = document.getElementById('contactBtn');
+const contactModal = document.getElementById('contactModal');
+
+if (contactBtn && contactModal) {
+  const closeBtn = contactModal.querySelector('.modal-close');
+
+  const openContactModal = () => {
+    contactModal.classList.add('is-open');
+    contactModal.setAttribute('aria-hidden', 'false');
+  };
+
+  const closeContactModal = () => {
+    contactModal.classList.remove('is-open');
+    contactModal.setAttribute('aria-hidden', 'true');
+  };
+
+  contactBtn.addEventListener('click', () => {
+    openContactModal();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      closeContactModal();
+    });
+  }
+
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      closeContactModal();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactModal.classList.contains('is-open')) {
+      closeContactModal();
+    }
+  });
+}
 
 
