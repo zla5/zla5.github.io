@@ -26,6 +26,7 @@
           <a href="#scenarios">适用人群</a>
           <a href="#guide">安装与使用</a>
           <a href="#faq">常见问题</a>
+          <button type="button" class="nav-contact-btn" id="contactBtn">联系客服</button>
         </nav>
         <button class="btn-theme-toggle" id="themeToggle" aria-label="切换主题">
           🌙
@@ -231,6 +232,20 @@
         </div>
       </div>
 
+      <!-- Contact Modal -->
+      <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+          <button class="modal-close" type="button" aria-label="关闭联系客服弹窗">✕</button>
+          <div class="modal-body">
+            <h3 id="contactModalTitle">添加微信联系客服</h3>
+            <p class="modal-subtitle">请使用微信扫描下方二维码添加客服：</p>
+            <div class="modal-image-wrap">
+              <img src="images/wechat.jpg" alt="客服微信二维码" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Platforms / Downloads -->
       <section class="section section-alt" id="platforms">
         <div class="container">
@@ -239,9 +254,51 @@
             无论您在电脑浏览器、安卓手机还是苹果设备上，都能用 WATransChat 轻松跨语言聊天。
           </p>
 
+          <div class="platform-tabs" role="tablist" aria-label="客户端安装方式">
+            <button
+              type="button"
+              class="platform-tab is-active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="platform-browser"
+              id="platform-tab-browser"
+              data-platform-tab="browser"
+            >
+              浏览器扩展
+            </button>
+            <button
+              type="button"
+              class="platform-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="platform-android"
+              id="platform-tab-android"
+              data-platform-tab="android"
+            >
+              安卓客户端
+            </button>
+            <button
+              type="button"
+              class="platform-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="platform-ios"
+              id="platform-tab-ios"
+              data-platform-tab="ios"
+            >
+              苹果客户端
+            </button>
+          </div>
+
           <div class="grid platform-grid">
             <!-- Browser Extension -->
-            <div class="card platform-card">
+            <div
+              class="card platform-card is-active"
+              role="tabpanel"
+              aria-labelledby="platform-tab-browser"
+              id="platform-browser"
+              data-platform-panel="browser"
+            >
               <div class="platform-badge">桌面端 · 浏览器扩展</div>
               <h3>WATransChat 浏览器扩展</h3>
               <p>
@@ -330,7 +387,14 @@
             </div>
 
             <!-- Android -->
-            <div class="card platform-card">
+            <div
+              class="card platform-card"
+              role="tabpanel"
+              aria-labelledby="platform-tab-android"
+              id="platform-android"
+              data-platform-panel="android"
+              hidden
+            >
               <div class="platform-badge platform-badge-green">移动端 · 安卓</div>
               <h3>WATransChat 安卓版</h3>
               <p>
@@ -355,40 +419,50 @@
                   下载 APK 安装包
                 </a>
               </div>
-              <ol class="step-list">
-                <li>点击上方按钮下载 <strong>WATransChat</strong>，也可以点击谷歌商店按钮进行安装。</li>
-                <li>在手机中找到下载的 APK 文件，允许安装来自未知来源的应用</li>
-                <li>设置它省电策略为“无限制”,否则您无法扫码登陆，按提示扫描 WhatsApp 登录二维码即可使用</li>
-              </ol>
+
               <ul class="hint-list">
-                <li>如安装后提示“无法打开网页”，请在您的 VPN 中将 WATransChat 添加为允许代理的应用</li>
+                <li>安装成功后如何扫码绑定Whatsapp账号，扫码必须在10秒内完成，否则无法扫码登陆.                  <a
+                  href="https://www.bilibili.com/video/BV19VPCzTETm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="download-link"
+                >
+                  查看视频
+                </a></li>
+                <li>功能介绍与使用教学                 <a
+                  href="https://www.bilibili.com/video/BV1oTPCz3EHG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="download-link"
+                >
+                  查看视频
+                </a></li>                                 
+                <li>如安装后提示“无法打开网页”或白屏，请在您的 VPN 中将 WATransChat 添加为允许代理的应用，如果还是不行，请重启手机</li>
+                </li>
+
                 <li>
-                  如果找不到策略设置，扫码登录没有反应？ 你需要10秒内完成扫码！ 请参考视频教程：
+                  每次打开都要重新加载数据的解决办法，请看：
                   <a
-                    href="https://www.bilibili.com/video/BV1qoU8BiEiY"
+                    href="https://www.bilibili.com/video/BV1X5PCziE2T"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="download-link"
                   >
-                    安卓版扫码问题教学
+                    保持后台运行的教学
                   </a>
-                </li>
-                <li>
-                  不清楚如何设置语言？请看：
-                  <a
-                    href="https://www.bilibili.com/video/BV1okUYBkEh2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    安卓版语言设置教学
-                  </a>
-                </li>
+                </li>                
               </ul>
             </div>
 
             <!-- iOS -->
-            <div class="card platform-card">
+            <div
+              class="card platform-card"
+              role="tabpanel"
+              aria-labelledby="platform-tab-ios"
+              id="platform-ios"
+              data-platform-panel="ios"
+              hidden
+            >
               <div class="platform-badge platform-badge-dark">移动端 · 苹果</div>
               <h3>WATransChat 苹果版（通过全能签安装）</h3>
 
