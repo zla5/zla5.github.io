@@ -256,18 +256,20 @@ document.querySelectorAll('.copy-link').forEach((link) => {
     e.preventDefault();
     const textToCopy = link.getAttribute('data-copy');
     if (!textToCopy) return;
+    const originalText = link.textContent;
+
+    const showCopiedState = () => {
+      link.textContent = '已复制！';
+      link.classList.add('is-copied');
+      setTimeout(() => {
+        link.textContent = originalText;
+        link.classList.remove('is-copied');
+      }, 1500);
+    };
 
     try {
       await navigator.clipboard.writeText(textToCopy);
-      // 临时改变文本显示"已复制"
-      const originalText = link.textContent;
-      link.textContent = '已复制！';
-      link.style.color = '#22c55e';
-      
-      setTimeout(() => {
-        link.textContent = originalText;
-        link.style.color = '';
-      }, 1500);
+      showCopiedState();
     } catch (err) {
       // 如果 clipboard API 不可用，使用传统方法
       const textArea = document.createElement('textarea');
@@ -278,14 +280,7 @@ document.querySelectorAll('.copy-link').forEach((link) => {
       textArea.select();
       try {
         document.execCommand('copy');
-        const originalText = link.textContent;
-        link.textContent = '已复制！';
-        link.style.color = '#22c55e';
-        
-        setTimeout(() => {
-          link.textContent = originalText;
-          link.style.color = '';
-        }, 1500);
+        showCopiedState();
       } catch (err) {
         alert('复制失败，请手动复制：' + textToCopy);
       }
