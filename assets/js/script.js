@@ -16,18 +16,8 @@ if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear().toString();
 }
 
-// Simple theme toggle (dark only now, but can be expanded later)
-const themeToggle = document.getElementById('themeToggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    // placeholder for potential light mode support
-    // currently just adds a small pulse animation
-    themeToggle.classList.add('pulse-once');
-    setTimeout(() => themeToggle.classList.remove('pulse-once'), 260);
-  });
-}
-
 // Image lightbox for gallery
+const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImage');
 
 if (lightbox && lightboxImg) {
@@ -304,28 +294,34 @@ document.querySelectorAll('.copy-link').forEach((link) => {
   });
 });
 
-// Platform tabs (浏览器 / 安卓 / 苹果 安装方式切换)
-const platformTabs = document.querySelectorAll('[data-platform-tab]');
-const platformPanels = document.querySelectorAll('[data-platform-panel]');
+// Platform tabs（浏览器 / 安卓 / 苹果）— 用事件委托，避免部分手机浏览器上子元素点击异常
+const platformsSection = document.getElementById('platforms');
 
-if (platformTabs.length && platformPanels.length) {
-  platformTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-platform-tab');
-      if (!target) return;
+function activatePlatformTab(target) {
+  if (!target) return;
+  const platformTabs = document.querySelectorAll('[data-platform-tab]');
+  const platformPanels = document.querySelectorAll('[data-platform-panel]');
+  if (!platformTabs.length || !platformPanels.length) return;
 
-      platformTabs.forEach((t) => {
-        const isActive = t === tab;
-        t.classList.toggle('is-active', isActive);
-        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
+  platformTabs.forEach((t) => {
+    const isActive = t.getAttribute('data-platform-tab') === target;
+    t.classList.toggle('is-active', isActive);
+    t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
 
-      platformPanels.forEach((panel) => {
-        const isMatch = panel.getAttribute('data-platform-panel') === target;
-        panel.classList.toggle('is-active', isMatch);
-        panel.hidden = !isMatch;
-      });
-    });
+  platformPanels.forEach((panel) => {
+    const isMatch = panel.getAttribute('data-platform-panel') === target;
+    panel.classList.toggle('is-active', isMatch);
+    panel.hidden = !isMatch;
+  });
+}
+
+if (platformsSection) {
+  platformsSection.addEventListener('click', (e) => {
+    const tab = e.target.closest('[data-platform-tab]');
+    if (!tab || !platformsSection.contains(tab)) return;
+    const target = tab.getAttribute('data-platform-tab');
+    activatePlatformTab(target);
   });
 }
 
@@ -346,8 +342,17 @@ if (contactBtn && contactModal) {
     contactModal.setAttribute('aria-hidden', 'true');
   };
 
-  contactBtn.addEventListener('click', () => {
+  contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     openContactModal();
+  });
+
+  // Pricing cards "立即购买" - 同一个弹窗
+  document.querySelectorAll('[data-open-contact]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openContactModal();
+    });
   });
 
   if (closeBtn) {
