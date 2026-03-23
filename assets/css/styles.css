@@ -963,6 +963,39 @@ main {
   opacity: 0.7;
 }
 
+.copy-link.is-copied {
+  color: #22c55e;
+}
+
+.copy-link-btn {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, rgba(34, 211, 238, 0.95), rgba(56, 189, 248, 0.95));
+  color: #082f49;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.25);
+  transition: transform 0.08s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+
+.copy-link-btn:hover {
+  color: #082f49;
+  filter: brightness(1.04);
+  box-shadow: 0 12px 28px rgba(56, 189, 248, 0.3);
+  transform: translateY(-1px);
+}
+
+.copy-link-btn:active {
+  transform: scale(0.98);
+}
+
+.copy-link-btn.is-copied {
+  color: #ecfeff;
+  background: linear-gradient(120deg, #0ea5a4, #14b8a6);
+}
+
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
