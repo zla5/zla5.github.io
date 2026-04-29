@@ -17,6 +17,7 @@
   const WS_BASE = window.CHAT_WIDGET_WS || (window.location.origin.replace(/^http/, 'ws') + '/ws');
   // 客服头像 / 提示音：默认使用内置资源，可被后台“客服设置”覆盖
   let SUPPORT_AVATAR_URL = 'https://cdn.shopify.com/s/files/1/0073/3813/1519/files/avatar.jpg';
+  let SUPPORT_NAME = '婉儿';
   let MSG_SOUND_URL = 'https://cdn.shopify.com/s/files/1/0073/3813/1519/files/mes.wav';
   // 是否要求访客填写姓名/邮箱后才能聊天（后台“访客设置”开关）
   let REQUIRE_GUEST_INFO = false;
@@ -28,6 +29,9 @@
       if (j && j.ok && j.settings) {
         if (j.settings.support_avatar_url) {
           SUPPORT_AVATAR_URL = j.settings.support_avatar_url;
+        }
+        if (j.settings.support_name) {
+          SUPPORT_NAME = String(j.settings.support_name).trim() || '婉儿';
         }
         if (j.settings.msg_sound_url) {
           MSG_SOUND_URL = j.settings.msg_sound_url;
@@ -51,12 +55,16 @@
     sendLabel: '发送',
     profileSubmitLabel: '保存并继续',
     firstMessage: '亲，有什么可以帮您？',
-    readReceipt: '已读',
-    agentTyping: '客服正在输入…'
+    readReceipt: '已读'
   };
 
   function t(key) {
     return (ZH && ZH[key]) ? ZH[key] : '';
+  }
+
+  function getSupportTypingText() {
+    const supportName = String(SUPPORT_NAME || '').trim() || '婉儿';
+    return supportName + '正在输入中...';
   }
 
   function getWidgetCustomer() {
@@ -125,6 +133,7 @@
   let ws = null;
   let wsRetryTimer = null;
   let wsPingTimer = null;
+  let supportTypingHideTimer = null;
   // 用于避免 visitor_id 变化导致 WS key 不一致，引起后台在线状态抖动
   let wsAddMsgRef = null;
   let wsRegisteredClientId = null;
@@ -386,21 +395,39 @@
               const text = msg.message_original || '';
               addMsg(text, 'ai', msg.created_at || Date.now());
             }
+            // 兜底：收到客服/AI消息时，结束“正在输入中”提示，避免状态残留
+            const barAfterMsg = document.getElementById('chat-widget-typing');
+            if (barAfterMsg) barAfterMsg.style.display = 'none';
+            if (supportTypingHideTimer) {
+              clearTimeout(supportTypingHideTimer);
+              supportTypingHideTimer = null;
+            }
             playNewMessageSound();
             // AIGC START
             scheduleVisitorMarkAgentRead();
             // AIGC END
           }
           // AIGC START
-          if (msg.type === 'peer_typing' && msg.peer === 'agent') {
+          if (msg.type === 'peer_typing' && msg.peer !== 'visitor') {
             if (msg.conversation_id && conversationId && Number(msg.conversation_id) !== Number(conversationId)) return;
             const bar = document.getElementById('chat-widget-typing');
             if (!bar) return;
             if (msg.is_typing) {
-              bar.textContent = t('agentTyping');
+              bar.textContent = getSupportTypingText();
               bar.style.display = 'block';
+              // 兜底超时：避免结束事件丢失导致“正在输入中”长期停留
+              if (supportTypingHideTimer) clearTimeout(supportTypingHideTimer);
+              supportTypingHideTimer = setTimeout(function () {
+                const b = document.getElementById('chat-widget-typing');
+                if (b) b.style.display = 'none';
+                supportTypingHideTimer = null;
+              }, 15000);
             } else {
               bar.style.display = 'none';
+              if (supportTypingHideTimer) {
+                clearTimeout(supportTypingHideTimer);
+                supportTypingHideTimer = null;
+              }
             }
           }
           if (msg.type === 'messages_read') {
@@ -652,11 +679,12 @@
       const tsText = formatTs(ts);
       if (who === 'ai') {
         div.style.display = 'flex';
-        div.style.alignItems = 'center';
+        div.style.alignItems = 'flex-start';
         div.innerHTML =
-          '<div class="avatar" style="margin-right:8px;flex-shrink:0;">' +
+          '<div class="avatar" style="margin-right:8px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;width:50px;">' +
             '<img src="' + SUPPORT_AVATAR_URL + '" ' +
             'alt="客服" style="width:50px;height:50px;border-radius:50%;display:block;" />' +
+            '<div style="margin-top:4px;font-size:12px;line-height:1.2;text-align:center;word-break:break-word;">' + escapeHtml(SUPPORT_NAME || '婉儿') + '</div>' +
           '</div>' +
           '<div class="bubble">' +
             renderMsgContent(text) +
