@@ -289,6 +289,39 @@ document.querySelectorAll('.copy-link').forEach((link) => {
   });
 });
 
+// iOS install helpers
+const iosCopyIpaBtn = document.getElementById('iosCopyIpaLinkBtn');
+if (iosCopyIpaBtn) {
+  iosCopyIpaBtn.addEventListener('click', async () => {
+    const textToCopy = iosCopyIpaBtn.getAttribute('data-copy');
+    if (!textToCopy) return;
+
+    const setCopiedUi = () => {
+      iosCopyIpaBtn.textContent = '已复制IPA链接';
+      iosCopyIpaBtn.classList.add('is-copied');
+    };
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopiedUi();
+    } catch (err) {
+      const textArea = document.createElement('textarea');
+      textArea.value = textToCopy;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        setCopiedUi();
+      } catch (err) {
+        alert('复制失败，请手动复制：' + textToCopy);
+      }
+      document.body.removeChild(textArea);
+    }
+  });
+}
+
 // Platform tabs（浏览器 / 安卓 / 苹果）— 用事件委托，避免部分手机浏览器上子元素点击异常
 const platformsSection = document.getElementById('platforms');
 
