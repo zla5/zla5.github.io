@@ -16,8 +16,8 @@
   })();
   const WS_BASE = window.CHAT_WIDGET_WS || (window.location.origin.replace(/^http/, 'ws') + '/ws');
   // 客服头像 / 提示音：默认使用内置资源，可被后台“客服设置”覆盖
-  let SUPPORT_AVATAR_URL = '';
-  let MSG_SOUND_URL = '';
+  let SUPPORT_AVATAR_URL = 'https://cdn.shopify.com/s/files/1/0073/3813/1519/files/avatar.jpg';
+  let MSG_SOUND_URL = 'https://cdn.shopify.com/s/files/1/0073/3813/1519/files/mes.wav';
   // 是否要求访客填写姓名/邮箱后才能聊天（后台“访客设置”开关）
   let REQUIRE_GUEST_INFO = false;
 
