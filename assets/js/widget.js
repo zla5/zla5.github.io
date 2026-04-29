@@ -50,7 +50,7 @@
     inputPlaceholder: '输入消息...',
     sendLabel: '发送',
     profileSubmitLabel: '保存并继续',
-    firstMessage: '您好，有什么可以帮您？',
+    firstMessage: '亲，有什么可以帮您？',
     readReceipt: '已读',
     agentTyping: '客服正在输入…'
   };
