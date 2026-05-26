@@ -1,0 +1,282 @@
+/* WhatsApp AI 智能客服 — 冷色紫蓝背景（与通话翻译官暖米色区分） */
+
+body.ai-body {
+  --vt-paper: #eef2ff;
+  --vt-paper-2: #e0e7ff;
+  --vt-ink: #1e1b4b;
+  --vt-ink-muted: #4338ca;
+  --vt-ink-soft: #6366f1;
+  --vt-coral: #4f46e5;
+  --vt-coral-light: #eef2ff;
+  --vt-teal: #6d28d9;
+  --vt-teal-light: #f5f3ff;
+  --vt-border: rgba(79, 70, 229, 0.14);
+  --vt-shadow: 0 4px 24px rgba(79, 70, 229, 0.08);
+  --vt-shadow-lg: 0 24px 64px rgba(79, 70, 229, 0.12);
+
+  background: linear-gradient(165deg, #eef2ff 0%, #f5f3ff 42%, #ede9fe 100%);
+  background-attachment: fixed;
+}
+
+body.ai-body .vt-header {
+  background: rgba(238, 242, 255, 0.9);
+  border-bottom-color: rgba(99, 102, 241, 0.15);
+}
+
+body.ai-body .vt-hero::before {
+  background: radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(79, 70, 229, 0.12) 0%, transparent 50%);
+}
+
+body.ai-body .vt-hero::after {
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+}
+
+body.ai-body .vt-section--alt {
+  background: rgba(255, 255, 255, 0.72);
+  border-top-color: rgba(99, 102, 241, 0.12);
+  border-bottom-color: rgba(99, 102, 241, 0.12);
+}
+
+body.ai-body .vt-tag {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--vt-ink-muted);
+}
+
+body.ai-body .vt-flow-col {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(99, 102, 241, 0.15);
+}
+
+body.ai-body .vt-scenario {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+body.ai-body .ai-highlight-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(99, 102, 241, 0.14);
+}
+
+body.ai-body .vt-install-box {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.ai-body .vt-section--dark {
+  background: linear-gradient(180deg, #312e81 0%, #1e1b4b 100%);
+}
+
+body.ai-body .vt-footer {
+  background: #1e1b4b;
+}
+
+body.ai-body .vt-footer-bottom {
+  border-top-color: rgba(165, 180, 252, 0.15);
+}
+
+body.ai-body .vt-modal {
+  background: #fafaff;
+}
+
+body.ai-body .vt-modal-close {
+  background: var(--vt-paper-2);
+}
+
+body.ai-body .vt-hero-carousel-dots button {
+  background: #c7d2fe;
+}
+
+body.ai-body .vt-badge {
+  color: var(--vt-teal);
+  background: var(--vt-teal-light);
+  border-color: rgba(109, 40, 217, 0.2);
+}
+
+body.ai-body .vt-badge-dot {
+  background: var(--vt-teal);
+}
+
+body.ai-body .vt-nav a:hover {
+  color: var(--vt-coral);
+}
+
+@media (max-width: 720px) {
+  body.ai-body .vt-header.is-nav-open .vt-nav {
+    background: rgba(238, 242, 255, 0.98);
+  }
+}
+
+body.ai-body .vt-btn-secondary:hover {
+  border-color: var(--vt-coral);
+  color: var(--vt-coral);
+}
+
+body.ai-body .vt-flow-col--out .vt-steps li::before {
+  background: var(--vt-coral);
+}
+
+body.ai-body .vt-flow-col--in .vt-steps li::before {
+  background: var(--vt-teal);
+}
+
+body.ai-body .vt-flow-note {
+  color: var(--vt-teal);
+  background: var(--vt-teal-light);
+  border-color: rgba(109, 40, 217, 0.15);
+}
+
+body.ai-body .vt-price-card--featured {
+  border-color: var(--vt-coral);
+}
+
+body.ai-body .vt-price-badge {
+  background: linear-gradient(120deg, var(--vt-coral), #818cf8);
+}
+
+body.ai-body .vt-faq-item summary::after {
+  color: var(--vt-coral);
+}
+
+.ai-highlight-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .ai-highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .ai-highlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ai-highlight-card {
+  background: #fff;
+  border: 1px solid var(--vt-border);
+  border-radius: var(--vt-radius);
+  padding: 24px;
+  box-shadow: var(--vt-shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.ai-highlight-card:hover {
+  box-shadow: var(--vt-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.ai-highlight-card--span2 {
+  grid-column: span 1;
+}
+
+@media (min-width: 960px) {
+  .ai-highlight-card--span2 {
+    grid-column: span 2;
+  }
+}
+
+.ai-highlight-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.ai-highlight-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.ai-highlight-card p {
+  font-size: 14px;
+  color: var(--vt-ink-muted);
+  line-height: 1.65;
+}
+
+.ai-cta-band {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #faf5ff 100%);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  border-radius: var(--vt-radius-lg);
+}
+
+.ai-cta-band h2 {
+  font-family: var(--vt-display);
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.ai-cta-band p {
+  color: var(--vt-ink-muted);
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.ai-cta-band .vt-hero-actions {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* 首屏右侧轮播 */
+.ai-hero-carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ai-hero-slide {
+  margin: 0;
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.ai-hero-slide.is-active {
+  display: flex;
+}
+
+.ai-hero-slide img {
+  width: auto;
+  max-width: min(500px, 100%);
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+.ai-hero-carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.ai-hero-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--vt-paper-2);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ai-hero-carousel-dots button.is-active {
+  background: var(--vt-coral);
+  transform: scale(1.15);
+}
+
+.ai-hero-carousel-dots button:hover {
+  background: #a5b4fc;
+}
