@@ -31,6 +31,7 @@
         <nav class="vt-nav" id="vt-site-nav" aria-label="主导航">
           <a href="#features">功能</a>
           <a href="#interface">界面</a>
+          <a href="#install">安装</a>
           <a href="#pricing">价格</a>
           <a href="#faq">帮助</a>
           <a href="ai-customer-service.html" class="vt-nav-ghost">AI 客服</a>
@@ -149,6 +150,94 @@
         </div>
       </section>
 
+      <section class="vt-section" id="install">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>安装与配置</h2>
+            <p>按顺序完成驱动安装、软件登录与接口配置，即可在 WhatsApp 等通话中使用双向实时翻译。</p>
+          </div>
+
+          <div class="vt-dl-grid">
+            <article class="vt-dl-card">
+              <div class="vt-dl-icon" aria-hidden="true">📦</div>
+              <h3>外贸通话翻译官 Setup.exe</h3>
+              <p>Windows 桌面主程序安装包</p>
+              <a
+                href="https://share.weiyun.com/i0WKLuUc"
+                class="vt-btn vt-btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                前往微云下载
+              </a>
+            </article>
+            <article class="vt-dl-card vt-dl-card--driver">
+              <div class="vt-dl-icon" aria-hidden="true">🔊</div>
+              <h3>Driver.zip</h3>
+              <p>虚拟音频线缆驱动（语音通话必需）</p>
+              <a
+                href="https://share.weiyun.com/i0WKLuUc"
+                class="vt-btn vt-btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                前往微云下载
+              </a>
+            </article>
+          </div>
+
+          <div class="vt-install-box">
+            <h3>安装步骤</h3>
+            <ol>
+              <li>
+                打开
+                <a href="https://share.weiyun.com/i0WKLuUc" target="_blank" rel="noopener noreferrer"
+                  >微云下载页面</a
+                >，下载 <strong>外贸通话翻译官 Setup.exe</strong> 与 <strong>Driver.zip</strong>。
+              </li>
+              <li>
+                解压 <strong>Driver.zip</strong>，得到
+                <strong>VBCABLE_A_Driver_Pack43.zip</strong> 与
+                <strong>VBCABLE_B_Driver_Pack43.zip</strong>，分别解压到文件夹。
+              </li>
+              <li>
+                进入 <strong>VBCABLE_A_Driver_Pack43</strong> 文件夹，右键
+                <strong>VBCABLE_Setup_x64.exe</strong>，选择<strong>以管理员身份运行</strong>完成安装。
+              </li>
+              <li>
+                进入 <strong>VBCABLE_B_Driver_Pack43</strong> 文件夹，同样右键
+                <strong>VBCABLE_Setup_x64.exe</strong>，选择<strong>以管理员身份运行</strong>完成安装。
+              </li>
+              <li>双击运行 <strong>外贸通话翻译官 Setup.exe</strong>，按向导安装软件。</li>
+              <li>
+                启动<strong>外贸通话翻译官</strong>，使用你的 <strong>WATransChat 账号与密码</strong>登录。
+              </li>
+              <li>
+                获取接口 Key：打开
+                <a
+                  href="https://console.volcengine.com/ark/region:ark+cn-beijing/tts/simulS2S"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >火山引擎豆包同声传译控制台</a
+                >，使用手机号登录；如需实名验证，请先完成实名。页面会显示<strong>豆包同声传译大模型</strong>，点击<strong>试用</strong>，复制下方的
+                <strong>APP ID</strong> 与 <strong>Access Token</strong>，填入软件内的<strong>接口设置</strong>。
+              </li>
+              <li>在软件中进入<strong>音频设备</strong>设置，按界面文字提示选择正确的输入、输出设备。</li>
+              <li>
+                在<strong>微软商店</strong>搜索并安装 <strong>WhatsApp 电脑版</strong>，扫码关联手机 WhatsApp 完成登录。找一位联系人发起语音通话，在通话界面点击<strong>麦克风</strong>，再按外贸通话翻译官内的提示完成麦克风与路由配置。
+              </li>
+              <li>
+                全部设置完成后，在软件中点击<strong>开始翻译通话</strong>，即可开始使用双向实时翻译。
+              </li>
+            </ol>
+            <p class="vt-legal">
+              驱动安装后建议重启电脑。除 WhatsApp 外，Zoom、Teams、微信等语音通话也可按软件内音频指引配置。安装或接口填写遇到问题，可
+              <a href="#" data-open-contact>联系微信客服</a>获取协助。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="vt-section vt-section--alt" id="pricing">
         <div class="vt-container">
           <div class="vt-section-head">
@@ -227,7 +316,7 @@
               <summary>一定要装驱动吗？</summary>
               <p>
                 在 WhatsApp、Zoom、Microsoft Teams、Google Meet、Discord、Telegram、微信、QQ 等<strong>语音通话</strong>场景下，需要先安装页面提供的音频驱动并重启电脑。
-                具体步骤见驱动包内说明或咨询客服。
+                详细步骤见上方<a href="#install">安装与配置</a>，也可咨询客服。
               </p>
             </details>
             <details class="vt-faq-item">
@@ -268,12 +357,15 @@
               <h4>产品</h4>
               <a href="#features">功能</a>
               <a href="#interface">界面</a>
+              <a href="#install">安装</a>
               <a href="#scenarios">场景</a>
             </div>
             <div>
               <h4>下载</h4>
-              <a href="downloads/VoiceTranslator-Setup.exe" download>安装包</a>
-              <a href="downloads/VBCABLE_A_B_Driver_Pack43.zip" download>音频驱动</a>
+              <a href="https://share.weiyun.com/i0WKLuUc" target="_blank" rel="noopener noreferrer"
+                >微云下载（安装包与驱动）</a
+              >
+              <a href="#install">安装说明</a>
             </div>
             <div>
               <h4>相关</h4>
