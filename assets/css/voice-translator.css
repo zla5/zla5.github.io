@@ -663,6 +663,16 @@ img {
   margin-top: 10px;
 }
 
+.vt-install-box ol a {
+  color: var(--vt-teal);
+  text-decoration: underline;
+}
+
+.vt-install-box ol strong {
+  color: var(--vt-ink);
+  font-weight: 600;
+}
+
 .vt-install-box .vt-legal {
   margin-top: 20px;
   padding-top: 16px;
