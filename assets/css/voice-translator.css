@@ -586,6 +586,11 @@ img {
 }
 
 /* Download cards */
+.vt-dl-single {
+  max-width: 420px;
+  margin: 0 auto 40px;
+}
+
 .vt-dl-grid {
   display: grid;
   gap: 20px;
@@ -671,6 +676,19 @@ img {
 .vt-install-box ol strong {
   color: var(--vt-ink);
   font-weight: 600;
+}
+
+.vt-install-shot {
+  margin: 16px 0 0;
+}
+
+.vt-install-shot img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--vt-border);
+  border-radius: var(--vt-radius);
 }
 
 .vt-install-box .vt-legal {
