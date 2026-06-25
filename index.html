@@ -255,6 +255,28 @@
               class="platform-tab"
               role="tab"
               aria-selected="false"
+              aria-controls="platform-windows"
+              id="platform-tab-windows"
+              data-platform-tab="windows"
+            >
+              Windows
+            </button>
+            <button
+              type="button"
+              class="platform-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="platform-mac"
+              id="platform-tab-mac"
+              data-platform-tab="mac"
+            >
+              Mac
+            </button>
+            <button
+              type="button"
+              class="platform-tab"
+              role="tab"
+              aria-selected="false"
               aria-controls="platform-android"
               id="platform-tab-android"
               data-platform-tab="android"
@@ -410,6 +432,56 @@
                 </div>
               </div>
 
+            </div>
+
+            <!-- Windows -->
+            <div
+              class="card platform-card"
+              role="tabpanel"
+              aria-labelledby="platform-tab-windows"
+              id="platform-windows"
+              data-platform-panel="windows"
+              hidden
+            >
+              <div class="platform-badge">桌面端 · Windows</div>
+              <h3>WATransChat Windows 版</h3>
+              <p>
+                适用于 Windows 10 及以上系统的独立桌面客户端，无需安装浏览器扩展，开箱即用 WhatsApp 实时翻译。
+              </p>
+              <div class="platform-actions">
+                <a
+                  href="https://github.com/zla5/WATransChat/releases/download/3.11/WATransChat.exe"
+                  download
+                  class="btn btn-primary"
+                >
+                  下载 Windows 安装包（WATransChat.exe）
+                </a>
+              </div>
+            </div>
+
+            <!-- Mac -->
+            <div
+              class="card platform-card"
+              role="tabpanel"
+              aria-labelledby="platform-tab-mac"
+              id="platform-mac"
+              data-platform-panel="mac"
+              hidden
+            >
+              <div class="platform-badge">桌面端 · Mac</div>
+              <h3>WATransChat Mac 版</h3>
+              <p>
+                适用于 macOS 的独立桌面客户端，原生体验，支持 WhatsApp 聊天实时翻译。
+              </p>
+              <div class="platform-actions">
+                <a
+                  href="https://github.com/zla5/WATransChat/releases/download/3.11/WATransChat.dmg"
+                  download
+                  class="btn btn-primary"
+                >
+                  下载 Mac 安装包（WATransChat.dmg）
+                </a>
+              </div>
             </div>
 
             <!-- Android -->
