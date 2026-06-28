@@ -908,6 +908,30 @@ main {
   flex-wrap: wrap;
 }
 
+.platform-screenshot {
+  display: block;
+  margin-top: 24px;
+}
+
+.platform-screenshots-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.platform-screenshots-row .platform-screenshot {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  max-width: calc(50% - 8px);
+  height: auto;
+  margin-top: 0;
+  object-fit: contain;
+}
+
 .google-play-btn {
   display: inline-flex;
   align-items: center;
