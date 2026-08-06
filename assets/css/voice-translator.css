@@ -682,13 +682,16 @@ img {
   margin: 16px 0 0;
 }
 
-.vt-install-shot img {
+.vt-install-shot img,
+.vt-install-shot video,
+.vt-install-video {
   width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
   border: 1px solid var(--vt-border);
   border-radius: var(--vt-radius);
+  background: #0f172a;
 }
 
 .vt-install-box .vt-legal {
