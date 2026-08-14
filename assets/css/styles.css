@@ -268,14 +268,6 @@ main {
   margin-bottom: 24px;
 }
 
-.distributor-hero .hero-inner {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.distributor-hero .hero-content {
-  max-width: 900px;
-}
-
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
