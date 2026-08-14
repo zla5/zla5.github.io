@@ -3,23 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WATransChat - 代理分销计划</title>
+    <title>WATransChat - 成为代理商</title>
     <meta
       name="description"
-      content="WATransChat 翻译软件代理合作政策（White Label 分销计划），支持品牌定制、独立定价和独立用户体系。"
+      content="成为 WATransChat 代理商：获取专属注册链接、自主定价赚取差价，并在后台为用户实时充值。"
     />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/distributor.css" />
   </head>
-  <body>
+  <body class="distributor-page">
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">
+        <a href="index.html" class="logo">
           <span class="logo-icon">
             <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
           </span>
           <span class="logo-text">WATransChat</span>
-        </div>
+        </a>
         <button
           type="button"
           class="nav-toggle"
@@ -33,78 +34,183 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="主导航">
           <a href="index.html">首页</a>
-          <a href="index.html#features">功能亮点</a>
-          <a href="index.html#platforms">下载试用</a>
           <a href="index.html#pricing">价格</a>
+          <a href="#how-it-works">合作流程</a>
+          <a href="#pricing-power">自主定价</a>
+          <a href="#recharge">实时充值</a>
           <a href="#" id="contactBtn">联系客服</a>
-          <a href="#agent-policy">代理分销</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="section hero distributor-hero" id="agent-policy">
-        <div class="container hero-inner">
-          <div class="hero-content">
-            <h1><span class="accent">翻译软件代理合作政策</span></h1>
-            <p class="hero-subtitle">
-              White Label 分销计划：支持代理商以自有品牌进行推广与销售，打造独立客户体系，获得持续稳定收益。
+      <section class="section dp-hero" id="agent-policy">
+        <div class="container dp-hero-inner">
+          <div class="dp-hero-copy">
+            <p class="dp-eyebrow">代理商计划</p>
+            <h1>成为代理商，<br /><span class="accent">开启您的专属业务</span></h1>
+            <p class="dp-lead">
+              申请成功后即可获得专属注册链接与独立后台。您自主定价、自行收款，用户一旦注册将永久归属您的名下。
             </p>
             <div class="hero-ctas">
-              <a href="#" class="btn btn-primary" data-open-contact>咨询合作</a>
               <a
                 href="https://serial.babyamy.store/admin/login"
-                class="btn btn-ghost"
+                class="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
-                >申请代理商</a
+                >立即申请</a
               >
+              <a href="#how-it-works" class="btn btn-outline">查看合作流程</a>
             </div>
+            <ul class="dp-chips">
+              <li>专属注册链接</li>
+              <li>自主定价赚差价</li>
+              <li>后台实时充值</li>
+            </ul>
+          </div>
+
+          <aside class="dp-hero-panel" aria-label="代理生意示意">
+            <div class="dp-panel-card">
+              <div class="dp-panel-head">
+                <span class="dp-panel-dot"></span>
+                <span>您的代理后台</span>
+              </div>
+              <div class="dp-link-box">
+                <span class="dp-link-label">专属注册链接</span>
+                <code>your-link / 注册成功即归属您</code>
+              </div>
+              <ul class="dp-feed">
+                <li>
+                  <span class="dp-feed-ok">已注册</span>
+                  <span>用户 A 通过您的链接注册</span>
+                  <strong>永久归属</strong>
+                </li>
+                <li>
+                  <span class="dp-feed-ok">已充值</span>
+                  <span>用户 B 微信联系您完成付款</span>
+                  <strong>赚取差价</strong>
+                </li>
+                <li>
+                  <span class="dp-feed-ok">已开通</span>
+                  <span>您在后台实时充值，无需等待</span>
+                  <strong>随充随用</strong>
+                </li>
+              </ul>
+              <div class="dp-profit">
+                <span>利润来源</span>
+                <strong>官方原价上浮后的差价</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section dp-section" id="how-it-works">
+        <div class="container">
+          <h2 class="section-title">申请成功后，用户永久归您</h2>
+          <p class="section-subtitle">系统为您生成专属注册链接。把链接发给用户，对方注册成功后即归属您的名下。</p>
+
+          <ol class="dp-steps">
+            <li class="dp-step">
+              <span class="dp-step-num">01</span>
+              <h3>立即申请</h3>
+              <p>提交代理商申请，开通专属后台。</p>
+            </li>
+            <li class="dp-step">
+              <span class="dp-step-num">02</span>
+              <h3>获得专属链接</h3>
+              <p>请务必妥善保管，只需将此链接发给用户。</p>
+            </li>
+            <li class="dp-step">
+              <span class="dp-step-num">03</span>
+              <h3>永久归属</h3>
+              <p>对方一旦注册成功，该用户将永久归属至您的名下，后续所有消费均与您关联。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section dp-section section-alt" id="pricing-power">
+        <div class="container">
+          <h2 class="section-title">自主定价，赚取丰厚差价</h2>
+          <p class="section-subtitle">您可以在代理商后台自主设置销售价格与收款方式。</p>
+
+          <div class="dp-split">
+            <article class="dp-card">
+              <div class="dp-icon" aria-hidden="true">¥</div>
+              <h3>销售价格</h3>
+              <p>在官方原价基础上进行上浮，差价即为您的利润。</p>
+              <div class="dp-price-demo" aria-hidden="true">
+                <div>
+                  <span>官方原价</span>
+                  <strong>底价</strong>
+                </div>
+                <span class="dp-plus">+</span>
+                <div>
+                  <span>您设定上浮</span>
+                  <strong>差价</strong>
+                </div>
+                <span class="dp-plus">=</span>
+                <div class="is-profit">
+                  <span>您的利润</span>
+                  <strong>全部归您</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="dp-card">
+              <div class="dp-icon" aria-hidden="true">微</div>
+              <h3>收款方式</h3>
+              <p>绑定您的微信二维码，您的用户将直接通过微信联系您完成充值。</p>
+              <ul class="dp-list">
+                <li>后台绑定您自己的收款码</li>
+                <li>用户付款直接到您的微信</li>
+                <li>您再在后台为用户开通服务</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="agent-permissions">
+      <section class="section dp-section" id="recharge">
         <div class="container">
-          <h2 class="section-title">代理权限</h2>
-          <p class="section-subtitle">成为代理后，您将获得以下权限：</p>
+          <h2 class="section-title">高效充值，无需等待</h2>
+          <p class="section-subtitle">把时间留给客户，让收益更高效。</p>
 
-          <div class="grid features-grid">
-            <div class="card feature-card">
-              <h3>1️⃣ 独立定价权</h3>
-              <p>代理可通过后台自主设定产品销售价格，包括但不限于：</p>
-              <ul>
-                <li>月订阅价格</li>
-                <li>年订阅价格</li>
-              </ul>
+          <div class="dp-compare">
+            <article class="dp-compare-card is-muted">
+              <p class="dp-compare-tag">不推荐作为日常方式</p>
+              <h3>联系我们人工入账</h3>
+              <p>人工处理非实时，可能耽误您的业务进程。</p>
+            </article>
+            <div class="dp-compare-vs" aria-hidden="true">VS</div>
+            <article class="dp-compare-card is-highlight">
+              <p class="dp-compare-tag">建议采用</p>
+              <h3>预存余额，后台实时充值</h3>
               <p>
-                代理可根据自身市场策略向终端用户收费。用户完成付款后，代理需在平台为对应用户开通或充值服务。
+                为保障用户随充随用，建议您提前预存余额至代理商账户。此后即可自行在后台为用户实时充值，无需等待人工入账。
               </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dp-cta">
+        <div class="container">
+          <div class="dp-cta-box">
+            <div>
+              <h2>现在申请，开通您的专属业务</h2>
+              <p>获取专属注册链接，自主定价，实时为用户充值。</p>
             </div>
-
-            <div class="card feature-card">
-              <h3>2️⃣ 用户归属权</h3>
-              <ul>
-                <li>每个代理拥有独立用户体系</li>
-                <li>用户一经注册或绑定，将默认归属于对应代理</li>
-                <li>平台不会在不同代理之间重新分配用户</li>
-              </ul>
-              <p>
-                👉 说明：用户归属关系用于订单统计、收益结算及服务管理。
-              </p>
-            </div>
-
-            <div class="card feature-card">
-              <h3>3️⃣ 代理后台管理</h3>
-              <p>
-                平台提供专属代理后台，帮助代理商高效完成用户与业务管理，形成完整的运营闭环。
-              </p>
-              <ul>
-                <li>管理自有用户：查看用户信息与服务状态</li>
-                <li>自主设置价格：按市场策略配置订阅与套餐价格</li>
-                <li>为用户充值：快速开通、续费或补充服务时长</li>
-                <li>添加专属微信二维码：用于客户咨询与售后引导</li>
-              </ul>
+            <div class="dp-cta-actions">
+              <a
+                href="https://serial.babyamy.store/admin/login"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >立即申请</a
+              >
+              <a href="#" class="btn btn-outline" data-open-contact>咨询合作</a>
             </div>
           </div>
         </div>
@@ -121,14 +227,16 @@
             <span class="logo-text">WATransChat</span>
           </div>
           <p class="footer-desc">
-            代理合作、品牌定制与分销支持，请返回主页联系在线客服获取详细方案。
+            成为代理商后，您可获取专属注册链接、自主定价，并在后台为用户实时充值。
           </p>
         </div>
         <div class="footer-links">
           <div>
             <h4>导航</h4>
             <a href="index.html">返回首页</a>
-            <a href="#agent-permissions">代理权限</a>
+            <a href="#how-it-works">合作流程</a>
+            <a href="#pricing-power">自主定价</a>
+            <a href="#recharge">实时充值</a>
           </div>
         </div>
       </div>
