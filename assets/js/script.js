@@ -66,10 +66,11 @@ if (lightbox && lightboxImg) {
     lightboxImg.src = '';
   };
 
-  document.querySelectorAll('.device-frame[data-full-image]').forEach((frame) => {
-    frame.addEventListener('click', () => {
-      const src = frame.getAttribute('data-full-image');
+  document.querySelectorAll('[data-full-image]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      const src = el.getAttribute('data-full-image');
       if (!src) return;
+      e.preventDefault();
       openLightbox(src);
     });
   });
