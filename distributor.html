@@ -139,7 +139,16 @@
             <article class="dp-card">
               <div class="dp-icon" aria-hidden="true">¥</div>
               <h3>销售价格</h3>
-              <p>在官方原价基础上进行上浮，差价即为您的利润。</p>
+              <p>
+                在官方原价基础上进行上浮，差价即为您的利润。
+                <a
+                  href="#"
+                  class="download-link"
+                  data-full-image="images/pricingsettings.jpg"
+                >
+                  如何调整价格
+                </a>
+              </p>
               <div class="dp-price-demo" aria-hidden="true">
                 <div>
                   <span>官方原价</span>
@@ -247,6 +256,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="lightbox-backdrop" id="lightbox" aria-hidden="true">
+      <div class="lightbox-inner" role="dialog" aria-modal="true">
+        <button class="lightbox-close" type="button" aria-label="关闭预览">✕</button>
+        <div class="lightbox-body">
+          <img src="" alt="价格设置界面大图预览" id="lightboxImage" />
+        </div>
+      </div>
+    </div>
 
     <div class="modal-backdrop" id="contactModal" aria-hidden="true">
       <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
