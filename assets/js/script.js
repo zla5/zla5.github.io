@@ -387,11 +387,11 @@ if (platformsSection) {
   });
 }
 
-// Contact modal (联系客服)
+// Contact modal (联系客服 / 立即购买)
 const contactBtn = document.getElementById('contactBtn');
 const contactModal = document.getElementById('contactModal');
 
-if (contactBtn && contactModal) {
+if (contactModal) {
   const closeBtn = contactModal.querySelector('.modal-close');
 
   const openContactModal = () => {
@@ -404,10 +404,12 @@ if (contactBtn && contactModal) {
     contactModal.setAttribute('aria-hidden', 'true');
   };
 
-  contactBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    openContactModal();
-  });
+  if (contactBtn) {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openContactModal();
+    });
+  }
 
   // Pricing cards "立即购买" - 同一个弹窗
   document.querySelectorAll('[data-open-contact]').forEach((btn) => {
