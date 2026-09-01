@@ -3,910 +3,507 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WATransChat - WhatsApp 跨语言智能翻译助手</title>
+    <title>外贸通话翻译官 — 已集成 WATransChat · 手机与电脑实时双向语音翻译</title>
     <meta
       name="description"
-      content="WATransChat 是一款为 WhatsApp Web 打造的智能翻译与跨时区沟通助手，支持实时翻译、国家识别、当地时间显示与快捷短语，一站式提升跨境沟通效率。"
+      content="外贸通话翻译官已集成到 WATransChat：开通会员后可在手机上与客户进行 WhatsApp 语音/视频通话实时翻译；电脑端独立软件仍可使用，适用于 Zoom、Teams、微信、QQ 等更多通话软件。"
     />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/voice-translator.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="logo">
-          <span class="logo-icon">
-            <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
-          </span>
-          <span class="logo-text">WATransChat</span>
-        </div>
+  <body class="vt-body">
+    <header class="vt-header">
+      <div class="vt-container vt-header-inner">
+        <a href="#top" class="vt-brand">
+          <img src="images/voice.png" alt="" class="vt-brand-mark" width="36" height="36" />
+          <span>外贸通话翻译官</span>
+        </a>
         <button
           type="button"
-          class="nav-toggle"
+          class="vt-nav-toggle"
           aria-expanded="false"
-          aria-controls="site-nav"
+          aria-controls="vt-site-nav"
           aria-label="打开菜单"
         >
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="vt-nav-toggle-bar" aria-hidden="true"></span>
+          <span class="vt-nav-toggle-bar" aria-hidden="true"></span>
+          <span class="vt-nav-toggle-bar" aria-hidden="true"></span>
         </button>
-        <nav class="nav" id="site-nav" aria-label="主导航">
-          <a href="#features">功能亮点</a>
-          <a href="#gallery">界面预览</a>
-          <a href="#platforms">下载试用</a>
+        <nav class="vt-nav" id="vt-site-nav" aria-label="主导航">
+          <a href="#features">功能</a>
+          <a href="#interface">界面</a>
+          <a href="#mobile">手机端</a>
+          <a href="#install">电脑端</a>
           <a href="#pricing">价格</a>
-          <a href="distributor.html">代理分销</a>
-          <a href="voice-translator.html">通话翻译官</a>
-          <a href="ai-customer-service.html">AI 客服</a>
-          <a href="#scenarios">适用人群</a>
-          <a href="#faq">常见问题</a>
+          <a href="#faq">帮助</a>
+          <a href="ai-customer-service.html" class="vt-nav-ghost">AI 客服</a>
+          <a href="index.html" class="vt-nav-ghost">WATransChat</a>
+          <button type="button" class="vt-btn-nav" data-open-contact>联系客服</button>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="section hero" id="top">
-        <div class="container hero-inner">
-          <div class="hero-content">
-            <h1><span class="accent">在WhatsApp中使用中文就能跟外国人轻松聊天</span></h1>
-            <p class="hero-subtitle">
-              <strong>WATransChat</strong> 是一款为
-              <strong>WhatsApp Web</strong> 打造的智能翻译助手。
-              只需用<strong>中文输入</strong>，自动翻译成对方语言发送；收到外语消息，<strong>自动翻译成中文</strong>显示。
-              集成 <strong>实时翻译 / 国家识别 / 当地时间显示 / 快捷短语</strong>，
-              让外贸、客服、跨境社交都能高效回复全球用户。
+      <section class="vt-hero" id="top">
+        <div class="vt-container vt-hero-grid">
+          <div class="vt-hero-copy">
+            <div class="vt-badge">
+              <span class="vt-badge-dot"></span>
+              已集成 WATransChat · 手机 + 电脑
+            </div>
+            <h1>
+              你说中文，<em>对方听外语</em><br />
+              对方说外语，<em>你听中文</em>
+            </h1>
+            <p class="vt-hero-lead">
+              通话翻译已集成到 <strong>WATransChat</strong>：开通会员后，在手机上即可与客户进行
+              WhatsApp 语音/视频通话实时翻译。电脑端独立软件仍可使用，适用于 Zoom、Teams、微信等更多通话场景。
             </p>
-            <div class="hero-ctas">
-              <a href="#platforms" class="btn btn-primary">立即下载与安装</a>
+            <div class="vt-hero-actions">
+              <a href="#mobile" class="vt-btn vt-btn-primary">
+                手机端使用说明
+              </a>
+              <a href="#install" class="vt-btn vt-btn-outline-dark">
+                电脑端下载安装
+              </a>
             </div>
-            <div class="hero-meta">
-              <span>支持 200+ 种语言</span>
-              <span>覆盖浏览器扩展 & 安卓 & 苹果</span>
-              <span>专为跨境电商与国际客服优化</span>
+            <div class="vt-hero-tags">
+              <span class="vt-tag">安卓 / iOS 手机</span>
+              <span class="vt-tag">Win 10 / 11 电脑</span>
+              <span class="vt-tag">WhatsApp · Zoom · Teams · 微信 等</span>
+              <span class="vt-tag">会员账号使用</span>
             </div>
           </div>
-          <div class="hero-preview">
-            <div class="preview-card">
-              <div class="preview-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="preview-title">WhatsApp Web</span>
-              </div>
-              <div class="preview-body">
-                <div class="chat-meta-row">
-                  <div class="chat-meta-avatar">U</div>
-                  <div class="chat-meta-text">
-                    <div class="chat-meta-name">+598 99 160 876</div>
-                    <div class="chat-meta-sub">
-                      <span class="chat-meta-lang">乌拉圭 · 西班牙语 · UYU</span>
-                      <span class="chat-meta-dot">·</span>
-                      <span class="chat-meta-time">12:44</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="chat-messages" id="heroChatMessages">
-                </div>
+          <figure class="vt-hero-media">
+            <img
+              src="images/voice.jpg"
+              alt="外贸通话翻译官软件界面示意"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </section>
 
-                <div class="chat-input">
-                  <div class="chat-input-main">
-                    <div class="chat-input-preview"></div>
-                  </div>
-                  <button class="chat-input-send" type="button" aria-label="发送消息">
-                    ➤
-                  </button>
-                  <div class="chat-input-hint">翻译 Enter，原文 Ctrl+Enter</div>
-                </div>
-
-              </div>
-            </div>
+      <section class="vt-section" id="features">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>通话时就能用，不用录完再译</h2>
+            <p>一边聊一边译，你说的话和对方说的话，都能实时变成彼此能听懂的语言。</p>
+          </div>
+          <div class="vt-bento">
+            <article class="vt-bento-item vt-bento-item--wide">
+              <div class="vt-bento-icon vt-bento-icon--coral">⇄</div>
+              <h3>双向实时翻译</h3>
+              <p>一次开启，你和对方都能边说边译，适合询价、谈交期、售后沟通等来回对话场景。</p>
+              <ul>
+                <li>你说中文，对方听到外语</li>
+                <li>对方说外语，你听到中文</li>
+              </ul>
+            </article>
+            <article class="vt-bento-item">
+              <div class="vt-bento-icon vt-bento-icon--teal">🔊</div>
+              <h3>听得到，也看得见</h3>
+              <p>除译音外，界面同步显示原文与译文，方便核对报价、数字和关键条款。</p>
+            </article>
+            <article class="vt-bento-item vt-bento-item--wide">
+              <div class="vt-bento-icon vt-bento-icon--teal">📱</div>
+              <h3>已集成 WATransChat 手机端</h3>
+              <p>开通通话翻译会员后，在 WATransChat 手机 App 中即可与客户进行 WhatsApp 语音/视频通话实时翻译，无需额外安装独立软件。</p>
+            </article>
+            <article class="vt-bento-item">
+              <div class="vt-bento-icon vt-bento-icon--ink">📞</div>
+              <h3>电脑端覆盖更多软件</h3>
+              <p>除 WhatsApp 外，Zoom、Microsoft Teams、Google Meet、Discord、Telegram、微信、QQ 等语音通话仍可使用 Windows 独立版，按指引完成简单配置即可。</p>
+            </article>
+            <article class="vt-bento-item">
+              <div class="vt-bento-icon vt-bento-icon--teal">👤</div>
+              <h3>会员账号</h3>
+              <p>与 WATransChat 共用账号体系，开通通话翻译会员后手机端与电脑端均可使用，支持月付 / 年付，到期续费。</p>
+            </article>
+            <article class="vt-bento-item">
+              <div class="vt-bento-icon vt-bento-icon--coral">⚡</div>
+              <h3>安装简单</h3>
+              <p>Windows 安装包一键安装，附带图文说明，客服可协助首次配置。</p>
+            </article>
+            <article class="vt-bento-item">
+              <div class="vt-bento-icon vt-bento-icon--ink">🌍</div>
+              <h3>多语言沟通</h3>
+              <p>覆盖常见外贸语种，可在软件内选择你与对方使用的语言组合，支持中文、英语、葡萄牙语、西班牙语、日语、印尼语、德语、法语互译。</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Features -->
-      <section class="section" id="features">
-        <div class="container">
-          <h2 class="section-title">核心功能，一站式解决跨语言与跨时区沟通</h2>
-          <p class="section-subtitle">
-            WATransChat 是一款轻量、智能的插件，为 WhatsApp Web 深度优化，从翻译、时区到高频话术，全面提升您的沟通效率。
-          </p>
-          <div class="grid features-grid">
-            <div class="card feature-card">
-              <h3>实时双向翻译 · 支持 200+ 语言</h3>
-              <p>
-                无需切换翻译工具，自动将收到的外语消息翻译成您的语言，发送时将您的输入翻译为对方语言。
-              </p>
-              <ul>
-                <li>支持 200+ 种语言，覆盖全球主流市场</li>
-                <li>集成 Google、Bing、火山等多家翻译引擎</li>
-                <li>仅翻译可见内容，减小资源占用</li>
-              </ul>
-            </div>
-            <div class="card feature-card">
-              <h3>国家信息 & 当地时间自动识别</h3>
-              <p>
-                打开聊天窗口，自动显示对方国家、语言、货币和当地时间，快速判断是否在对方工作时间。
-              </p>
-              <ul>
-                <li>示例：日本 · 日语 · JPY · 当地时间 10:45</li>
-                <li>外贸场景下，快速了解客户背景</li>
-                <li>提高首响率与回复体验</li>
-              </ul>
-            </div>
-            <div class="card feature-card">
-              <h3>智能翻译记忆 & 语言偏好</h3>
-              <p>
-                自动记录每个联系人的语言偏好，下次聊天自动应用，无需反复设置。
-              </p>
-              <ul>
-                <li>联系人语言偏好自动记忆</li>
-                <li>可手动切换目标语言，界面简洁直观</li>
-                <li>支持自定义翻译语言和引擎</li>
-              </ul>
-            </div>
-            <div class="card feature-card">
-              <h3>快捷短语库 · 高频话术一键发送</h3>
-              <p>
-                将常用话术（如欢迎语、报价模板、售后话术）保存为短语，一键插入输入框。
-              </p>
-              <ul>
-                <li>自定义短语内容</li>
-                <li>外贸、客服、社交场景均适用</li>
-                <li>配合自动翻译，节省大量重复输入时间</li>
-              </ul>
-            </div>
-            <div class="card feature-card">
-              <h3>快速聊天 · 无需保存号码</h3>
-              <p>
-                只需输入带区号的手机号（如 +86 / +1），即可直接发起 WhatsApp 聊天，无需先保存到通讯录。
-              </p>
-              <ul>
-                <li>适合临时沟通与批量联系方式管理</li>
-                <li>一步到位跳转 WhatsApp 会话页面</li>
-                <li>减少保存号码的繁琐操作</li>
-              </ul>
-            </div>
-            <div class="card feature-card">
-              <h3>多平台兼容 & 高性能架构</h3>
-              <p>
-                支持电脑浏览器、安卓手机、苹果设备三大平台，无论您在哪里都能使用 WATransChat 与全球客户沟通。
-              </p>
-              <ul>
-                <li>电脑端：Chrome 浏览器扩展，支持 WhatsApp Web</li>
-                <li>安卓端：原生应用，扫码登录即可使用</li>
-                <li>苹果端：提供 IPA 安装包（需自签证书）</li>
-              </ul>
-            </div>
+      <section class="vt-section vt-section--alt" id="interface">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>手机端与电脑端界面</h2>
+            <p>手机端已集成在 WATransChat 中，开通会员即可在通话时使用；电脑端保留独立软件，适用于更多通话应用。</p>
+          </div>
+          <div class="vt-interface-grid">
+            <figure class="vt-interface-card">
+              <div class="vt-interface-label">手机端 · WATransChat 通话翻译</div>
+              <div class="vt-interface-media">
+                <img
+                  src="images/mobilevoice.jpg"
+                  alt="WATransChat 手机端语音视频通话翻译界面"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>在手机上与客户进行 WhatsApp 语音/视频通话时，实时显示原文与译文，边说边译。</figcaption>
+            </figure>
+            <figure class="vt-interface-card">
+              <div class="vt-interface-label">电脑端 · 独立通话翻译软件</div>
+              <div class="vt-interface-media">
+                <img
+                  src="images/softwareinterface.jpg"
+                  alt="外贸通话翻译官电脑端软件操作界面"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>登录、选择语言与音频设备，一键开始双向实时翻译，适用于 Zoom、Teams、微信等。</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <!-- UI Gallery -->
-      <section class="section section-alt" id="gallery">
-        <div class="container">
-          <h2 class="section-title">真实界面预览 · 更直观了解 WATransChat</h2>
-          <p class="section-subtitle">
-            下方图片为 WATransChat 在电脑浏览器和手机端的真实界面示意，您可以直接将自己的最新版截图替换根目录中的图片文件。
-          </p>
-
-          <div class="gallery-grid">
-            <div class="gallery-item gallery-desktop">
-              <div class="device-label">电脑端 · WhatsApp Web 插件界面</div>
-              <button class="device-frame desktop-frame" data-full-image="images/desktop-ui.jpg" type="button">
-                <img src="images/desktop-ui.jpg" alt="WATransChat 电脑端 WhatsApp Web 插件界面预览" />
-              </button>
-              <p class="device-desc">
-                展示在浏览器中打开 WhatsApp Web 后，WATransChat 插件在页面中的布局、
-                翻译面板、国家与时区信息等关键元素。
-              </p>
-            </div>
-
-            <div class="gallery-item gallery-mobile">
-              <div class="device-label">手机端 · 会话列表</div>
-              <button class="device-frame phone-frame" data-full-image="images/mobile-list.jpg" type="button">
-                <img src="images/mobile-list.jpg" alt="WATransChat 手机端 WhatsApp 会话列表界面预览" />
-              </button>
-              <p class="device-desc">
-                展示在安卓/苹果手机中，WATransChat 登录后看到的 WhatsApp 会话列表，
-                可用于呈现多国家、多语言客户分布。
-              </p>
-            </div>
-
-            <div class="gallery-item gallery-mobile">
-              <div class="device-label">手机端 · 聊天窗口</div>
-              <button class="device-frame phone-frame" data-full-image="images/mobile-chat.jpg" type="button">
-                <img src="images/mobile-chat.jpg" alt="WATransChat 手机端 WhatsApp 聊天页面界面预览" />
-              </button>
-              <p class="device-desc">
-                展示实际聊天时的翻译效果与对话形式，让用户直观感受到跨语言聊天的真实体验。
-              </p>
-            </div>
+      <section class="vt-section" id="mobile">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>手机端使用（推荐）</h2>
+            <p>通话翻译已集成到 WATransChat，开通会员后直接在手机上与客户语音/视频通话翻译，无需安装额外软件。</p>
           </div>
 
+          <div class="vt-platform-path vt-platform-path--mobile">
+            <h3>使用步骤</h3>
+            <ol>
+              <li>
+                在手机上安装 <strong>WATransChat</strong>（安卓 / iOS），使用您的账号登录。
+                下载方式见 <a href="index.html#platforms">WATransChat 多平台下载</a>。
+              </li>
+              <li>
+                联系客服开通<strong>通话翻译会员</strong>（与 WATransChat 共用账号，语音翻译为独立订阅）。
+              </li>
+              <li>
+                在 WATransChat 中进入 WhatsApp，选择客户发起<strong>语音或视频通话</strong>。
+              </li>
+              <li>
+                开启通话翻译功能，即可在通话过程中实时双向翻译，原文与译文同步显示在界面上。
+              </li>
+            </ol>
+            <p class="vt-legal">
+              手机端适合在 WhatsApp 上直接与客户沟通的场景。如需在 Zoom、Teams、微信等其它软件中通话翻译，请使用下方
+              <a href="#install">电脑端独立软件</a>。
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- Platforms / Downloads -->
-      <section class="section section-alt" id="platforms">
-        <div class="container">
-          <h2 class="section-title">多平台版本 · 选择最适合您的安装方式</h2>
-          <p class="section-subtitle">
-            无论您在电脑浏览器、安卓手机还是苹果设备上，都能用 WATransChat 轻松跨语言聊天。
-          </p>
-
-          <div class="platform-tabs" role="tablist" aria-label="客户端安装方式">
-            <button
-              type="button"
-              class="platform-tab is-active"
-              role="tab"
-              aria-selected="true"
-              aria-controls="platform-browser"
-              id="platform-tab-browser"
-              data-platform-tab="browser"
-            >
-              浏览器
-            </button>
-            <button
-              type="button"
-              class="platform-tab"
-              role="tab"
-              aria-selected="false"
-              aria-controls="platform-windows"
-              id="platform-tab-windows"
-              data-platform-tab="windows"
-            >
-              Windows
-            </button>
-            <button
-              type="button"
-              class="platform-tab"
-              role="tab"
-              aria-selected="false"
-              aria-controls="platform-mac"
-              id="platform-tab-mac"
-              data-platform-tab="mac"
-            >
-              Mac
-            </button>
-            <button
-              type="button"
-              class="platform-tab"
-              role="tab"
-              aria-selected="false"
-              aria-controls="platform-android"
-              id="platform-tab-android"
-              data-platform-tab="android"
-            >
-              安卓
-            </button>
-            <button
-              type="button"
-              class="platform-tab"
-              role="tab"
-              aria-selected="false"
-              aria-controls="platform-ios"
-              id="platform-tab-ios"
-              data-platform-tab="ios"
-            >
-              苹果
-            </button>
+      <section class="vt-section vt-section--alt" id="install">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>电脑端安装与配置</h2>
+            <p>除 WhatsApp 手机通话外，Zoom、Teams、微信、QQ 等软件仍需使用 Windows 独立版。按顺序完成驱动安装、软件登录与接口配置即可。</p>
           </div>
 
-          <div class="grid platform-grid">
-            <!-- Browser Extension -->
-            <div
-              class="card platform-card is-active"
-              role="tabpanel"
-              aria-labelledby="platform-tab-browser"
-              id="platform-browser"
-              data-platform-panel="browser"
-            >
-              <div class="platform-badge">桌面端 · 浏览器扩展</div>
-              <h3>WATransChat 浏览器扩展</h3>
-              <p>
-                适用于电脑端 WhatsApp Web，支持 Chrome 及兼容内核浏览器（Edge、360、Brave 等），也支持通过
-                CRX 方式在其他浏览器中安装。
-              </p>
-              <div class="platform-actions">
+          <div class="vt-dl-grid">
+            <article class="vt-dl-card">
+              <div class="vt-dl-icon" aria-hidden="true">📦</div>
+              <h3>软件安装包</h3>
+              <p>外贸通话翻译官 Windows 安装程序（CallTranslator-0.1.2.exe）</p>
+              <a
+                href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.2.exe"
+                class="vt-btn vt-btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                下载软件
+              </a>
+            </article>
+            <article class="vt-dl-card vt-dl-card--driver">
+              <div class="vt-dl-icon" aria-hidden="true">🔌</div>
+              <h3>虚拟音频驱动</h3>
+              <p>语音通话必需，内含 VBCABLE A / B 驱动包</p>
+              <a
+                href="https://github.com/zla5/WATransChat/releases/download/3.17/VBCABLE_A_B_Driver_Pack43.zip"
+                class="vt-btn vt-btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                下载驱动
+              </a>
+            </article>
+          </div>
 
-              </div>
-              <div class="download-list">
+          <div class="vt-install-box">
+            <h3>安装步骤</h3>
+            <ol>
+              <li>
+                分别下载
                 <a
-                  href="https://chromewebstore.google.com/detail/cgdniobighicnjocimecbcphimoebgbj?utm_source=item-share-cb"
+                  href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.2.exe"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-primary btn-chrome-install"
+                  >软件安装包</a
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 28 28" class="chrome-icon">
-                    <path fill="#fff" d="M14.034 27.834c7.613 0 13.785-6.17 13.785-13.78C27.82 6.442 21.647.272 14.034.272S.248 6.443.248 14.053c0 7.611 6.172 13.78 13.786 13.78"></path>
-                    <path fill="#000" fill-opacity="0.1" d="M22.806 16.559a8.77 8.77 0 0 0-8.772-8.77c-4.845 0-8.773 3.927-8.773 8.77h2.506a6.265 6.265 0 0 1 6.267-6.264 6.265 6.265 0 0 1 6.266 6.264"></path>
-                    <path fill="#000" fill-opacity="0.1" d="M14.66 20.568a4.761 4.761 0 1 0-4.762-4.761c0 2.63 2.132 4.76 4.762 4.76"></path>
-                    <path fill="url(#chrome_svg__a__r_q_)" d="M14.034 19.19a5.137 5.137 0 1 0-5.139-5.137c0 2.837 2.3 5.136 5.139 5.136"></path>
-                    <path fill="url(#chrome_svg__b__r_q_)" d="M26.566 7.79C23.116.85 14.692-1.98 7.75 1.47a14.03 14.03 0 0 0-5.371 4.69l5.64 9.772a6.264 6.264 0 0 1 5.89-8.143"></path>
-                    <path fill="url(#chrome_svg__c__r_q_)" d="M2.379 6.16c-4.317 6.438-2.596 15.153 3.843 19.468a14.04 14.04 0 0 0 6.684 2.331l5.89-10.022a6.267 6.267 0 0 1-10.778-2.005"></path>
-                    <path fill="url(#chrome_svg__d__r_q_)" d="M12.906 27.96c7.73.584 14.47-5.207 15.054-12.934a14 14 0 0 0-1.394-7.236H13.909a6.265 6.265 0 0 1 4.887 10.147"></path>
-                    <path fill="url(#chrome_svg__e__r_q_)" d="m2.379 6.16 5.64 9.772a6.26 6.26 0 0 1 .25-4.26l-5.64-5.887"></path>
-                    <path fill="url(#chrome_svg__f__r_q_)" d="m12.906 27.96 5.89-10.023a6.27 6.27 0 0 1-3.635 2.13l-2.506 7.892"></path>
-                    <path fill="url(#chrome_svg__g__r_q_)" d="M26.566 7.79H13.908a6.27 6.27 0 0 1 4.888 2.38l8.02-2.005"></path>
-                    <defs>
-                      <linearGradient id="chrome_svg__a__r_q_" x1="14.037" x2="14.037" y1="8.909" y2="19.19" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#81B4E0"></stop>
-                        <stop offset="1" stop-color="#0C5A94"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__b__r_q_" x1="14.472" x2="14.472" y1="0.022" y2="11.422" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F06B59"></stop>
-                        <stop offset="1" stop-color="#DF2227"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__c__r_q_" x1="3.415" x2="9.177" y1="24.026" y2="14.504" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#388B41"></stop>
-                        <stop offset="1" stop-color="#4CB749"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__d__r_q_" x1="22.727" x2="16.59" y1="25.039" y2="10.255" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#E4B022"></stop>
-                        <stop offset="0.3" stop-color="#FCD209"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__e__r_q_" x1="5.324" x2="5.324" y1="15.557" y2="5.535" gradientUnits="userSpaceOnUse">
-                        <stop stop-opacity="0.15"></stop>
-                        <stop offset="0.3" stop-opacity="0.06"></stop>
-                        <stop offset="1" stop-opacity="0.03"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__f__r_q_" x1="19.162" x2="12.272" y1="18.793" y2="25.811" gradientUnits="userSpaceOnUse">
-                        <stop stop-opacity="0.15"></stop>
-                        <stop offset="0.3" stop-opacity="0.06"></stop>
-                        <stop offset="1" stop-opacity="0.03"></stop>
-                      </linearGradient>
-                      <linearGradient id="chrome_svg__g__r_q_" x1="19.062" x2="20.064" y1="20.812" y2="10.915" gradientUnits="userSpaceOnUse">
-                        <stop stop-opacity="0.15"></stop>
-                        <stop offset="0.3" stop-opacity="0.06"></stop>
-                        <stop offset="1" stop-opacity="0.03"></stop>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <span>安装到 Chrome浏览器</span>
-                </a>
+                与
                 <a
-                  href="https://microsoftedge.microsoft.com/addons/detail/clmnnepcbdbjfladiblhegipmlgfnagg"
+                  href="https://github.com/zla5/WATransChat/releases/download/3.17/VBCABLE_A_B_Driver_Pack43.zip"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-primary btn-chrome-install"
-                >
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" class="chrome-icon"><g clip-path="url(#edge_svg__a)"><path fill="#0F5197" d="M21.65 17.854q-.477.255-.985.44a9.6 9.6 0 0 1-3.364.61c-4.433 0-8.295-3.046-8.295-6.964a2.94 2.94 0 0 1 1.537-2.559c-4.01.17-5.042 4.35-5.042 6.795 0 6.926 6.382 7.629 7.76 7.629.74 0 1.856-.216 2.54-.431l.123-.038a12 12 0 0 0 6.241-4.948.375.375 0 0 0-.307-.578.4.4 0 0 0-.199.044"></path><path fill="#0C88DA" d="M9.906 22.624a7.45 7.45 0 0 1-2.127-1.996A7.564 7.564 0 0 1 10.544 9.38c.446-.241.945-.37 1.452-.374a3.05 3.05 0 0 1 2.409 1.218c.379.507.588 1.12.6 1.752 0-.018 2.296-7.46-7.498-7.46-4.114 0-7.498 3.909-7.498 7.33a12.2 12.2 0 0 0 1.135 5.248A12.003 12.003 0 0 0 15.8 23.383a7.1 7.1 0 0 1-5.895-.759"></path><path fill="#2CC3D5" d="M14.274 13.955c-.075.094-.31.234-.31.534 0 .244.16.478.44.675 1.35.937 3.89.815 3.9.815a5.6 5.6 0 0 0 2.84-.777 5.75 5.75 0 0 0 2.848-4.958c.028-2.1-.75-3.496-1.059-4.115a10.3 10.3 0 0 0-1.962-2.668 11.6 11.6 0 0 0-3.344-2.275A13.65 13.65 0 0 0 11.997 0 11.996 11.996 0 0 0 0 11.828c.047-3.421 3.449-6.186 7.498-6.186.328 0 2.202.028 3.936.947 1.527 .806 2.333 1.77 2.886 2.736.581 1.003.684 2.259.684 2.765s-.253 1.246-.73 1.865"></path><path fill="#49D668" d="M15.224.354s8.734 9.027-1.138 13.905c0 0-.638 1.06 2.41 1.608 0 0 5.051 1.097 7.09-3.34.41-1.392.776-3.549-.31-5.949a10 10 0 0 0-1.804-2.664 12.8 12.8 0 0 0-2.65-2.22c-1.605-.82-3.598-1.34-3.598-1.34"></path></g><defs><clipPath id="edge_svg__a__R_16dked5fnivb_"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath></defs></svg>
-                  <span>安装到 Edge浏览器</span>
-                </a>				
-                <a
-                  href="https://ext.se.360.cn/#/extension-detail?id=hclljkpdoampipnnofcgkkhahehghcnl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary btn-chrome-install"
-                >
-                  <svg
-                    t="1777298547218"
-                    class="chrome-icon"
-                    viewBox="0 0 1024 1024"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    p-id="4787"
-                    width="20"
-                    height="20"
-                  >
-                    <path d="M736 753.92c0 1.28 1.28 3.84 1.28 5.12l-1.28-3.84v1.28c-44.8-84.48-98.56-170.24-111.36-190.72-19.2 38.4-58.88 61.44-101.12 61.44h-19.2c-12.8 15.36-76.8 90.88-142.08 158.72l-8.96 7.68c-37.12 43.52-80.64 80.64-130.56 110.08-49.92 28.16 239.36 202.24 439.04 66.56 70.4-43.52 102.4-129.28 76.8-207.36l-2.56-3.84v-5.12z" fill="#FFEA00" p-id="4788"></path>
-                    <path d="M999.68 518.4c-21.76-80.64-94.72-135.68-177.92-131.84-96 16.64-197.12 42.24-216.32 47.36 20.48 21.76 32 49.92 32 79.36 0 15.36-2.56 30.72-10.24 46.08 48.64 57.6 84.48 122.88 107.52 193.28l1.28 5.12 2.56 3.84c29.44 47.36 49.92 99.84 62.72 154.88 12.8 56.32 264.96-166.4 198.4-398.08z" fill="#FF0022" p-id="4789"></path>
-                    <path d="M734.72 752.64v-1.28c-23.04-70.4-60.16-135.68-107.52-192 0 2.56-1.28 5.12-2.56 7.68l1.28 1.28c12.8 19.2 65.28 104.96 110.08 186.88l1.28 2.56c-1.28-1.28-1.28-2.56-2.56-5.12z" fill="#E95130" p-id="4790"></path>
-                    <path d="M472.32 409.6c14.08-6.4 30.72-10.24 47.36-8.96 28.16 0 55.04 10.24 75.52 29.44l6.4 5.12c19.2-5.12 121.6-30.72 216.32-47.36 55.04-14.08 112.64-17.92 170.24-12.8 57.6 5.12-75.52-303.36-316.16-312.32-78.08-3.84-151.04 43.52-176.64 117.76 0 3.84 0 6.4-1.28 10.24-12.8 93.44-21.76 198.4-21.76 218.88z" fill="#D13BFC" p-id="4791"></path>
-                    <path d="M314.88 488.96c47.36 20.48 85.76 35.84 96 39.68-1.28-5.12-1.28-10.24-1.28-16.64 0-39.68 20.48-78.08 55.04-98.56l8.96-5.12c0-19.2 7.68-124.16 21.76-218.88C499.2 133.12 512 78.08 535.04 25.6c5.12-12.8-11.52-20.48-40.96-21.76h-15.36c-94.72 2.56-281.6 64-340.48 225.28-28.16 72.96-3.84 156.16 57.6 204.8 3.84 1.28 7.68 3.84 11.52 5.12 37.12 16.64 71.68 34.56 107.52 49.92z" fill="#23A0F7" p-id="4792"></path>
-                    <path d="M353.28 792.32c69.12-70.4 138.24-149.76 149.76-163.84-5.12 0-10.24-1.28-16.64-3.84-38.4-12.8-66.56-44.8-75.52-83.2l-1.28-11.52c-11.52-3.84-48.64-19.2-96-40.96-35.84-16.64-70.4-33.28-104.96-51.2-52.48-21.76-101.12-53.76-142.08-90.88-10.24-8.96-23.04 3.84-34.56 30.72l-5.12 14.08C0 483.84-2.56 679.68 131.84 787.2c64 52.48 154.88 55.04 221.44 5.12z" fill="#00E46C" p-id="4793"></path>
-                  </svg>
-                  <span>安装到360浏览器</span>
-                </a>
-                <div class="download-item">
-                  <div class="download-label">其他浏览器版本（CRX）</div>
-                  <a
-                    href="downloads/WATransChat.crx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    下载 CRX 安装包（WATransChat.crx）
-                  </a>
-                  <div class="download-desc" style="font-size: 12px; color: #9ca3af; margin-bottom: 4px;">
-                    下载后直接拖到浏览器安装。
-                  </div>
-                </div>
-                <div class="download-item">
-                  <div class="download-label">其他浏览器版本（ZIP）</div>
-                  <a
-                    href="downloads/WATransChat.zip"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    下载 ZIP 安装包（WATransChat.zip）
-                  </a>
-                  <div class="download-desc" style="font-size: 12px; color: #9ca3af; margin-bottom: 4px;">
-                    如果您无法打开chrome商店，下载这个压缩包解压，扩展-扩展程序-启用开发者模式-加载未打包的扩展程序-选择解压的文件夹里面为空都可以-确定。关闭浏览器所有窗口重新打开。。
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Windows -->
-            <div
-              class="card platform-card"
-              role="tabpanel"
-              aria-labelledby="platform-tab-windows"
-              id="platform-windows"
-              data-platform-panel="windows"
-              hidden
-            >
-              <div class="platform-badge">桌面端 · Windows</div>
-              <h3>WATransChat Windows 版</h3>
-              <p>
-                适用于 Windows 10 及以上系统的独立桌面客户端，无需安装浏览器扩展，开箱即用 WhatsApp 实时翻译。
-              </p>
-              <ul class="hint-list">
-                <li>支持管理多个 WhatsApp 账号</li>
-                <li>每个账号一个标签页，独立会话视图互不干扰</li>
-                <li>每个标签页启用指纹隔离，降低账号关联/串号风险</li>
-                <li>键盘 <strong>F2 / F3</strong> 左右切换不同标签页</li>
-              </ul>
-              <div class="platform-actions">
-                <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat-Setup-1.2.5.exe"
-                  download
-                  class="btn btn-primary"
-                >
-                  下载 Windows 安装包（WATransChat.exe）
-                </a>
-              </div>
-              <ul class="hint-list">
-                <li>
-                  如安装或运行后提示「无法启动此程序，因为计算机中丢失 vcruntime140.dll。尝试重新安装该程序以解决此问题。」，请安装官方 Visual C++ 运行库：
-                  <a
-                    href="https://aka.ms/vc14/vc_redist.x64.exe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    Microsoft Visual C++ 2015-2022 Redistributable (x64)
-                  </a>
-                  。
-                </li>
-              </ul>
-              <img class="platform-screenshot" src="images/windows.jpg" alt="WATransChat Windows 桌面客户端界面预览" />
-            </div>
-
-            <!-- Mac -->
-            <div
-              class="card platform-card"
-              role="tabpanel"
-              aria-labelledby="platform-tab-mac"
-              id="platform-mac"
-              data-platform-panel="mac"
-              hidden
-            >
-              <div class="platform-badge">桌面端 · Mac</div>
-              <h3>WATransChat Mac 版</h3>
-              <p>
-                适用于 macOS 的独立桌面客户端，原生体验，支持 WhatsApp 聊天实时翻译。
-              </p>
-              <ul class="hint-list">
-                <li>支持管理多个 WhatsApp 账号</li>
-                <li>每个账号一个标签页，独立会话视图互不干扰</li>
-                <li>每个标签页启用指纹隔离，降低账号关联/串号风险</li>
-                <li>键盘 <strong>F2 / F3</strong> 左右切换不同标签页</li>
-              </ul>
-              <div class="platform-actions">
-                <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat-macOS-1.1.9.dmg"
-                  download
-                  class="btn btn-primary"
-                >
-                  下载 Mac 安装包（WATransChat.dmg）
-                </a>
-              </div>
-              <ul class="hint-list">
-                <li>
-                  如安装后运行显示损坏，请在终端执行 xattr -cr /Applications/WATransChat.app
-                </li>
-                <li>
-                  如运行提示无法打开“WATransChat”，因为 Apple 无法检查其是否包含恶意软件。请在设置中选择仍要打开，
-                  <a
-                    href="#"
-                    class="download-link"
-                    data-full-image="images/openanyway.jpg"
-                  >
-                    查看方法
-                  </a>
-                </li>
-              </ul>
-              <img class="platform-screenshot" src="images/windows.jpg" alt="WATransChat Mac 桌面客户端界面预览" />
-            </div>
-
-            <!-- Android -->
-            <div
-              class="card platform-card"
-              role="tabpanel"
-              aria-labelledby="platform-tab-android"
-              id="platform-android"
-              data-platform-panel="android"
-              hidden
-            >
-              <div class="platform-badge platform-badge-green">移动端 · 安卓</div>
-              <h3>WATransChat 安卓版</h3>
-              <p>
-                适用于任何安卓手机，非常适合随时随地回复客户。
-              </p>
-              <div class="platform-actions">
-
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.watranschat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="google-play-btn"
-                >
-                  <img src="images/mt5-google_play.png" alt="Google Play" />
-                </a>
-				                <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat3.30.apk"
-                  download
-                  type="application/vnd.android.package-archive"
-                  class="btn btn-primary"
-                >
-                  下载 APK 安装包
-                </a>
-              </div>
-              <br>
-
-              <ul class="hint-list">
-                <li>功能介绍与使用教学                 <a
-                  href="https://www.bilibili.com/video/BV1oTPCz3EHG"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="download-link"
-                >
-                  查看视频
-                </a></li>                                 
-                <li>如安装后提示“无法打开网页”或白屏，请在您的 VPN 中将 WATransChat 添加为允许代理的应用，如果还是不行，请重启手机</li>
-                </li>
-
-                <li>
-                  每次打开都要重新加载数据的解决办法，请看：
-                  <a
-                    href="https://www.bilibili.com/video/BV1X5PCziE2T"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    保持后台运行的教学
-                  </a>
-                </li>
-              </ul>
-              <div class="platform-screenshots-row">
-                <img class="platform-screenshot" src="images/android1.jpg" alt="WATransChat 安卓版界面预览 1" />
-                <img class="platform-screenshot" src="images/android2.jpg" alt="WATransChat 安卓版界面预览 2" />
-              </div>
-            </div>
-
-            <!-- iOS -->
-            <div
-              class="card platform-card"
-              role="tabpanel"
-              aria-labelledby="platform-tab-ios"
-              id="platform-ios"
-              data-platform-panel="ios"
-              hidden
-            >
-              <div class="platform-badge platform-badge-dark">移动端 · 苹果</div>
-              <h3>WATransChat苹果IOS版本</h3>
-
-
-              <p>
-                请先在 iPhone、iPad 或 Mac 上安装 TestFlight，然后使用苹果自带的Safari打开链接
-                <a
-                  href="https://testflight.apple.com/join/BU6pydWY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="download-link"
-                >
-                  https://testflight.apple.com/join/BU6pydWY
-                </a>
-                进行安装。
-              </p>
-              <p>如果无法通过 TestFlight 安装，可选择以下方式：</p>
-              <ol class="step-list">
-                <li>
-                  自行在苹果官网将您的 Apple ID 地区切换至海外（推荐改到香港，支付工具选择支付宝），然后登录 App Store 搜索“WATransChat”下载安装。由于应用地区限制，大陆地区 Apple ID 无法搜索到该应用。
-                  <a
-                    href="https://b23.tv/mC4o4OY"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    观看修改 Apple ID 地区教学视频
-                  </a>
-                </li>
-                <li>
-                  使用第三方签名工具（如
-                  <a
-                    href="https://sign.nuosike.com/signall"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    全能签
-                  </a>
-                  ）进行安装。需要付费购买证书。
-                </li>
-                <li>购买一个现成的海外 Apple ID（请务必选择可靠渠道，并注意隐私安全）。</li>
-              </ol>
-              <div class="platform-actions">
-                <a
-                  href="https://testflight.apple.com/join/BU6pydWY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="google-play-btn"
-                  aria-label="通过 TestFlight 安装 WATransChat"
-                >
-                  <img src="images/app_store.png" alt="通过 TestFlight 安装" />
-                </a>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  style="height: 46px;"
-                  id="iosCopyIpaLinkBtn"
-                  data-copy="https://zla5.github.io/downloads/WATransChat.ipa"
-                >
+                  >虚拟音频驱动</a
+                >。
+              </li>
+              <li>
+                解压 <strong>VBCABLE_A_B_Driver_Pack43.zip</strong>，得到
+                <strong>VBCABLE_A_Driver_Pack43</strong> 与
+                <strong>VBCABLE_B_Driver_Pack43</strong> 文件夹（若仍为 zip，请再分别解压）。
+              </li>
+              <li>
+                进入 <strong>VBCABLE_A_Driver_Pack43</strong> 文件夹，右键
+                <strong>VBCABLE_Setup_x64.exe</strong>，选择<strong>以管理员身份运行</strong>完成安装。
+              </li>
+              <li>
+                进入 <strong>VBCABLE_B_Driver_Pack43</strong> 文件夹，同样右键
+                <strong>VBCABLE_Setup_x64.exe</strong>，选择<strong>以管理员身份运行</strong>完成安装。
+              </li>
+              <li>
+                双击运行 <strong>CallTranslator-0.1.2.exe</strong>，按向导安装软件。如弹出安全提示窗口，点击<strong>更多信息</strong>，选择<strong>仍要运行</strong>。
+                <figure class="vt-install-shot">
                   <img
-                    src="images/xz-3.png"
-                    alt="全能签"
-                    style="width: 20px; height: 20px; margin-right: 8px;"
+                    src="images/20260608165530.jpg"
+                    alt="Windows 安全提示窗口选择仍要运行示意"
+                    loading="lazy"
                   />
-                  通过全能签安装
-                </button>
-              </div>
-              <div class="platform-screenshots-row">
-                <img class="platform-screenshot" src="images/ios1.jpg" alt="WATransChat iOS 界面预览 1" />
-                <img class="platform-screenshot" src="images/ios2.jpg" alt="WATransChat iOS 界面预览 2" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pricing -->
-      <section class="section" id="pricing">
-        <div class="container">
-          <h2 class="section-title">价格展示 · 两个版本对比</h2>
-          <p class="section-subtitle">
-            选择更适合你的版本：基础版够用省心，专业版能力更强、体验更接近人工翻译。
-          </p>
-
-          <div class="pricing-grid">
-            <div class="card price-card">
-              <div class="price-top">
-                <h3 class="price-plan-name">基础版</h3>
-                <div class="price-plan-price-row">
-                  <span class="price-plan-price">¥19.9</span>
-                  <span class="price-plan-unit">元 / 1月</span>
-                </div>
-              </div>
-
-              <ol class="price-list">
-                <li>支持电脑，苹果系统，安卓系统，鸿蒙系统</li>
-                <li>可同时在两个位置登陆使用(如手机或电脑)，无需分开付费</li>				  
-                <li>多种翻译接口，Google，谷歌网页，Bing，Yandex, 火山</li>
-                <li>支持任何语言互译，不限翻译字数</li>
-              </ol>
-
-              <a href="#" class="buy-btn" data-open-contact>立即购买</a>
-            </div>
-
-            <div class="card price-card price-card-featured">
-              <div class="price-featured-badge">推荐</div>
-              <div class="price-top">
-                <h3 class="price-plan-name">专业版</h3>
-                <div class="price-plan-price-row">
-                  <span class="price-plan-price">¥39.9</span>
-                  <span class="price-plan-unit">元 / 1月</span>
-                </div>
-              </div>
-
-              <ol class="price-list">
-                <li>包含基础版所有功能</li>
-				<li>5种AI语义级高精度翻译接口,DeepSeek,阿里Qwen2.5-7B-Instruct,腾讯Hunyuan-MT-7B,智谱GLM-4-Flash</li>
-                <li>支持接入DeepL，自然流畅语境理解强多语言精准表达</li>
-                <li>支持语音翻译文字</li>
-              </ol>
-
-              <a href="#" class="buy-btn" data-open-contact>立即购买</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Scenarios -->
-      <section class="section" id="scenarios">
-        <div class="container">
-          <h2 class="section-title">谁最适合使用 WATransChat？</h2>
-          <p class="section-subtitle">
-            只要您需要和不同国家、不同语言的用户在 WhatsApp 上沟通，WATransChat 都能帮您节省大量时间与精力。
-          </p>
-          <div class="grid scenarios-grid">
-            <div class="card scenario-card">
-              <h3>跨境电商卖家</h3>
-              <ul>
-                <li>高频回复来自全球买家的咨询与售后</li>
-                <li>通过快捷短语快速发送报价与说明</li>
-                <li>自动识别客户时区，合理安排跟进时间</li>
-              </ul>
-            </div>
-            <div class="card scenario-card">
-              <h3>国际客服团队</h3>
-              <ul>
-                <li>多语言消息自动翻译，减少人工使用翻译器</li>
-                <li>统一维护常用服务话术，保证服务质量</li>
-                <li>一键切换多账号、多语言客户会话</li>
-              </ul>
-            </div>
-            <div class="card scenario-card">
-              <h3>外贸销售/BD</h3>
-              <ul>
-                <li>在全球时区中高效跟进潜在客户</li>
-                <li>结合国家信息与货币，进行个性化报价</li>
-                <li>使用电话直聊功能，快速触达新线索</li>
-              </ul>
-            </div>
-            <div class="card scenario-card">
-              <h3>留学生 / 海外生活用户</h3>
-              <ul>
-                <li>与不同语言的同学、朋友自然聊天</li>
-                <li>无需担心语法与拼写，先用母语再交给翻译</li>
-                <li>在陌生语言环境中保持顺畅沟通</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section" id="faq">
-        <div class="container">
-          <h2 class="section-title">常见问题解答</h2>
-          <p class="section-subtitle">
-            如果您在安装或使用中遇到问题，可以先查看这里是否已有答案。
-          </p>
-          <div class="faq-list">
-            <details class="faq-item" open>
-              <summary>安卓安装后显示无法打开网页怎么办？</summary>
-              <p>
-                很可能是您的 VPN 或网络工具阻止了 WATransChat 的网络访问。
-                请在 VPN 或网络加速软件中，将 WATransChat
-                添加为“允许代理”或“信任应用”，然后重新打开再试。
-              </p>
-            </details>
-
-            <details class="faq-item">
-              <summary>扫码登录总是没有反应怎么办？</summary>
-              <p>
-                推荐使用电话号码方式登录，更简单快捷。如果必须使用扫码登录，请参考详细视频教学：
+                </figure>
+              </li>
+              <li>
+                启动<strong>外贸通话翻译官</strong>，使用你的 <strong>WATransChat 账号与密码</strong>登录。
+              </li>
+              <li>
+                获取接口 Key：打开
                 <a
-                  href="https://www.bilibili.com/video/BV1qoU8BiEiY"
+                  href="https://console.volcengine.com/ark/region:ark+cn-beijing/tts/simulS2S"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="download-link"
-                >
-                  安卓扫码问题教学视频
-                </a>
-                。
-                一般建议：确保网络稳定、相机对准二维码、避免反光，并在二维码刷新后尽快扫码。
+                  >火山引擎豆包同声传译控制台</a
+                >，使用手机号登录；如需实名验证，请先完成实名。页面会显示<strong>豆包同声传译大模型</strong>，点击<strong>试用</strong>，复制下方的
+                <strong>APP ID</strong> 与 <strong>Access Token</strong>，填入软件内的<strong>接口设置</strong>。
+                <figure class="vt-install-shot">
+                  <img
+                    src="images/20260608161347.jpg"
+                    alt="火山引擎豆包同声传译控制台获取 APP ID 与 Access Token 示意"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="vt-install-shot">
+                  <video
+                    class="vt-install-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                    src="https://github.com/zla5/WATransChat/releases/download/3.17/translation-api-key.mp4"
+                  >
+                    您的浏览器不支持视频播放。
+                  </video>
+                </figure>
+              </li>
+              <li>
+                在软件中进入<strong>音频设备</strong>设置，按界面文字提示选择正确的输入、输出设备。
+                <figure class="vt-install-shot">
+                  <img
+                    src="images/8461.jpg"
+                    alt="外贸通话翻译官音频设备设置示意"
+                    loading="lazy"
+                  />
+                </figure>
+              </li>
+              <li>
+                在<strong>微软商店</strong>搜索并安装 <strong>WhatsApp 电脑版</strong>，扫码关联手机 WhatsApp 完成登录。找一位联系人发起语音通话，在通话界面点击<strong>麦克风</strong>，再按外贸通话翻译官内的提示完成麦克风与路由配置。
+              </li>
+              <li>
+                全部设置完成后，在软件中点击<strong>开始翻译通话</strong>，即可开始使用双向实时翻译。
+              </li>
+            </ol>
+            <p class="vt-legal">
+              驱动安装后建议重启电脑。电脑端适用于 Zoom、Teams、微信、QQ 等更多通话软件；若仅需在手机上与客户 WhatsApp 通话翻译，推荐使用上方
+              <a href="#mobile">WATransChat 手机端</a>。安装或接口填写遇到问题，可
+              <a href="#" data-open-contact>联系微信客服</a>获取协助。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vt-section vt-section--alt" id="pricing">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>会员价格</h2>
+            <p>与 WATransChat 共用账号，开通后手机端与电脑端均可使用，语音翻译为独立订阅。</p>
+          </div>
+          <div class="vt-pricing">
+            <div class="vt-price-card">
+              <div class="vt-price-name">月付</div>
+              <div class="vt-price-amount">¥59</div>
+              <div class="vt-price-unit">元 / 1 个月</div>
+              <ul class="vt-price-list">
+                <li>完整双向实时翻译功能</li>
+                <li>适合短期试用与临时项目</li>
+                <li>到期可续费延长</li>
+              </ul>
+              <button type="button" class="vt-btn vt-btn-outline-dark" data-open-contact>
+                联系购买
+              </button>
+            </div>
+            <div class="vt-price-card vt-price-card--featured">
+              <span class="vt-price-badge">更划算</span>
+              <div class="vt-price-name">年付</div>
+              <div class="vt-price-amount">¥599</div>
+              <div class="vt-price-unit">元 / 1 年 · 约 ¥50/月</div>
+              <ul class="vt-price-list">
+                <li>包含月付全部能力</li>
+                <li>适合长期外呼与客服团队</li>
+                <li>微信联系客服开通与续费</li>
+              </ul>
+              <button type="button" class="vt-btn vt-btn-primary" data-open-contact>
+                联系购买
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vt-section" id="scenarios">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>谁在用？</h2>
+          </div>
+          <div class="vt-scenarios">
+            <div class="vt-scenario">
+              <div class="vt-scenario-emoji">📞</div>
+              <h3>外贸与客户通话</h3>
+              <p>在手机上通过 WATransChat 与客户 WhatsApp 语音/视频通话实时翻译；电脑端亦可用于 Telegram 等更多渠道。</p>
+            </div>
+            <div class="vt-scenario">
+              <div class="vt-scenario-emoji">🎧</div>
+              <h3>线上会议与语音</h3>
+              <p>适用于 Zoom、Microsoft Teams、Google Meet、Discord 等远程会议与协作通话中的即时翻译。</p>
+            </div>
+            <div class="vt-scenario">
+              <div class="vt-scenario-emoji">🏢</div>
+              <h3>跨境客服团队</h3>
+              <p>统一账号与续费管理，降低对双语人员的依赖。</p>
+            </div>
+            <div class="vt-scenario">
+              <div class="vt-scenario-emoji">💬</div>
+              <h3>集成 WATransChat</h3>
+              <p>文字聊天与手机语音/视频通话翻译均在 WATransChat 中完成；电脑端独立软件覆盖更多通话应用。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vt-section vt-section--dark" id="faq">
+        <div class="vt-container">
+          <div class="vt-section-head">
+            <h2>常见问题</h2>
+          </div>
+          <div class="vt-faq">
+            <details class="vt-faq-item" open>
+              <summary>手机端怎么用？需要单独装软件吗？</summary>
+              <p>
+                不需要。通话翻译已集成到 <strong>WATransChat</strong> 手机 App 中，开通通话翻译会员后，在手机上即可与客户进行 WhatsApp 语音/视频通话实时翻译。
+                详见<a href="#mobile">手机端使用说明</a>。
               </p>
             </details>
-
-            <details class="faq-item">
-              <summary>苹果手机在消息框输入中文没有显示怎么办？</summary>
+            <details class="vt-faq-item">
+              <summary>电脑端一定要装驱动吗？</summary>
               <p>
-                这通常与输入法兼容性有关。请尝试切换到其他输入法，例如
-                <strong>百度输入法</strong> 等，再重新尝试输入。
+                使用 Windows 独立版在 Zoom、Microsoft Teams、Google Meet、Discord、Telegram、微信、QQ 等<strong>电脑语音通话</strong>场景下，需要先安装页面提供的音频驱动并重启电脑。
+                详细步骤见<a href="#install">电脑端安装与配置</a>，也可咨询客服。
               </p>
             </details>
-
-            <details class="faq-item">
-              <summary>苹果扫码登录时提示“请同时保持在两台设备上运行 WhatsApp”怎么办？</summary>
-              <p>
-                这是 WhatsApp 多设备登录机制导致的提示。请先在另一台设备（如手机上的原装
-                WhatsApp）保持登录状态，然后再在 WATransChat 中扫码，一般即可正常登录。
-              </p>
+            <details class="vt-faq-item">
+              <summary>下载不了安装包怎么办？</summary>
+              <p>请联系微信客服获取最新安装包与驱动下载链接。</p>
             </details>
-
-            <details class="faq-item">
-              <summary>不知道在哪里设置翻译语言，怎么办？</summary>
-              <p>
-                建议先观看教学视频了解设置入口：
-                <a
-                  href="https://www.bilibili.com/video/BV1okUYBkEh2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="download-link"
-                >
-                  语言设置教学视频
-                </a>
-                。安装成功后，通常可以在扩展图标或 WhatsApp
-                页面内浮动面板中找到语言设置界面。
-              </p>
+            <details class="vt-faq-item">
+              <summary>第一次使用不会配置？</summary>
+              <p>软件内有操作引导；也可添加客服微信，获取图文教程或预约协助配置。</p>
+            </details>
+            <details class="vt-faq-item">
+              <summary>提示账号已在其他电脑登录？</summary>
+              <p>请在已登录的电脑上先退出账号，或联系客服处理后再登录。</p>
+            </details>
+            <details class="vt-faq-item">
+              <summary>安装后没有声音或无法翻译？</summary>
+              <p>请确认已重启电脑、会员在有效期内，并检查软件内音频设备是否选择正确。仍无法解决请联系客服。</p>
             </details>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="logo footer-logo">
-            <span class="logo-icon">
-              <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
-            </span>
-            <span class="logo-text">WATransChat</span>
+    <footer class="vt-footer">
+      <div class="vt-container">
+        <div class="vt-footer-grid">
+          <div>
+            <div class="vt-brand">
+              <img src="images/voice.png" alt="" class="vt-brand-mark" width="36" height="36" />
+              <span>外贸通话翻译官</span>
+            </div>
+            <p class="vt-footer-desc">
+              已集成 WATransChat 手机端，电脑端独立软件覆盖更多通话应用，让跨境通话像同一种语言一样自然。
+            </p>
           </div>
-          <p class="footer-desc">
-            专为 WhatsApp 跨语言沟通打造的智能翻译助手，帮助跨境电商、国际客服、外贸销售和海外用户高效沟通全球。
-          </p>
+          <div class="vt-footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="#features">功能</a>
+              <a href="#interface">界面</a>
+              <a href="#mobile">手机端</a>
+              <a href="#install">电脑端</a>
+              <a href="#scenarios">场景</a>
+            </div>
+            <div>
+              <h4>下载</h4>
+              <a
+                href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.2.exe"
+                target="_blank"
+                rel="noopener noreferrer"
+                >软件安装包</a
+              >
+              <a
+                href="https://github.com/zla5/WATransChat/releases/download/3.17/VBCABLE_A_B_Driver_Pack43.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+                >虚拟音频驱动</a
+              >
+              <a href="#mobile">手机端说明</a>
+              <a href="#install">电脑端安装</a>
+            </div>
+            <div>
+              <h4>相关</h4>
+              <a href="index.html">WATransChat</a>
+              <a href="ai-customer-service.html">AI 智能客服</a>
+              <a href="#faq">帮助</a>
+              <a href="#" data-open-contact>客服</a>
+            </div>
+          </div>
         </div>
-        <div class="footer-links">
-          <div>
-            <h4>产品</h4>
-            <a href="#features">功能介绍</a>
-            <a href="#gallery">界面预览</a>
-            <a href="#scenarios">适用人群</a>
+        <div class="vt-footer-bottom">
+          <div class="vt-footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="vt-footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
           </div>
-          <div>
-            <h4>下载</h4>
-            <a href="#platforms">浏览器扩展</a>
-            <a href="#platforms">安卓版本</a>
-            <a href="#platforms">苹果版本</a>
-            <a href="voice-translator.html">外贸通话翻译官</a>
-            <a href="ai-customer-service.html">WhatsApp AI 智能客服</a>
-          </div>
-          <div>
-            <h4>帮助</h4>
-            <a href="#platforms">安装与教学</a>
-            <a href="#faq">常见问题</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
-          <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
         </div>
       </div>
     </footer>
 
-    <!-- 固定在 body 末尾，避免部分手机浏览器里 main 内 fixed 层挡住下方可点击区域 -->
-    <div class="lightbox-backdrop" id="lightbox" aria-hidden="true">
-      <div class="lightbox-inner" role="dialog" aria-modal="true">
-        <button class="lightbox-close" type="button" aria-label="关闭预览">✕</button>
-        <div class="lightbox-body">
-          <img src="" alt="WATransChat 界面大图预览" id="lightboxImage" />
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-backdrop" id="contactModal" aria-hidden="true">
-      <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-        <button class="modal-close" type="button" aria-label="关闭联系客服弹窗">✕</button>
-        <div class="modal-body">
-          <h3 id="contactModalTitle">添加微信联系客服</h3>
-          <p class="modal-subtitle">请使用微信扫描下方二维码添加客服：</p>
-          <div class="modal-image-wrap">
-            <img src="images/wechat.jpg" alt="客服微信二维码" />
-          </div>
-        </div>
+    <div class="vt-modal-backdrop" id="contactModal" aria-hidden="true">
+      <div class="vt-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <button type="button" class="vt-modal-close" aria-label="关闭">✕</button>
+        <h3 id="contactModalTitle">微信联系客服</h3>
+        <p class="vt-modal-sub">扫码购买、续费或获取安装帮助</p>
+        <img src="images/wechat.jpg" alt="客服微信二维码" />
       </div>
     </div>
 
@@ -915,16 +512,6 @@
       window.CHAT_WIDGET_WS = 'wss://chat.babyamy.store/ws';
     </script>
     <script src="assets/js/widget.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/voice-translator.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
