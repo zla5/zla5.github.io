@@ -76,6 +76,19 @@
     }
   }
 
+  function getEntrySource() {
+    try {
+      const customer = getWidgetCustomer();
+      if (customer && customer.entry_source) {
+        return String(customer.entry_source).trim();
+      }
+      if (window.CHAT_WIDGET_ENTRY_SOURCE) {
+        return String(window.CHAT_WIDGET_ENTRY_SOURCE).trim();
+      }
+    } catch (e) {}
+    return 'web-widget';
+  }
+
   // AIGC START
   function applyVisitorReadReceipts(ids, convId) {
     const msgsEl = document.getElementById('chat-msgs');
@@ -200,7 +213,8 @@
         geo: null,
         country: null,
         device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
-        browser: navigator.userAgent.slice(0, 80)
+        browser: navigator.userAgent.slice(0, 80),
+        entry_source: getEntrySource()
       })
     });
     const data = await r.json();
