@@ -243,6 +243,115 @@ img {
   border-radius: 0;
 }
 
+.vt-interface-grid {
+  display: grid;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .vt-interface-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+}
+
+.vt-interface-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--vt-border);
+  border-radius: var(--vt-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--vt-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.vt-interface-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vt-teal);
+  background: var(--vt-teal-light);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--vt-border);
+}
+
+.vt-interface-media {
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #f5f4f1;
+}
+
+.vt-interface-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.vt-interface-card figcaption {
+  padding: 16px 20px 20px;
+  font-size: 14px;
+  color: var(--vt-ink-muted);
+  line-height: 1.6;
+}
+
+.vt-platform-path {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--vt-border);
+  border-radius: var(--vt-radius);
+  padding: 28px 32px;
+}
+
+.vt-platform-path--mobile {
+  border-color: rgba(15, 118, 110, 0.25);
+  box-shadow: 0 8px 32px rgba(15, 118, 110, 0.08);
+}
+
+.vt-platform-path h3 {
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.vt-platform-path ol {
+  padding-left: 20px;
+  color: var(--vt-ink-muted);
+  font-size: 15px;
+}
+
+.vt-platform-path li + li {
+  margin-top: 10px;
+}
+
+.vt-platform-path ol a {
+  color: var(--vt-teal);
+  text-decoration: underline;
+}
+
+.vt-platform-path ol strong {
+  color: var(--vt-ink);
+  font-weight: 600;
+}
+
+.vt-platform-path .vt-legal {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--vt-border);
+  font-size: 12px;
+  color: var(--vt-ink-soft);
+  line-height: 1.6;
+}
+
+.vt-platform-path .vt-legal a {
+  color: var(--vt-teal);
+  text-decoration: underline;
+}
+
 .vt-badge {
   display: inline-flex;
   align-items: center;
