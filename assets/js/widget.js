@@ -73,6 +73,8 @@
     { labelKey: 'quickReplyLine', payload: '__product:C' },
     { labelKey: 'quickReplyCustom', payload: '__product:D' },
   ];
+
+  function getSupportTypingText() {
     const supportName = String(SUPPORT_NAME || '').trim() || '婉儿';
     return supportName + '正在输入中...';
   }
