@@ -1092,11 +1092,15 @@ code {
 }
 
 /* ===== Gallery ===== */
-.gallery-grid {
+.gallery-mobile-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.85fr) minmax(0, 0.85fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   align-items: flex-start;
+}
+
+.gallery-desktop-row {
+  margin-top: 28px;
 }
 
 .gallery-item {
@@ -1131,7 +1135,7 @@ code {
 }
 
 .phone-frame {
-  max-width: 260px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 32px;
@@ -1535,7 +1539,7 @@ code {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .gallery-grid {
+  .gallery-mobile-row {
     grid-template-columns: minmax(0, 1fr);
   }
 
