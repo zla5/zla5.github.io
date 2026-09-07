@@ -270,8 +270,8 @@ img {
 .vt-interface-label {
   font-size: 13px;
   font-weight: 600;
-  color: var(--vt-teal);
-  background: var(--vt-teal-light);
+  color: var(--vt-coral);
+  background: var(--vt-coral-light);
   padding: 12px 20px;
   border-bottom: 1px solid var(--vt-border);
 }
