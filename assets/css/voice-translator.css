@@ -244,20 +244,23 @@ img {
 }
 
 .vt-interface-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
   gap: 28px;
 }
 
 @media (min-width: 768px) {
   .vt-interface-grid {
-    grid-template-columns: 1fr 1fr;
     gap: 32px;
-    align-items: stretch;
   }
 }
 
 .vt-interface-card {
   margin: 0;
+  width: fit-content;
+  max-width: 100%;
   background: #fff;
   border: 1px solid var(--vt-border);
   border-radius: var(--vt-radius-lg);
@@ -274,10 +277,12 @@ img {
   background: var(--vt-coral-light);
   padding: 12px 20px;
   border-bottom: 1px solid var(--vt-border);
+  width: 0;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .vt-interface-media {
-  height: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,8 +291,10 @@ img {
 }
 
 .vt-interface-card img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 800px;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -297,6 +304,23 @@ img {
   font-size: 14px;
   color: var(--vt-ink-muted);
   line-height: 1.6;
+  width: 0;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.vt-mobile-split {
+  display: grid;
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .vt-mobile-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
 }
 
 .vt-platform-path {
@@ -308,9 +332,58 @@ img {
   padding: 28px 32px;
 }
 
+.vt-mobile-split .vt-platform-path {
+  max-width: none;
+  margin: 0;
+  height: 100%;
+}
+
 .vt-platform-path--mobile {
   border-color: rgba(15, 118, 110, 0.25);
   box-shadow: 0 8px 32px rgba(15, 118, 110, 0.08);
+}
+
+.vt-mobile-demo {
+  background: #fff;
+  border: 1px solid rgba(15, 118, 110, 0.25);
+  border-radius: var(--vt-radius);
+  padding: 20px 20px 16px;
+  box-shadow: 0 8px 32px rgba(15, 118, 110, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.vt-mobile-demo-label {
+  font-family: var(--vt-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--vt-ink);
+  align-self: flex-start;
+}
+
+.vt-mobile-demo-frame {
+  width: min(100%, calc(min(640px, 70vh) * 720 / 1600));
+  aspect-ratio: 720 / 1600;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vt-mobile-demo-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: transparent;
+}
+
+.vt-mobile-demo figcaption {
+  font-size: 13px;
+  color: var(--vt-ink-soft);
+  line-height: 1.5;
+  text-align: center;
 }
 
 .vt-platform-path h3 {
