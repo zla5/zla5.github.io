@@ -1098,6 +1098,34 @@ img {
   border-radius: 4px;
 }
 
+.vt-faq-video {
+  margin: 0 22px 18px;
+  max-width: 360px;
+}
+
+.vt-faq-video video,
+.vt-faq-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.vt-faq-video figcaption,
+.vt-faq-media figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #a8a29e;
+  line-height: 1.5;
+}
+
+.vt-faq-media {
+  margin: 0 22px 18px;
+  max-width: 100%;
+}
+
 /* Footer */
 .vt-footer {
   background: var(--vt-ink);
