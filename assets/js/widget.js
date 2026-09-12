@@ -74,6 +74,7 @@
   ];
 
   function getSupportTypingText() {
+    // 访客侧只显示「正在输入」，不暴露诊断/查库等内部状态文案
     const supportName = String(SUPPORT_NAME || '').trim() || '婉儿';
     return supportName + '正在输入中...';
   }
@@ -433,6 +434,19 @@
             // AIGC END
           }
           // AIGC START
+          if (msg.type === 'agent_status') {
+            if (msg.conversation_id && conversationId && Number(msg.conversation_id) !== Number(conversationId)) return;
+            const bar = document.getElementById('chat-widget-typing');
+            if (!bar) return;
+            bar.textContent = getSupportTypingText();
+            bar.style.display = 'block';
+            if (supportTypingHideTimer) clearTimeout(supportTypingHideTimer);
+            supportTypingHideTimer = setTimeout(function () {
+              const b = document.getElementById('chat-widget-typing');
+              if (b) b.style.display = 'none';
+              supportTypingHideTimer = null;
+            }, 15000);
+          }
           if (msg.type === 'peer_typing' && msg.peer !== 'visitor') {
             if (msg.conversation_id && conversationId && Number(msg.conversation_id) !== Number(conversationId)) return;
             const bar = document.getElementById('chat-widget-typing');
@@ -543,11 +557,18 @@
     const typingBarEl = document.createElement('div');
     typingBarEl.id = 'chat-widget-typing';
     typingBarEl.style.display = 'none';
-    typingBarEl.style.padding = '4px 12px';
+    typingBarEl.style.padding = '6px 12px 4px';
     typingBarEl.style.fontSize = '12px';
     typingBarEl.style.color = '#6b7280';
     typingBarEl.style.fontStyle = 'italic';
-    if (footerEl && footerEl.parentNode) footerEl.parentNode.insertBefore(typingBarEl, footerEl);
+    typingBarEl.style.flexShrink = '0';
+    // 放在「快捷咨询」上方（消息区与产品 chips 之间）
+    const chipsEl = document.getElementById('chat-product-chips');
+    if (chipsEl && chipsEl.parentNode) {
+      chipsEl.parentNode.insertBefore(typingBarEl, chipsEl);
+    } else if (footerEl && footerEl.parentNode) {
+      footerEl.parentNode.insertBefore(typingBarEl, footerEl);
+    }
     // AIGC END
 
     // 按当前语言填充界面文案
