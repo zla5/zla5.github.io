@@ -649,11 +649,48 @@ main {
   }
 }
 
+/* 功能卡相对定位，便于放版本角标 */
+.feature-card {
+  position: relative;
+}
+
+/* 功能卡版本角标（专业版 / 尊享版） */
+.feature-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+/* 专业版相关角标：绿色系，与推荐价卡一致 */
+.feature-badge-pro {
+  background: linear-gradient(120deg, #22c55e, #22d3ee);
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.22);
+}
+
+/* 尊享版专属角标：金色系，与尊享价卡一致 */
+.feature-badge-premium {
+  background: linear-gradient(120deg, #fbbf24, #f59e0b);
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(251, 191, 36, 0.25);
+}
+
 .feature-card h3,
 .platform-card h3,
 .scenario-card h3 {
   font-size: 18px;
   margin-bottom: 8px;
+}
+
+/* 有角标时标题右侧留空，避免与角标重叠 */
+.feature-card:has(.feature-badge) h3 {
+  padding-right: 96px;
 }
 
 .feature-card p,
@@ -741,11 +778,14 @@ main {
 }
 
 /* ===== Pricing ===== */
+/* 价格卡片网格：桌面三列（基础 / 专业 / 尊享） */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* 三列均分，适配三个版本并排对比 */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  max-width: 920px;
+  /* 三列时加宽容器，避免卡片过窄 */
+  max-width: 1100px;
   margin: 0 auto;
   align-items: stretch;
 }
@@ -757,9 +797,16 @@ main {
   flex-direction: column;
 }
 
+/* 专业版高亮边框与阴影 */
 .price-card-featured {
   border-color: rgba(34, 197, 94, 0.65) !important;
   box-shadow: 0 22px 70px rgba(34, 197, 94, 0.14), 0 18px 50px rgba(15, 23, 42, 0.9);
+}
+
+/* 尊享版高亮：暖金色边框，与专业版绿色区分 */
+.price-card-premium {
+  border-color: rgba(251, 191, 36, 0.7) !important;
+  box-shadow: 0 22px 70px rgba(251, 191, 36, 0.12), 0 18px 50px rgba(15, 23, 42, 0.9);
 }
 
 .price-top {
@@ -794,6 +841,7 @@ main {
   font-weight: 600;
 }
 
+/* 专业版「推荐」角标 */
 .price-featured-badge {
   position: absolute;
   top: 14px;
@@ -805,6 +853,20 @@ main {
   padding: 6px 12px;
   border-radius: 999px;
   box-shadow: 0 18px 45px rgba(34, 197, 94, 0.25);
+}
+
+/* 尊享版「尊享」角标：金色渐变 */
+.price-premium-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(120deg, #fbbf24, #f59e0b);
+  color: #020617;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 18px 45px rgba(251, 191, 36, 0.28);
 }
 
 .price-list {
@@ -847,6 +909,15 @@ main {
   transform: scale(0.99);
 }
 
+/* 平板：三列过挤时改为单列纵向排列 */
+@media (max-width: 960px) {
+  .pricing-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    max-width: 480px;
+  }
+}
+
 @media (max-width: 720px) {
   .pricing-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -865,7 +936,9 @@ main {
     font-size: 26px;
   }
 
-  .price-featured-badge {
+  /* 专业版 / 尊享版角标在小屏略内收 */
+  .price-featured-badge,
+  .price-premium-badge {
     top: 12px;
     right: 12px;
   }
