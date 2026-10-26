@@ -249,7 +249,6 @@
                 class="vt-btn vt-btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-dl="desktop"
               >
                 下载软件
               </a>
@@ -278,7 +277,6 @@
                   href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.4.exe"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-dl="desktop"
                   >软件安装包</a
                 >
                 与
@@ -384,6 +382,14 @@
               </button>
             </div>
           </div>
+          <!-- 说明：通话套餐与文字聊天套餐（含尊享版）相互独立 -->
+          <p class="vt-cross-note">
+            本套餐仅覆盖<strong>语音/视频通话实时翻译</strong>。
+            文字聊天翻译、待办提醒、AI 员工接待等，请查看
+            <a href="index.html#pricing">WATransChat 基础 / 专业 / 尊享版</a>
+            ；需要广告引流深度定制可前往
+            <a href="ai-customer-service.html">AI 智能客服</a>。
+          </p>
         </div>
       </section>
 
@@ -459,6 +465,16 @@
               <summary>第一次使用不会配置？</summary>
               <p>软件内有操作引导；也可添加客服微信，获取图文教程或预约协助配置。</p>
             </details>
+            <!-- FAQ：与主站套餐关系 -->
+            <details class="vt-faq-item">
+              <summary>开通通话翻译，还需要买 WATransChat 尊享版吗？</summary>
+              <p>
+                账号共用，但能力不同：通话翻译套餐解决<strong>语音/视频通话</strong>实时互译；
+                <a href="index.html#pricing">WATransChat 套餐</a>
+                （基础 / 专业 / 尊享）解决<strong>文字聊天翻译</strong>等能力，其中尊享版另含 AI 员工自动接待与上下文精确翻译。
+                只需打电话互译选通话套餐即可；需要文字聊天或 AI 接待再选对应版本。
+              </p>
+            </details>
             <details class="vt-faq-item">
               <summary>提示账号已在其他电脑登录？</summary>
               <p>请在已登录的电脑上先退出账号，或联系客服处理后再登录。</p>
@@ -480,7 +496,7 @@
                   controls
                   preload="metadata"
                   playsinline
-                  src="https://github.com/zla5/WATransChat/releases/download/3.17/hiddify.mp4"
+                  src="https://download.watranschat.com/hiddify.mp4"
                 >
                   您的浏览器不支持视频播放。
                 </video>
@@ -523,10 +539,9 @@
             <div>
               <h4>下载</h4>
               <a
-                href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.4.exe"
+                href="https://download.watranschat.com/CallTranslator-0.1.5.exe"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-dl="desktop"
                 >软件安装包</a
               >
               <a
@@ -541,6 +556,7 @@
             <div>
               <h4>相关</h4>
               <a href="index.html">WATransChat</a>
+              <a href="index.html#pricing">文字聊天套餐</a>
               <a href="ai-customer-service.html">AI 智能客服</a>
               <a href="#faq">帮助</a>
               <a href="#" data-open-contact>客服</a>
@@ -568,10 +584,8 @@
     <script>
       window.CHAT_WIDGET_API = 'https://chat.babyamy.store/api';
       window.CHAT_WIDGET_WS = 'wss://chat.babyamy.store/ws';
-      window.DOWNLOADS_API = 'https://serial.babyamy.store/api/extension/latest';
     </script>
     <script src="assets/js/widget.js"></script>
-    <script src="assets/js/downloads.js"></script>
     <script src="assets/js/voice-translator.js"></script>
   </body>
 </html>
