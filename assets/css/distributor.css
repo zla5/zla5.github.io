@@ -448,3 +448,29 @@
     padding: 24px 18px;
   }
 }
+
+/* ===== Wide screen ===== */
+@media (min-width: 1440px) {
+  .dp-hero-inner {
+    gap: 64px;
+  }
+
+  .dp-lead {
+    max-width: 640px;
+  }
+
+  .dp-hero-copy h1 {
+    font-size: clamp(36px, 3.2vw, 52px);
+  }
+}
+
+@media (min-width: 1680px) {
+  .dp-hero-inner {
+    gap: 80px;
+  }
+
+  .dp-lead {
+    max-width: 720px;
+  }
+}
+

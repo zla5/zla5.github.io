@@ -33,11 +33,20 @@
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <nav class="nav" id="site-nav" aria-label="主导航">
-          <a href="index.html">首页</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="index.html" role="menuitem">WATransChat 消息翻译</a>
+              <a href="voice-translator.html" role="menuitem">外贸通话翻译官</a>
+              <a href="ai-customer-service.html" role="menuitem">AI 客服</a>
+            </div>
+          </div>
           <a href="index.html#pricing">价格</a>
-          <a href="#how-it-works">合作流程</a>
-          <a href="#pricing-power">自主定价</a>
-          <a href="#recharge">实时充值</a>
+          <a href="index.html#platforms">下载</a>
+          <a href="help/link-whatsapp.html">帮助中心</a>
           <a href="#" id="contactBtn">联系客服</a>
         </nav>
       </div>
@@ -49,8 +58,10 @@
           <div class="dp-hero-copy">
             <p class="dp-eyebrow">代理商计划</p>
             <h1>成为代理商，<br /><span class="accent">开启您的专属业务</span></h1>
+            <!-- 代理可售卖基础 / 专业 / 尊享三档 -->
             <p class="dp-lead">
               申请成功后即可获得专属注册链接与独立后台。您自主定价、自行收款，用户一旦注册将永久归属您的名下。
+              可推广 WATransChat 基础版、专业版与尊享版（含 AI 员工接待等能力），差价全部归您。
             </p>
             <div class="hero-ctas">
               <a
@@ -133,7 +144,13 @@
       <section class="section dp-section section-alt" id="pricing-power">
         <div class="container">
           <h2 class="section-title">自主定价，赚取丰厚差价</h2>
-          <p class="section-subtitle">您可以在代理商后台自主设置销售价格与收款方式。</p>
+          <!-- 三档套餐均可由代理上浮售卖 -->
+          <p class="section-subtitle">
+            您可以在代理商后台自主设置销售价格与收款方式。官方提供基础版、专业版、尊享版三档产品线，您可按市场策略分别上浮定价。
+            也可先查看
+            <a href="index.html#pricing" class="download-link">官网价格对比</a>
+            。
+          </p>
 
           <div class="dp-split">
             <article class="dp-card">
@@ -227,32 +244,51 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="logo footer-logo">
-            <span class="logo-icon">
-              <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
-            </span>
-            <span class="logo-text">WATransChat</span>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="logo footer-logo">
+              <span class="logo-icon">
+                <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+              </span>
+              <span class="logo-text">WATransChat</span>
+            </div>
+            <p class="footer-desc">
+              成为代理商后，您可获取专属注册链接、自主定价，并在后台为用户实时充值。
+            </p>
           </div>
-          <p class="footer-desc">
-            成为代理商后，您可获取专属注册链接、自主定价，并在后台为用户实时充值。
-          </p>
-        </div>
-        <div class="footer-links">
-          <div>
-            <h4>导航</h4>
-            <a href="index.html">返回首页</a>
-            <a href="#how-it-works">合作流程</a>
-            <a href="#pricing-power">自主定价</a>
-            <a href="#recharge">实时充值</a>
+          <div class="footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="index.html">WATransChat 消息翻译</a>
+              <a href="voice-translator.html">通话翻译官</a>
+              <a href="ai-customer-service.html">AI 客服</a>
+              <a href="index.html#pricing">价格套餐</a>
+            </div>
+            <div>
+              <h4>代理</h4>
+              <a href="#how-it-works">合作流程</a>
+              <a href="#pricing-power">自主定价</a>
+              <a href="#recharge">实时充值</a>
+            </div>
+            <div>
+              <h4>资源</h4>
+              <a href="index.html#platforms">下载</a>
+              <a
+                href="https://www.bilibili.com/video/BV1oTPCz3EHG"
+                target="_blank"
+                rel="noopener noreferrer"
+                >教学视频</a
+              >
+              <a href="help/link-whatsapp.html">帮助中心</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
-          <span class="footer-small">本网站仅作为产品介绍页面，与 WhatsApp 官方无关。</span>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="footer-small">本网站仅作为产品介绍页面，与 WhatsApp 官方无关。</span>
+          </div>
         </div>
       </div>
     </footer>

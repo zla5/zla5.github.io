@@ -29,12 +29,20 @@
           <span class="vt-nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <nav class="vt-nav" id="vt-site-nav" aria-label="主导航">
-          <a href="#features">特点</a>
-          <a href="#scenarios">场景</a>
-          <a href="#deploy">部署</a>
-          <a href="#faq">帮助</a>
-          <a href="index.html" class="vt-nav-ghost">WATransChat</a>
-          <a href="voice-translator.html" class="vt-nav-ghost">通话翻译官</a>
+          <div class="vt-nav-item has-dropdown">
+            <button type="button" class="vt-nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="vt-nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="vt-nav-dropdown" role="menu">
+              <a href="index.html" role="menuitem">WATransChat 消息翻译</a>
+              <a href="voice-translator.html" role="menuitem">外贸通话翻译官</a>
+              <a href="#top" role="menuitem">AI 客服</a>
+            </div>
+          </div>
+          <a href="index.html#pricing">价格</a>
+          <a href="index.html#platforms">下载</a>
+          <a href="help/link-whatsapp.html">帮助中心</a>
           <button type="button" class="vt-btn-nav" data-open-contact>联系客服</button>
         </nav>
       </div>
@@ -63,6 +71,11 @@
               </button>
               <a href="#features" class="vt-btn vt-btn-secondary">了解核心特点</a>
             </div>
+            <!-- 与主站尊享版能力互通说明 -->
+            <p class="ai-watrans-note">
+              已在使用 WATransChat？尊享版同样包含 AI 员工自动接待、模板话术与定时启停，可
+              <a href="index.html#pricing">直接查看套餐</a>。
+            </p>
             <div class="vt-hero-tags">
               <span class="vt-tag">个人 / 商业 WhatsApp</span>
               <span class="vt-tag">多语言智能接待</span>
@@ -210,6 +223,8 @@
             <p>添加微信客服，说明您的行业、日咨询量与 WhatsApp 使用方式，我们将提供匹配的部署建议。</p>
             <div class="vt-hero-actions">
               <button type="button" class="vt-btn vt-btn-primary" data-open-contact>微信咨询客服</button>
+              <!-- 轻量需求可直接选主站尊享版 -->
+              <a href="index.html#pricing" class="vt-btn vt-btn-secondary">查看 WATransChat 尊享版</a>
             </div>
           </div>
         </div>
@@ -246,6 +261,16 @@
               <summary>如何联系开通？</summary>
               <p>请点击页面「联系客服」或「微信咨询客服」，扫码添加微信获取方案与报价。</p>
             </details>
+            <!-- FAQ：与主站尊享版的关系 -->
+            <details class="vt-faq-item">
+              <summary>和 WATransChat 尊享版里的 AI 员工有什么区别？</summary>
+              <p>
+                WATransChat
+                <a href="index.html#pricing">尊享版</a>
+                内置 AI 员工能力（自动聊单、报价、发图/视频、模板话术、定时启停），适合已在用翻译插件、希望一体开通的用户。
+                本页方案更侧重 Facebook 广告引流、独立部署与按业务深度定制；需求更复杂时可微信咨询获取专属方案。
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -265,19 +290,26 @@
           <div class="vt-footer-links">
             <div>
               <h4>产品</h4>
-              <a href="#features">特点</a>
-              <a href="#scenarios">场景</a>
-              <a href="#deploy">部署</a>
+              <a href="index.html">WATransChat 消息翻译</a>
+              <a href="voice-translator.html">通话翻译官</a>
+              <a href="#top">AI 客服</a>
+              <a href="index.html#pricing">价格</a>
             </div>
             <div>
-              <h4>相关</h4>
-              <a href="index.html">WATransChat</a>
-              <a href="voice-translator.html">外贸通话翻译官</a>
-              <a href="#faq">帮助</a>
+              <h4>下载</h4>
+              <a href="index.html#platforms">多平台下载</a>
+              <a href="#deploy">部署说明</a>
             </div>
             <div>
-              <h4>联系</h4>
-              <a href="#" data-open-contact>微信客服</a>
+              <h4>资源</h4>
+              <a
+                href="https://www.bilibili.com/video/BV1oTPCz3EHG"
+                target="_blank"
+                rel="noopener noreferrer"
+                >教学视频</a
+              >
+              <a href="help/link-whatsapp.html">帮助中心</a>
+              <a href="#" data-open-contact>联系客服</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenAI API 申请 - 帮助中心 · WATransChat</title>
+    <meta name="description" content="如何申请 OpenAI API Key，并在 WATransChat 中配置使用。" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/help.css" />
+  </head>
+  <body class="help-page" data-help-id="api-openai">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">
+            <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+          </span>
+          <span class="logo-text">WATransChat</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="主导航">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="../index.html" role="menuitem">WATransChat 消息翻译</a>
+              <a href="../voice-translator.html" role="menuitem">外贸通话翻译官</a>
+              <a href="../ai-customer-service.html" role="menuitem">AI 客服</a>
+            </div>
+          </div>
+          <a href="../index.html#pricing">价格</a>
+          <a href="../index.html#platforms">下载</a>
+          <a href="index.html" aria-current="page">帮助中心</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="help-layout">
+      <aside class="help-sidebar" id="helpSidebar" aria-label="帮助中心目录">
+        <div class="help-sidebar-inner">
+          <button type="button" class="help-sidebar-close" id="helpSidebarClose" aria-label="关闭目录">✕</button>
+          <nav class="help-nav" id="helpNav"></nav>
+        </div>
+      </aside>
+
+      <div class="help-sidebar-backdrop" id="helpSidebarBackdrop" hidden></div>
+
+      <main class="help-main">
+        <button type="button" class="help-menu-btn" id="helpMenuBtn" aria-controls="helpSidebar" aria-expanded="false">目录</button>
+
+        <article class="help-article">
+          <nav class="help-breadcrumb" aria-label="面包屑">
+            <a href="../index.html" class="help-bc-home" aria-label="首页">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <span class="help-bc-sep">/</span>
+            <a href="index.html">帮助中心</a>
+            <span class="help-bc-sep">/</span>
+            <span id="helpBcCurrent">OpenAI API 申请</span>
+          </nav>
+
+          <section class="help-section">
+            <h1>OpenAI API 申请</h1>
+            <p class="help-lead">
+              专业版及以上可接入 OpenAI / ChatGPT，或兼容 OpenAI 协议的第三方网关。按下列步骤申请并复制 Secret Key。
+            </p>
+
+            <h2>1. 打开 OpenAI 平台</h2>
+            <p>
+              访问
+              <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" class="help-link">https://platform.openai.com/api-keys</a>
+              并完成登录。
+            </p>
+
+            <h2>2. 进入 API Keys</h2>
+            <p>在左侧菜单中点击 <strong>API Keys</strong>（如图红箭头所示）。</p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/01-api-keys-menu.jpg"
+                alt="OpenAI 平台左侧菜单，点击 API Keys"
+              />
+              <figcaption>左侧菜单 → API Keys</figcaption>
+            </figure>
+
+            <h2>3. 创建新密钥</h2>
+            <p>点击右上角黑色按钮 <strong>+ Create new secret key</strong>。</p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/02-create-secret-key.jpg"
+                alt="点击 Create new secret key 创建密钥"
+              />
+              <figcaption>点击「+ Create new secret key」</figcaption>
+            </figure>
+
+            <h2>4. 填写名称并创建</h2>
+            <p>
+              在弹窗中取一个名称（例如「翻译」），有效期建议选择
+              <strong>永不过期</strong>，然后点击 <strong>Create secret key</strong>。
+            </p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/03-create-form.jpg"
+                alt="填写密钥名称、选择永不过期并点击创建"
+              />
+              <figcaption>取名 → 永不过期 → Create secret key</figcaption>
+            </figure>
+
+            <h2>5. 复制并妥善保存 Key</h2>
+            <p>
+              Key <strong>仅显示一次</strong>。请立即点击 <strong>Copy</strong> 复制，保存到安全位置。
+              关闭后将无法再次查看完整 Key，丢失需重新创建。
+            </p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/04-copy-key.jpg"
+                alt="创建成功后点击 Copy 复制 API key"
+              />
+              <figcaption>点击「Copy」保存 API key</figcaption>
+            </figure>
+            <p class="help-note">
+              提示：不要分享你的 API key，防止泄露后产生意外费用。
+            </p>
+
+            <h2>6. 填入 WATransChat</h2>
+            <p>复制 Key 后，按您使用的端打开对应入口粘贴即可。建议在 OpenAI 后台设置用量限额，并先小额测试连通性后再日常使用。</p>
+
+            <h3>浏览器扩展</h3>
+            <p>
+              路径：<strong>会员中心 → 翻译设置</strong>。
+              将「聊天记录翻译接口」和「全局输入框翻译接口」选择为
+              <strong>ChatGPT自定义</strong>（或 OpenAI自定义），下方会出现配置项。
+            </p>
+            <ol class="help-steps">
+              <li>两个接口下拉框均选择 ChatGPT自定义 / OpenAI自定义。</li>
+              <li>在 ChatGPT API 的 Key 输入框中粘贴刚复制的 Key（多个 Key 可用英文逗号分隔）。</li>
+              <li>按需选择模型后保存。</li>
+            </ol>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/05-browser-settings.jpg"
+                alt="浏览器扩展：选择 ChatGPT自定义并粘贴 API Key"
+              />
+              <figcaption>会员中心 → 翻译设置 → 选择 ChatGPT自定义 → 粘贴 Key</figcaption>
+            </figure>
+
+            <h3>手机端</h3>
+            <p>
+              路径：<strong>会员中心 → 翻译设置 → 其它翻译接口</strong>，找到
+              <strong>ChatGPT 自定义 API</strong> 配置项。
+            </p>
+            <ol class="help-steps">
+              <li>打开 ChatGPT API 配置。</li>
+              <li>在「请输入 OpenAI API Key」中粘贴 Key（多个可用英文逗号分隔）。</li>
+              <li>在「ChatGPT 模型」中选择或填写所需模型。</li>
+            </ol>
+            <figure class="help-figure">
+              <img
+                src="../images/help/openai/06-mobile-settings.jpg"
+                alt="手机端：ChatGPT API，粘贴 OpenAI API Key"
+              />
+              <figcaption>会员中心 → 翻译设置 → 其它翻译接口 → ChatGPT 自定义 API</figcaption>
+            </figure>
+
+            <h2>注意事项</h2>
+            <ol class="help-steps">
+              <li>
+                如果没有绑定信用卡，或是 OpenAI 5 美元额度的新用户，每分钟请求数最多约 3 次，基本无法正常使用，出错很常见。
+                可
+                <a href="https://platform.openai.com/account/rate-limits" target="_blank" rel="noopener noreferrer" class="help-link">点此查看你的 API 频率限制</a>。
+              </li>
+              <li>
+                OpenAI 的 API 与 ChatGPT 是两套不同的服务。WATransChat 支持的是
+                <strong>OpenAI API</strong>，不是网页版 ChatGPT。
+                因此需要开通 OpenAI 的 API 服务，而不是开通 ChatGPT Plus；开通后在设置页填写 API Key 即可。
+              </li>
+              <li>
+                出现 <strong>429</strong> 错误，说明已超出 OpenAI 的频率限制。
+              </li>
+              <li>
+                OpenAI <strong>gpt-3.5-turbo</strong> 模型价格约为 <strong>$0.002 / 1K tokens</strong>。
+                实测翻译约 66 万英文字符花费大约 1 美元，翻译约 17 万英文字符花费大约 0.25 美元。
+              </li>
+              <li>
+                WATransChat 扩展支持多个 API Key 负载均衡：填写时请用英文逗号
+                <strong>,</strong> 分隔不同的 Key。
+              </li>
+            </ol>
+
+            <p>相关：
+              <a href="api-deepl.html" class="help-link">DeepL</a> ·
+              <a href="api-deepseek.html" class="help-link">DeepSeek</a>
+            </p>
+          </section>
+
+          <section class="help-section help-contact-block">
+            <h2>还有问题？</h2>
+            <p>若以上内容未能解决您的问题，欢迎联系客服获取一对一协助。</p>
+            <button type="button" class="btn btn-primary" id="helpContactBtn">联系客服</button>
+          </section>
+        </article>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="logo footer-logo">
+              <span class="logo-icon">
+                <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+              </span>
+              <span class="logo-text">WATransChat</span>
+            </div>
+            <p class="footer-desc">专为 WhatsApp 跨语言沟通打造的智能翻译助手，支持待办提醒、AI 员工接待与上下文精确翻译。</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="../index.html">WATransChat 消息翻译</a>
+              <a href="../voice-translator.html">通话翻译官</a>
+              <a href="../ai-customer-service.html">AI 客服</a>
+              <a href="../index.html#pricing">价格套餐</a>
+            </div>
+            <div>
+              <h4>下载</h4>
+              <a href="../index.html#platforms">浏览器扩展</a>
+              <a href="../index.html#platforms">安卓版本</a>
+              <a href="../index.html#platforms">苹果版本</a>
+            </div>
+            <div>
+              <h4>资源</h4>
+              <a href="https://www.bilibili.com/video/BV1oTPCz3EHG" target="_blank" rel="noopener noreferrer">教学视频</a>
+              <a href="index.html">帮助中心</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+      <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <button class="modal-close" type="button" aria-label="关闭联系客服弹窗">✕</button>
+        <div class="modal-body">
+          <h3 id="contactModalTitle">添加微信联系客服</h3>
+          <p class="modal-subtitle">请使用微信扫描下方二维码添加客服：</p>
+          <div class="modal-image-wrap">
+            <img src="../images/wechat.jpg" alt="客服微信二维码" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.CHAT_WIDGET_API = 'https://chat.watranschat.com/api';
+      window.CHAT_WIDGET_WS = 'wss://chat.watranschat.com/ws';
+    </script>
+    <script src="../assets/js/widget.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/help.js"></script>
+  </body>
+</html>

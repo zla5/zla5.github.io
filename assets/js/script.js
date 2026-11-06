@@ -1,4 +1,4 @@
-// Mobile navigation (hamburger)
+// Mobile navigation (hamburger) + dropdown menus
 (function initSiteMobileNav() {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
@@ -6,19 +6,42 @@
   if (!header || !toggle || !nav) return;
 
   const mq = window.matchMedia('(max-width: 960px)');
+  const dropdownItems = Array.from(nav.querySelectorAll('.nav-item.has-dropdown'));
+
+  const closeDropdowns = () => {
+    dropdownItems.forEach((item) => {
+      item.classList.remove('is-open');
+      const trigger = item.querySelector('.nav-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  };
 
   const setOpen = (open) => {
     header.classList.toggle('is-nav-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
     document.body.style.overflow = open && mq.matches ? 'hidden' : '';
+    if (!open) closeDropdowns();
   };
 
   toggle.addEventListener('click', () => {
     setOpen(!header.classList.contains('is-nav-open'));
   });
 
-  nav.querySelectorAll('a, button').forEach((el) => {
+  dropdownItems.forEach((item) => {
+    const trigger = item.querySelector('.nav-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', (e) => {
+      if (!mq.matches) return;
+      e.preventDefault();
+      const willOpen = !item.classList.contains('is-open');
+      closeDropdowns();
+      item.classList.toggle('is-open', willOpen);
+      trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+
+  nav.querySelectorAll('a').forEach((el) => {
     el.addEventListener('click', () => setOpen(false));
   });
 
@@ -28,6 +51,10 @@
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && header.classList.contains('is-nav-open')) setOpen(false);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mq.matches && !nav.contains(e.target)) closeDropdowns();
   });
 })();
 

@@ -38,15 +38,20 @@
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <nav class="nav" id="site-nav" aria-label="主导航">
-          <a href="#features">功能亮点</a>
-          <a href="#gallery">界面预览</a>
-          <a href="#platforms">下载试用</a>
+          <div class="nav-item has-dropdown">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#top" role="menuitem">WATransChat 消息翻译</a>
+              <a href="voice-translator.html" role="menuitem">外贸通话翻译官</a>
+              <a href="ai-customer-service.html" role="menuitem">AI 客服</a>
+            </div>
+          </div>
           <a href="#pricing">价格</a>
-          <a href="distributor.html">代理分销</a>
-          <a href="voice-translator.html">通话翻译官</a>
-          <a href="ai-customer-service.html">AI 客服</a>
-          <a href="#scenarios">适用人群</a>
-          <a href="#faq">常见问题</a>
+          <a href="#platforms">下载</a>
+          <a href="help/link-whatsapp.html">帮助中心</a>
         </nav>
       </div>
     </header>
@@ -1017,53 +1022,61 @@
               </p>
             </details>
           </div>
+          <p class="section-subtitle" style="margin-top: 28px; margin-bottom: 0;">
+            <a href="help/link-whatsapp.html" class="download-link">打开完整帮助中心（目录式浏览）→</a>
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="logo footer-logo">
-            <span class="logo-icon">
-              <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
-            </span>
-            <span class="logo-text">WATransChat</span>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="logo footer-logo">
+              <span class="logo-icon">
+                <img src="images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+              </span>
+              <span class="logo-text">WATransChat</span>
+            </div>
+            <p class="footer-desc">
+              专为 WhatsApp 跨语言沟通打造的智能翻译助手，支持待办提醒、AI 员工接待与上下文精确翻译，帮助跨境电商、国际客服、外贸销售和海外用户高效沟通全球。
+            </p>
           </div>
-          <!-- 页脚简介：与核心能力保持一致 -->
-          <p class="footer-desc">
-            专为 WhatsApp 跨语言沟通打造的智能翻译助手，支持待办提醒、AI 员工接待与上下文精确翻译，帮助跨境电商、国际客服、外贸销售和海外用户高效沟通全球。
-          </p>
+          <div class="footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="#top">WATransChat 消息翻译</a>
+              <a href="voice-translator.html">通话翻译官</a>
+              <a href="ai-customer-service.html">AI 客服</a>
+              <a href="#pricing">价格套餐</a>
+              <a href="distributor.html">代理分销</a>
+            </div>
+            <div>
+              <h4>下载</h4>
+              <a href="#platforms">浏览器扩展</a>
+              <a href="#platforms">安卓版本</a>
+              <a href="#platforms">苹果版本</a>
+              <a href="#platforms">电脑 / Mac</a>
+            </div>
+            <div>
+              <h4>资源</h4>
+              <a
+                href="https://www.bilibili.com/video/BV1oTPCz3EHG"
+                target="_blank"
+                rel="noopener noreferrer"
+                >教学视频</a
+              >
+              <a href="#platforms">安装与教学</a>
+              <a href="help/link-whatsapp.html">帮助中心</a>
+            </div>
+          </div>
         </div>
-        <div class="footer-links">
-          <div>
-            <h4>产品</h4>
-            <a href="#features">功能介绍</a>
-            <a href="#gallery">界面预览</a>
-            <a href="#pricing">价格套餐</a>
-            <a href="#related-products">增值能力</a>
-            <a href="#scenarios">适用人群</a>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
           </div>
-          <div>
-            <h4>下载</h4>
-            <a href="#platforms">浏览器扩展</a>
-            <a href="#platforms">安卓版本</a>
-            <a href="#platforms">苹果版本</a>
-            <a href="voice-translator.html">外贸通话翻译官</a>
-            <a href="ai-customer-service.html">WhatsApp AI 智能客服</a>
-            <a href="distributor.html">代理分销</a>
-          </div>
-          <div>
-            <h4>帮助</h4>
-            <a href="#platforms">安装与教学</a>
-            <a href="#faq">常见问题</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
-          <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
         </div>
       </div>
     </footer>

@@ -29,14 +29,20 @@
           <span class="vt-nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <nav class="vt-nav" id="vt-site-nav" aria-label="主导航">
-          <a href="#features">功能</a>
-          <a href="#interface">界面</a>
-          <a href="#mobile">手机端</a>
-          <a href="#install">电脑端</a>
+          <div class="vt-nav-item has-dropdown">
+            <button type="button" class="vt-nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="vt-nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="vt-nav-dropdown" role="menu">
+              <a href="index.html" role="menuitem">WATransChat 消息翻译</a>
+              <a href="#top" role="menuitem">外贸通话翻译官</a>
+              <a href="ai-customer-service.html" role="menuitem">AI 客服</a>
+            </div>
+          </div>
           <a href="#pricing">价格</a>
-          <a href="#faq">帮助</a>
-          <a href="ai-customer-service.html" class="vt-nav-ghost">AI 客服</a>
-          <a href="index.html" class="vt-nav-ghost">WATransChat</a>
+          <a href="#install">下载</a>
+          <a href="help/link-whatsapp.html">帮助中心</a>
           <button type="button" class="vt-btn-nav" data-open-contact>联系客服</button>
         </nav>
       </div>
@@ -249,6 +255,7 @@
                 class="vt-btn vt-btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-dl="desktop"
               >
                 下载软件
               </a>
@@ -277,6 +284,7 @@
                   href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.4.exe"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-dl="desktop"
                   >软件安装包</a
                 >
                 与
@@ -530,11 +538,10 @@
           <div class="vt-footer-links">
             <div>
               <h4>产品</h4>
-              <a href="#features">功能</a>
-              <a href="#interface">界面</a>
-              <a href="#mobile">手机端</a>
-              <a href="#install">电脑端</a>
-              <a href="#scenarios">场景</a>
+              <a href="index.html">WATransChat 消息翻译</a>
+              <a href="#top">通话翻译官</a>
+              <a href="ai-customer-service.html">AI 客服</a>
+              <a href="#pricing">价格</a>
             </div>
             <div>
               <h4>下载</h4>
@@ -542,6 +549,7 @@
                 href="https://download.watranschat.com/CallTranslator-0.1.5.exe"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-dl="desktop"
                 >软件安装包</a
               >
               <a
@@ -554,12 +562,15 @@
               <a href="#install">电脑端安装</a>
             </div>
             <div>
-              <h4>相关</h4>
-              <a href="index.html">WATransChat</a>
-              <a href="index.html#pricing">文字聊天套餐</a>
-              <a href="ai-customer-service.html">AI 智能客服</a>
-              <a href="#faq">帮助</a>
-              <a href="#" data-open-contact>客服</a>
+              <h4>资源</h4>
+              <a
+                href="https://www.bilibili.com/video/BV1VNhB6GEsE"
+                target="_blank"
+                rel="noopener noreferrer"
+                >教学视频</a
+              >
+              <a href="help/link-whatsapp.html">帮助中心</a>
+              <a href="#" data-open-contact>联系客服</a>
             </div>
           </div>
         </div>
@@ -584,8 +595,10 @@
     <script>
       window.CHAT_WIDGET_API = 'https://chat.babyamy.store/api';
       window.CHAT_WIDGET_WS = 'wss://chat.babyamy.store/ws';
+      window.DOWNLOADS_API = 'https://serial.babyamy.store/api/extension/latest';
     </script>
     <script src="assets/js/widget.js"></script>
+    <script src="assets/js/downloads.js"></script>
     <script src="assets/js/voice-translator.js"></script>
   </body>
 </html>

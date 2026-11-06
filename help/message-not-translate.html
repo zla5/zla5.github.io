@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>消息不翻译 - 帮助中心 · WATransChat</title>
+    <meta name="description" content="聊天记录或输入框消息不翻译时的排查：接口延时、同语不译、网络与 API Key 额度等。" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/help.css" />
+  </head>
+  <body class="help-page" data-help-id="faq-not-translate">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">
+            <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+          </span>
+          <span class="logo-text">WATransChat</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="主导航">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="../index.html" role="menuitem">WATransChat 消息翻译</a>
+              <a href="../voice-translator.html" role="menuitem">外贸通话翻译官</a>
+              <a href="../ai-customer-service.html" role="menuitem">AI 客服</a>
+            </div>
+          </div>
+          <a href="../index.html#pricing">价格</a>
+          <a href="../index.html#platforms">下载</a>
+          <a href="index.html" aria-current="page">帮助中心</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="help-layout">
+      <aside class="help-sidebar" id="helpSidebar" aria-label="帮助中心目录">
+        <div class="help-sidebar-inner">
+          <button type="button" class="help-sidebar-close" id="helpSidebarClose" aria-label="关闭目录">✕</button>
+          <nav class="help-nav" id="helpNav"></nav>
+        </div>
+      </aside>
+
+      <div class="help-sidebar-backdrop" id="helpSidebarBackdrop" hidden></div>
+
+      <main class="help-main">
+        <button type="button" class="help-menu-btn" id="helpMenuBtn" aria-controls="helpSidebar" aria-expanded="false">目录</button>
+
+        <article class="help-article">
+          <nav class="help-breadcrumb" aria-label="面包屑">
+            <a href="../index.html" class="help-bc-home" aria-label="首页">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <span class="help-bc-sep">/</span>
+            <a href="index.html">帮助中心</a>
+            <span class="help-bc-sep">/</span>
+            <span id="helpBcCurrent">消息不翻译</span>
+          </nav>
+
+          <section class="help-section">
+            <h1>消息不翻译</h1>
+            <p class="help-lead">消息未翻译可能有多种原因，请按场景对照排查。</p>
+
+            <h2>1. 聊天记录中的消息不翻译</h2>
+            <p>
+              请检查 <strong>聊天记录翻译接口</strong> 的延时是否过大。延时过大时，翻译会非常慢，甚至失败。
+              请尝试更换其它翻译接口。
+            </p>
+            <p>
+              入口位置见各端翻译接口设置（也可打开
+              <a href="change-translate-engine.html" class="help-link">更换翻译接口</a> 查看完整说明）：
+            </p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-translate-engine/browser.jpg"
+                alt="浏览器扩展：聊天记录翻译接口设置"
+              />
+              <figcaption>浏览器扩展：会员中心 → 翻译设置 → 聊天记录翻译接口</figcaption>
+            </figure>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-translate-engine/android.jpg"
+                alt="安卓：聊天记录翻译接口设置"
+              />
+              <figcaption>安卓：会员中心 → 翻译设置 → 聊天记录翻译接口</figcaption>
+            </figure>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-translate-engine/ios.jpg"
+                alt="苹果：聊天记录翻译接口设置"
+              />
+              <figcaption>苹果：会员中心 → 翻译设置 → 聊天记录翻译接口</figcaption>
+            </figure>
+
+            <h2>2. 消息输入框发消息不翻译</h2>
+
+            <h3>同语不译（对方也是中文）</h3>
+            <p>
+              请确认对方是否为中国人 / 中文用户。若输入框提示
+              <strong>「同语不译」</strong>，说明系统判断对方语言与您相同，消息无需翻译。
+            </p>
+            <p>
+              若你在用<strong>中文号码</strong>自测，可为对方单独修改一种语言后再试。入口见各端客户语言设置（完整说明见
+              <a href="change-customer-lang.html" class="help-link">修改客户语言</a>）：
+            </p>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-customer-lang/browser.jpg"
+                alt="浏览器扩展：客户语言设置"
+              />
+              <figcaption>浏览器扩展：客户语言设置</figcaption>
+            </figure>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-customer-lang/android.jpg"
+                alt="安卓：客户语言设置"
+              />
+              <figcaption>安卓：客户语言设置</figcaption>
+            </figure>
+            <figure class="help-figure">
+              <img
+                src="../images/help/change-customer-lang/ios.jpg"
+                alt="苹果：客户语言设置"
+              />
+              <figcaption>苹果：客户语言设置</figcaption>
+            </figure>
+
+            <h3>全局输入框翻译接口延时过大</h3>
+            <p>
+              请检查 <strong>全局输入框翻译接口</strong> 的延时是否过大。延时过大时，翻译会非常慢，甚至失败。
+              请尝试更换其它翻译接口（入口同上文各端翻译接口设置图）。
+            </p>
+
+            <h2>3. 检查国际网络是否可用</h2>
+            <p>
+              请确认国际互联网未断开。可在浏览器打开
+              <a href="https://translate.google.com/" target="_blank" rel="noopener noreferrer" class="help-link">https://translate.google.com/</a>
+              ，若无法正常访问，请先排除网络 / VPN 问题后再试翻译。
+            </p>
+
+            <h2>4. 检查所选翻译接口是否可用</h2>
+            <p>若使用 DeepSeek、OpenAI、ChatGPT 等自定义接口，请确认：</p>
+            <ol class="help-steps">
+              <li>API Key 是否填写正确；</li>
+              <li>额度是否充足；</li>
+              <li>账号是否已欠费或被停用。</li>
+            </ol>
+            <p>
+              申请与填写说明见
+              <a href="api-deepseek.html" class="help-link">DeepSeek</a> ·
+              <a href="api-openai.html" class="help-link">OpenAI</a> ·
+              <a href="api-deepl.html" class="help-link">DeepL</a>。
+            </p>
+          </section>
+
+          <section class="help-section help-contact-block">
+            <h2>还有问题？</h2>
+            <p>若以上内容未能解决您的问题，欢迎联系客服获取一对一协助。</p>
+            <button type="button" class="btn btn-primary" id="helpContactBtn">联系客服</button>
+          </section>
+        </article>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="logo footer-logo">
+              <span class="logo-icon">
+                <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+              </span>
+              <span class="logo-text">WATransChat</span>
+            </div>
+            <p class="footer-desc">专为 WhatsApp 跨语言沟通打造的智能翻译助手，支持待办提醒、AI 员工接待与上下文精确翻译。</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="../index.html">WATransChat 消息翻译</a>
+              <a href="../voice-translator.html">通话翻译官</a>
+              <a href="../ai-customer-service.html">AI 客服</a>
+              <a href="../index.html#pricing">价格套餐</a>
+            </div>
+            <div>
+              <h4>下载</h4>
+              <a href="../index.html#platforms">浏览器扩展</a>
+              <a href="../index.html#platforms">安卓版本</a>
+              <a href="../index.html#platforms">苹果版本</a>
+            </div>
+            <div>
+              <h4>资源</h4>
+              <a href="index.html">帮助中心</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+      <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <button class="modal-close" type="button" aria-label="关闭联系客服弹窗">✕</button>
+        <div class="modal-body">
+          <h3 id="contactModalTitle">添加微信联系客服</h3>
+          <p class="modal-subtitle">请使用微信扫描下方二维码添加客服：</p>
+          <div class="modal-image-wrap">
+            <img src="../images/wechat.jpg" alt="客服微信二维码" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.CHAT_WIDGET_API = 'https://chat.watranschat.com/api';
+      window.CHAT_WIDGET_WS = 'wss://chat.watranschat.com/ws';
+    </script>
+    <script src="../assets/js/widget.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/help.js"></script>
+  </body>
+</html>

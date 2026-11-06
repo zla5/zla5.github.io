@@ -3,7 +3,8 @@
  * 失败时保留 HTML 里写死的兜底 href。
  *
  * data-dl 取值：
- *   chrome | windows | mac | play | apk | ios | desktop
+ *   chrome | windows | mac | play | apk | desktop
+ * （iOS 不走后台，保持页面写死的 TestFlight / IPA）
  * data-dl-sync-text：同步把链接可见文字改成新 URL（用于正文里展示的地址）
  */
 (function applyManagedDownloads() {
@@ -18,7 +19,6 @@
     mac: { device: 'mac' },
     play: { device: 'mobile' },
     apk: { device: 'mobile', field: 'apk_download_url' },
-    ios: { device: 'ios' },
     desktop: { device: 'desktop' },
   };
 
