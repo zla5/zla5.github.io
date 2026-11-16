@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>常见问题 - 帮助中心 · WATransChat</title>
+    <meta name="description" content="WATransChat 常见问题：安装、登录、输入法、语言设置与套餐选择。" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/help.css" />
+  </head>
+  <body class="help-page" data-help-id="faq">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">
+            <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+          </span>
+          <span class="logo-text">WATransChat</span>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="主导航">
+          <div class="nav-item has-dropdown">
+            <button type="button" class="nav-trigger" aria-expanded="false" aria-haspopup="true">
+              产品
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="../index.html" role="menuitem" class="nav-product-link">
+                <img class="nav-product-icon" src="../images/watranschat-icon.png" alt="" width="36" height="36" />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">WATransChat</span>
+                  <span class="nav-product-desc">WhatsApp 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://www.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="../images/lingotg-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoTG</span>
+                  <span class="nav-product-desc">Telegram 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://meta.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="../images/lingometa-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoMeta</span>
+                  <span class="nav-product-desc">Facebook Inbox 消息语音翻译</span>
+                </span>
+              </a>
+              <a href="../voice-translator.html" role="menuitem" class="nav-product-link">
+                <img
+                  class="nav-product-icon"
+                  src="../images/voice-translator-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">外贸通话翻译官</span>
+                  <span class="nav-product-desc">语音/视频通话实时翻译 WhatsApp、Zoom、Teams、Skype、Facebook Messenger、微信、飞书</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <a href="../index.html#pricing">价格</a>
+          <a href="../index.html#platforms">下载</a>
+          <a href="index.html" aria-current="page">帮助中心</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="help-layout">
+      <aside class="help-sidebar" id="helpSidebar" aria-label="帮助中心目录">
+        <div class="help-sidebar-inner">
+          <button type="button" class="help-sidebar-close" id="helpSidebarClose" aria-label="关闭目录">✕</button>
+          <nav class="help-nav" id="helpNav"></nav>
+        </div>
+      </aside>
+
+      <div class="help-sidebar-backdrop" id="helpSidebarBackdrop" hidden></div>
+
+      <main class="help-main">
+        <button type="button" class="help-menu-btn" id="helpMenuBtn" aria-controls="helpSidebar" aria-expanded="false">目录</button>
+
+        <article class="help-article">
+          <nav class="help-breadcrumb" aria-label="面包屑">
+            <a href="../index.html" class="help-bc-home" aria-label="首页">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <span class="help-bc-sep">/</span>
+            <a href="index.html">帮助中心</a>
+            <span class="help-bc-sep">/</span>
+            <span id="helpBcCurrent">常见问题</span>
+          </nav>
+
+          <section class="help-section">
+            <h1>常见问题</h1>
+            <p class="help-lead">
+              如果您在安装或使用中遇到问题，可以先查看这里是否已有答案。仍未解决时，可通过页面右下角客服联系我们。
+            </p>
+
+            <h2>1. 安卓安装后显示无法打开网页怎么办？</h2>
+            <p>
+              很可能是您的 VPN 或网络工具阻止了 WATransChat 的网络访问。
+              请在 VPN 或网络加速软件中，将 WATransChat 添加为「允许代理」或「信任应用」，然后重新打开再试。
+            </p>
+
+            <h2>2. 扫码登录总是没有反应怎么办？</h2>
+            <p>
+              推荐使用电话号码方式登录，更简单快捷。如果必须使用扫码登录，请参考
+              <a href="https://www.bilibili.com/video/BV1qoU8BiEiY" target="_blank" rel="noopener noreferrer" class="help-link">安卓扫码问题教学视频</a>。
+              一般建议：确保网络稳定、相机对准二维码、避免反光，并在二维码刷新后尽快扫码。
+            </p>
+
+            <h2>3. 苹果手机在消息框输入中文没有显示怎么办？</h2>
+            <p>这通常与输入法兼容性有关。请尝试切换到其他输入法，例如 <strong>百度输入法</strong> 等，再重新尝试输入。</p>
+
+            <h2>4. 苹果扫码登录时提示「请同时保持在两台设备上运行 WhatsApp」怎么办？</h2>
+            <p>
+              这是 WhatsApp 多设备登录机制导致的提示。请先在另一台设备（如手机上的原装 WhatsApp）保持登录状态，然后再在 WATransChat 中扫码，一般即可正常登录。
+            </p>
+
+            <h2>5. 不知道在哪里设置翻译语言，怎么办？</h2>
+            <p>
+              建议先观看
+              <a href="https://www.bilibili.com/video/BV1okUYBkEh2" target="_blank" rel="noopener noreferrer" class="help-link">语言设置教学视频</a>。
+              安装成功后，通常可以在扩展图标或 WhatsApp 页面内浮动面板中找到语言设置界面。
+            </p>
+
+            <h2>6. 基础版、专业版、尊享版有什么区别？怎么选？</h2>
+            <p>
+              <strong>基础版</strong>适合日常互译与本地待办提醒；
+              <strong>专业版</strong>在此基础上增加 AI 语义翻译、语音识别，以及待办多设备同步；
+              <strong>尊享版</strong>包含前两版全部能力，并额外提供 AI 员工自动接待与 AI 分析上下文精确翻译。
+              详见 <a href="../index.html#pricing" class="help-link">价格套餐</a>。
+            </p>
+          </section>
+
+          <section class="help-section help-contact-block">
+            <h2>还有问题？</h2>
+            <p>若以上内容未能解决您的问题，欢迎联系客服获取一对一协助。</p>
+            <button type="button" class="btn btn-primary" id="helpContactBtn">联系客服</button>
+          </section>
+        </article>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="logo footer-logo">
+              <span class="logo-icon">
+                <img src="../images/icon.png" alt="WATransChat Logo" class="logo-icon-img" />
+              </span>
+              <span class="logo-text">WATransChat</span>
+            </div>
+            <p class="footer-desc">专为 WhatsApp 跨语言沟通打造的智能翻译助手，支持待办提醒、AI 员工接待与上下文精确翻译。</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h4>产品</h4>
+              <a href="../index.html">WATransChat 消息翻译</a>
+              <a href="../voice-translator.html">通话翻译官</a>
+              <a href="../ai-customer-service.html">AI 客服</a>
+              <a href="../index.html#pricing">价格套餐</a>
+            </div>
+            <div>
+              <h4>下载</h4>
+              <a href="../index.html#platforms">浏览器扩展</a>
+              <a href="../index.html#platforms">安卓版本</a>
+              <a href="../index.html#platforms">苹果版本</a>
+            </div>
+            <div>
+              <h4>资源</h4>
+              <a href="https://www.bilibili.com/video/BV1oTPCz3EHG" target="_blank" rel="noopener noreferrer">教学视频</a>
+              <a href="index.html">帮助中心</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-inner">
+            <span>© <span id="year"></span> WATransChat. All rights reserved.</span>
+            <span class="footer-small">本网站仅作为产品介绍与下载引导页面，与 WhatsApp 官方无关。</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="contactModal" aria-hidden="true">
+      <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+        <button class="modal-close" type="button" aria-label="关闭联系客服弹窗">✕</button>
+        <div class="modal-body">
+          <h3 id="contactModalTitle">添加微信联系客服</h3>
+          <p class="modal-subtitle">请使用微信扫描下方二维码添加客服：</p>
+          <div class="modal-image-wrap">
+            <img src="../images/wechat.jpg" alt="客服微信二维码" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.CHAT_WIDGET_API = 'https://chat.watranschat.com/api';
+      window.CHAT_WIDGET_WS = 'wss://chat.watranschat.com/ws';
+    </script>
+    <script src="../assets/js/widget.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/help.js"></script>
+  </body>
+</html>
