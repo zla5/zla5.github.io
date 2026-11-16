@@ -1,26 +1,3 @@
-## 产品官网（静态版）
-
-本项目包含两个产品介绍页，可部署在 GitHub Pages 或任意静态托管：
-
-| 页面 | 文件 | 产品 |
-|------|------|------|
-| WATransChat | `index.html` | WhatsApp 跨语言文字翻译 |
-| 外贸通话翻译官 | `voice-translator.html` | Windows 实时双向语音翻译 |
-| WhatsApp AI 智能客服 | `ai-customer-service.html` | Facebook 引流 · WhatsApp AI 自动接待 |
-
-### 外贸通话翻译官页面
-
-- 地址：`voice-translator.html`
-- **独立浅色编辑风**（`assets/css/voice-translator.css`），与 WATransChat 深色站视觉分离
-- 交互脚本：`assets/js/voice-translator.js`
-- 下载按钮指向 `downloads/` 目录，部署前请将安装包与驱动 zip 放入该目录（见 `downloads/README.md`）
-
----
-
-## WATransChat 官方网站
-
-本项目同时是 **WATransChat** 的静态官网页面，用于在 GitHub Pages 上展示产品功能与多平台下载链接。
-
 ### 官网访问
 
 在浏览器中打开以下地址即可访问官网（可直接点击）：
