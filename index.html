@@ -44,9 +44,64 @@
               <span class="nav-chevron" aria-hidden="true"></span>
             </button>
             <div class="nav-dropdown" role="menu">
-              <a href="#top" role="menuitem">WATransChat 消息翻译</a>
-              <a href="voice-translator.html" role="menuitem">外贸通话翻译官</a>
-              <a href="ai-customer-service.html" role="menuitem">AI 客服</a>
+              <a href="#top" role="menuitem" class="nav-product-link">
+                <img class="nav-product-icon" src="images/watranschat-icon.png" alt="" width="36" height="36" />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">WATransChat</span>
+                  <span class="nav-product-desc">WhatsApp 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://www.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="images/lingotg-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoTG</span>
+                  <span class="nav-product-desc">Telegram 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://meta.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="images/lingometa-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoMeta</span>
+                  <span class="nav-product-desc">Facebook Inbox 消息语音翻译</span>
+                </span>
+              </a>
+              <a href="voice-translator.html" role="menuitem" class="nav-product-link">
+                <img
+                  class="nav-product-icon"
+                  src="images/voice-translator-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">外贸通话翻译官</span>
+                  <span class="nav-product-desc">语音/视频通话实时翻译 WhatsApp、Zoom、Teams、Skype、Facebook Messenger、微信、飞书</span>
+                </span>
+              </a>
             </div>
           </div>
           <a href="#pricing">价格</a>
@@ -284,11 +339,19 @@
 
             <div class="gallery-item gallery-mobile">
               <div class="device-label">手机端 · 语音通话翻译</div>
-              <button class="device-frame phone-frame" data-full-image="images/mobilevoice.jpg" type="button">
-                <img src="images/mobilevoice.jpg" alt="WATransChat 手机端语音通话翻译界面预览" />
+              <button
+                class="device-frame phone-frame phone-frame-voice"
+                data-full-image="images/mobilevoice.jpg"
+                type="button"
+                aria-label="放大查看语音通话翻译界面"
+              >
+                <span class="phone-frame-screen">
+                  <img src="images/mobilevoice.jpg" alt="WATransChat 手机端语音通话翻译界面预览" />
+                  <div class="voice-call-subs" id="voiceCallSubs" aria-hidden="true"></div>
+                </span>
               </button>
               <p class="device-desc">
-                展示语音通话过程中的实时翻译界面，通话内容可即时转写并翻译成双方语言。
+                展示语音通话过程中的实时字幕互译：您说中文、对方听英语；对方说英语、您看中文，交期、价格、定金等商务沟通一目了然。
               </p>
             </div>
           </div>
@@ -392,8 +455,7 @@
               <div class="platform-badge">桌面端 · 浏览器扩展</div>
               <h3>WATransChat 浏览器扩展</h3>
               <p>
-                适用于电脑端 WhatsApp Web，支持 Chrome 及兼容内核浏览器（Edge、360、Brave 等），也支持通过
-                CRX 方式在其他浏览器中安装。
+                适用于电脑端 WhatsApp Web，支持 Chrome 及兼容内核浏览器（Edge、360、Brave 等）。
               </p>
               <div class="platform-actions">
 
@@ -404,7 +466,6 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-primary btn-chrome-install"
-                  data-dl="chrome"
                 >
                   <svg xmlns="http://www.w3.org/2480/svg" width="20" height="20" fill="none" viewBox="0 0 28 28" class="chrome-icon">
                     <path fill="#fff" d="M14.034 27.834c7.613 0 13.785-6.17 13.785-13.78C27.82 6.442 21.647.272 14.034.272S.248 6.443.248 14.053c0 7.611 6.172 13.78 13.786 13.78"></path>
@@ -487,34 +548,36 @@
                   </svg>
                   <span>安装到360浏览器</span>
                 </a>
-                <div class="download-item">
-                  <div class="download-label">其他浏览器版本（CRX）</div>
-                  <a
-                    href="downloads/WATransChat.crx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    下载 CRX 安装包（WATransChat.crx）
-                  </a>
-                  <div class="download-desc" style="font-size: 12px; color: #9ca3af; margin-bottom: 4px;">
-                    下载后直接拖到浏览器安装。
-                  </div>
-                </div>
-                <div class="download-item">
-                  <div class="download-label">其他浏览器版本（ZIP）</div>
-                  <a
-                    href="downloads/WATransChat.zip"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="download-link"
-                  >
-                    下载 ZIP 安装包（WATransChat.zip）
-                  </a>
-                  <div class="download-desc" style="font-size: 12px; color: #9ca3af; margin-bottom: 4px;">
-                    如果您无法打开chrome商店，下载这个压缩包解压，扩展-扩展程序-启用开发者模式-加载未打包的扩展程序-选择解压的文件夹里面为空都可以-确定。关闭浏览器所有窗口重新打开。。
-                  </div>
-                </div>
+                <a
+                  href="https://appstore.ziniao.com/plugin/detail/16312716831647/WATransChat-BuDongWaiYu-ZuoWaiMaoBiBei-WhatsApp-FanYiGongJu.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-chrome-install"
+                >
+                  <img
+                    src="images/ziniao-icon.png"
+                    alt="紫鸟浏览器"
+                    class="chrome-icon"
+                    width="20"
+                    height="20"
+                  />
+                  <span>安装到紫鸟浏览器</span>
+                </a>
+                <a
+                  href="https://client.bitbrowser.cn/extensions/list?categoryCode=&extensionName=WATransChat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-chrome-install"
+                >
+                  <img
+                    src="images/bitbrowser-icon.png"
+                    alt="比特浏览器"
+                    class="chrome-icon"
+                    width="20"
+                    height="20"
+                  />
+                  <span>安装到比特浏览器</span>
+                </a>
               </div>
 
             </div>
@@ -541,10 +604,9 @@
               </ul>
               <div class="platform-actions">
                 <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat_2.6.2_windows_x64-setup.exe"
+                  href="https://download.watranschat.com/releases/windows/WATransChat.exe"
                   download
                   class="btn btn-primary"
-                  data-dl="windows"
                 >
                   下载 Windows 安装包（WATransChat.exe）
                 </a>
@@ -588,10 +650,9 @@
               </ul>
               <div class="platform-actions">
                 <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat-macOS-1.3.2.dmg"
+                  href="https://download.watranschat.com/releases/mac/WATransChat.dmg"
                   download
                   class="btn btn-primary"
-                  data-dl="mac"
                 >
                   下载 Mac 安装包（WATransChat.dmg）
                 </a>
@@ -635,16 +696,14 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="google-play-btn"
-                  data-dl="play"
                 >
                   <img src="images/mt5-google_play.png" alt="Google Play" />
                 </a>
 				                <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/WATransChat3.51.apk"
+                  href="https://download.watranschat.com/releases/android/WATransChat.apk"
                   download
                   type="application/vnd.android.package-archive"
                   class="btn btn-primary"
-                  data-dl="apk"
                 >
                   下载 APK 安装包
                 </a>
@@ -676,8 +735,8 @@
                 </li>
               </ul>
               <div class="platform-screenshots-row">
-                <img class="platform-screenshot" src="images/android1.jpg" alt="WATransChat 安卓版界面预览 1" />
-                <img class="platform-screenshot" src="images/android2.jpg" alt="WATransChat 安卓版界面预览 2" />
+                <img class="platform-screenshot" src="images/mobile-list.jpg" alt="WATransChat 安卓版界面预览 1" />
+                <img class="platform-screenshot" src="images/mobile-chat.jpg" alt="WATransChat 安卓版界面预览 2" />
               </div>
             </div>
 
@@ -704,8 +763,8 @@
                 >
                   https://testflight.apple.com/join/BU6pydWY
                 </a>
-                进行安装。
-              </p>
+                进行安装。注意:不需要邀请码！
+              </p><br>
               <p>如果无法通过 TestFlight 安装，可选择以下方式：</p>
               <ol class="step-list">
                 <li>
@@ -729,26 +788,26 @@
                   >
                     全能签
                   </a>
-                  ）进行安装。需要付费购买证书。
+                  ）进行安装。需要付费购买证书。全能签支持将软件多开，方便同时管理多个 WhatsApp 账号。
                 </li>
                 <li>购买一个现成的海外 Apple ID（请务必选择可靠渠道，并注意隐私安全）。</li>
               </ol>
               <div class="platform-actions">
                 <a
-                  href="https://testflight.apple.com/join/BU6pydWY"
+                  href="https://apps.apple.com/us/app/watranschat/id6761809886"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="google-play-btn"
-                  aria-label="通过 TestFlight 安装 WATransChat"
+                  aria-label="通过 App Store 安装 WATransChat"
                 >
-                  <img src="images/app_store.png" alt="通过 TestFlight 安装" />
+                  <img src="images/app_store.png" alt="通过 App Store 安装" />
                 </a>
                 <button
                   type="button"
                   class="btn btn-primary"
                   style="height: 46px;"
                   id="iosCopyIpaLinkBtn"
-                  data-copy="https://zla5.github.io/downloads/WATransChat.ipa"
+                  data-copy="https://download.watranschat.com/releases/ios/WATransChat.ipa"
                 >
                   <img
                     src="images/xz-3.png"
@@ -1086,7 +1145,9 @@
       <div class="lightbox-inner" role="dialog" aria-modal="true">
         <button class="lightbox-close" type="button" aria-label="关闭预览">✕</button>
         <div class="lightbox-body">
-          <img src="" alt="WATransChat 界面大图预览" id="lightboxImage" />
+          <div class="lightbox-media" id="lightboxMedia">
+            <img src="" alt="WATransChat 界面大图预览" id="lightboxImage" />
+          </div>
         </div>
       </div>
     </div>
@@ -1107,10 +1168,8 @@
     <script>
       window.CHAT_WIDGET_API = 'https://chat.watranschat.com/api';
       window.CHAT_WIDGET_WS = 'wss://chat.watranschat.com/ws';
-      window.DOWNLOADS_API = 'https://serial.babyamy.store/api/extension/latest';
     </script>
     <script src="assets/js/widget.js"></script>
-    <script src="assets/js/downloads.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

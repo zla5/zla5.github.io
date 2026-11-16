@@ -35,9 +35,64 @@
               <span class="vt-nav-chevron" aria-hidden="true"></span>
             </button>
             <div class="vt-nav-dropdown" role="menu">
-              <a href="index.html" role="menuitem">WATransChat 消息翻译</a>
-              <a href="#top" role="menuitem">外贸通话翻译官</a>
-              <a href="ai-customer-service.html" role="menuitem">AI 客服</a>
+              <a href="index.html" role="menuitem" class="nav-product-link">
+                <img class="nav-product-icon" src="images/watranschat-icon.png" alt="" width="36" height="36" />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">WATransChat</span>
+                  <span class="nav-product-desc">WhatsApp 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://www.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="images/lingotg-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoTG</span>
+                  <span class="nav-product-desc">Telegram 消息及语音视频通话翻译</span>
+                </span>
+              </a>
+              <a
+                href="https://meta.lingotg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="menuitem"
+                class="nav-product-link"
+              >
+                <img
+                  class="nav-product-icon"
+                  src="images/lingometa-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">LingoMeta</span>
+                  <span class="nav-product-desc">Facebook Inbox 消息语音翻译</span>
+                </span>
+              </a>
+              <a href="#top" role="menuitem" class="nav-product-link">
+                <img
+                  class="nav-product-icon"
+                  src="images/voice-translator-icon.png"
+                  alt=""
+                  width="36"
+                  height="36"
+                />
+                <span class="nav-product-copy">
+                  <span class="nav-product-name">外贸通话翻译官</span>
+                  <span class="nav-product-desc">语音/视频通话实时翻译 WhatsApp、Zoom、Teams、Skype、Facebook Messenger、微信、飞书</span>
+                </span>
+              </a>
             </div>
           </div>
           <a href="#pricing">价格</a>
@@ -249,13 +304,12 @@
             <article class="vt-dl-card">
               <div class="vt-dl-icon" aria-hidden="true">📦</div>
               <h3>软件安装包</h3>
-              <p>外贸通话翻译官 Windows 安装程序（CallTranslator-0.1.4.exe）</p>
+              <p>外贸通话翻译官 Windows 安装程序（CallTranslator.exe）</p>
               <a
-                href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.4.exe"
+                href="https://download.watranschat.com/releases/desktop/CallTranslator.exe"
                 class="vt-btn vt-btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-dl="desktop"
               >
                 下载软件
               </a>
@@ -281,10 +335,9 @@
               <li>
                 分别下载
                 <a
-                  href="https://github.com/zla5/WATransChat/releases/download/3.17/CallTranslator-0.1.4.exe"
+                  href="https://download.watranschat.com/releases/desktop/CallTranslator.exe"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-dl="desktop"
                   >软件安装包</a
                 >
                 与
@@ -309,7 +362,7 @@
                 <strong>VBCABLE_Setup_x64.exe</strong>，选择<strong>以管理员身份运行</strong>完成安装。
               </li>
               <li>
-                双击运行 <strong>CallTranslator-0.1.4.exe</strong>，按向导安装软件。如弹出安全提示窗口，点击<strong>更多信息</strong>，选择<strong>仍要运行</strong>。
+                双击运行 <strong>CallTranslator.exe</strong>，按向导安装软件。如弹出安全提示窗口，点击<strong>更多信息</strong>，选择<strong>仍要运行</strong>。
                 <figure class="vt-install-shot">
                   <img
                     src="images/20260608165530.jpg"
@@ -377,7 +430,7 @@
           <div class="vt-pricing">
             <div class="vt-price-card vt-price-card--featured">
               <div class="vt-price-name">通话翻译套餐</div>
-              <div class="vt-price-amount">¥59</div>
+              <div class="vt-price-amount">¥99</div>
               <div class="vt-price-unit">元 / 200 分钟</div>
               <ul class="vt-price-list">
                 <li>完整双向实时翻译功能</li>
@@ -494,28 +547,47 @@
             <details class="vt-faq-item">
               <summary>接听后一直显示「正在连接」怎么办？</summary>
               <p>
-                该问题通常与代理软件的分应用设置有关，请按系统选择兼容方案：
+                通常是您的国际互联网不支持 UDP 协议。请在国际互联网软件中添加一条绕过路由：dst port 填写
+                <strong>3478</strong>，network 选择 <strong>TCP and UDP</strong>，Outbound 选择
+                <strong>绕过</strong>，保存并启用后再试。
               </p>
               <p>
-                <strong>苹果手机：</strong>目前测试了很多软件，只发现与 <strong>Hiddify</strong> 软件兼容。
+                安卓可使用
+                <a
+                  href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >NekoBox</a
+                >，苹果可使用
+                <a
+                  href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532?platform=iphone"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Hiddify</a
+                >。完整步骤与下载入口见
+                <a href="help/call-connecting.html">语音通话显示「连接中」</a>。
               </p>
               <figure class="vt-faq-video">
                 <video
                   controls
                   preload="metadata"
                   playsinline
-                  src="https://download.watranschat.com/hiddify.mp4"
+                  src="https://download.watranschat.com/AndroidNetworkSettings.mp4"
                 >
                   您的浏览器不支持视频播放。
                 </video>
-                <figcaption>苹果手机 Hiddify 配置演示</figcaption>
+                <figcaption>安卓手机教学视频</figcaption>
               </figure>
-              <p>
-                <strong>安卓手机：</strong>支持 <strong>Shadowrocket</strong>（在分应用设置中勾选 WATransChat，重新关闭并开启节点后生效）；也支持 <strong>nekobox</strong>（在设置 → 分应用代码中勾选 WATransChat，重新关闭并开启节点后生效）。
-              </p>
-              <figure class="vt-faq-media">
-                <img src="images/Shadowrocket.jpg" alt="安卓 Shadowrocket 分应用设置示意" />
-                <figcaption>安卓 Shadowrocket 分应用设置示意</figcaption>
+              <figure class="vt-faq-video">
+                <video
+                  controls
+                  preload="metadata"
+                  playsinline
+                  src="https://download.watranschat.com/iphoneNetworkSettings.mp4"
+                >
+                  您的浏览器不支持视频播放。
+                </video>
+                <figcaption>苹果手机教学视频</figcaption>
               </figure>
             </details>
           </div>
@@ -546,10 +618,9 @@
             <div>
               <h4>下载</h4>
               <a
-                href="https://download.watranschat.com/CallTranslator-0.1.5.exe"
+                href="https://download.watranschat.com/releases/desktop/CallTranslator.exe"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-dl="desktop"
                 >软件安装包</a
               >
               <a
@@ -595,10 +666,8 @@
     <script>
       window.CHAT_WIDGET_API = 'https://chat.babyamy.store/api';
       window.CHAT_WIDGET_WS = 'wss://chat.babyamy.store/ws';
-      window.DOWNLOADS_API = 'https://serial.babyamy.store/api/extension/latest';
     </script>
     <script src="assets/js/widget.js"></script>
-    <script src="assets/js/downloads.js"></script>
     <script src="assets/js/voice-translator.js"></script>
   </body>
 </html>

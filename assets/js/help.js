@@ -10,6 +10,7 @@
         { id: "faq-default-lang", href: "default-customer-lang.html", label: "为所有客户设置默认语言" },
         { id: "faq-check-before-send", href: "check-before-send.html", label: "在发送前检查翻译结果" },
         { id: "faq-not-translate", href: "message-not-translate.html", label: "消息不翻译" },
+        { id: "faq-call-connecting", href: "call-connecting.html", label: "语音通话显示「连接中」" },
         { id: "faq-ban-risk", href: "ban-risk.html", label: "会封号吗" },
         {
           label: "翻译服务 API 申请",

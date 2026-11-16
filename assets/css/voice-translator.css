@@ -154,7 +154,8 @@ img {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 200px;
+  min-width: 320px;
+  max-width: min(420px, 92vw);
   padding: 12px 0 0;
   background: transparent;
   border: none;
@@ -197,7 +198,50 @@ img {
   font-size: 14px;
   font-weight: 500;
   color: var(--vt-ink);
-  white-space: nowrap;
+  white-space: normal;
+}
+
+.vt-nav-dropdown a.nav-product-link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.vt-nav-dropdown .nav-product-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(16, 32, 51, 0.08);
+}
+
+.vt-nav-dropdown .nav-product-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.vt-nav-dropdown .nav-product-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vt-ink);
+  line-height: 1.35;
+}
+
+.vt-nav-dropdown .nav-product-desc {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--vt-ink-soft);
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .vt-nav-dropdown a:first-child {
@@ -210,6 +254,10 @@ img {
 
 .vt-nav-dropdown a:hover {
   background: rgba(232, 93, 74, 0.08);
+  color: var(--vt-coral);
+}
+
+.vt-nav-dropdown a:hover .nav-product-name {
   color: var(--vt-coral);
 }
 

@@ -76,13 +76,227 @@ if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear().toString();
 }
 
+// 语音通话实时字幕：气泡从下往上逐条递增
+const VOICE_CALL_LINES = [
+  {
+    side: 'me',
+    origin: '能听清楚吗？',
+    trans: 'Can you hear me clearly?',
+  },
+  {
+    side: 'them',
+    origin: 'Yes, the signal is clear.',
+    trans: '可以，信号很清楚。',
+  },
+  {
+    side: 'me',
+    origin: '很好。我们来谈一下这单吧？',
+    trans: 'Great. Shall we talk about this order?',
+  },
+  {
+    side: 'them',
+    origin: "Sure. What's the lead time, and how much deposit is needed?",
+    trans: '好的。请问这批货交期大概多久？定金要付多少？',
+  },
+  {
+    side: 'me',
+    origin: '收到定金后交期30天。开工需要支付30%定金。',
+    trans: 'Lead time is 30 days after deposit. We need 30% to start production.',
+  },
+  {
+    side: 'them',
+    origin: 'Is the balance paid before shipment?',
+    trans: '尾款是发货前付清吗？',
+  },
+  {
+    side: 'me',
+    origin: '是的。装柜前付清70%尾款。',
+    trans: 'Yes. 70% balance before loading.',
+  },
+  {
+    side: 'them',
+    origin: 'Can you offer a better price?',
+    trans: '价格方面还能再优惠一点吗？',
+  },
+  {
+    side: 'me',
+    origin: '订购超过1000件，可以给5%优惠。',
+    trans: 'If you order 1000+ units, we can give 5% off.',
+  },
+  {
+    side: 'them',
+    origin: "What's the minimum order quantity?",
+    trans: '那最小起订量是多少？',
+  },
+  {
+    side: 'me',
+    origin: '每个颜色最小起订量是500件。',
+    trans: 'MOQ is 500 units per color.',
+  },
+  {
+    side: 'them',
+    origin: 'Can packaging be customized to our requirements?',
+    trans: '包装可以按我们的要求定制吗？',
+  },
+  {
+    side: 'me',
+    origin: '可以。订购超过1000件，定制logo和箱唛免费。',
+    trans: 'Yes. Custom logo and carton marks are free above 1000 units.',
+  },
+  {
+    side: 'them',
+    origin: 'How soon can samples ship, and who covers freight?',
+    trans: '样品多久能寄出？运费怎么算？',
+  },
+  {
+    side: 'me',
+    origin: '样品5天内寄出。运费到付，大货下单后退还。',
+    trans: 'Samples in 5 days. Freight is collect, refunded after bulk order.',
+  },
+  {
+    side: 'them',
+    origin: "Okay, let's confirm the quote based on 1000 units.",
+    trans: '好的，我们按1000件先确认报价。',
+  },
+  {
+    side: 'me',
+    origin: '没问题。我今天把形式发票发给您。',
+    trans: 'Perfect. I will send the proforma invoice today.',
+  },
+];
+
+function startVoiceCallSubsLoop(container, options = {}) {
+  if (!container) return () => {};
+
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const gapMs = options.gapMs ?? 3000;
+  const holdMs = options.holdMs ?? 2200;
+  const resetMs = options.resetMs ?? 700;
+  const maxVisible = options.maxVisible ?? 5;
+  const startSeconds = options.startSeconds ?? 10;
+  let running = true;
+  let elapsed = startSeconds;
+  let timerId = 0;
+
+  const formatTime = (totalSeconds) => {
+    const m = Math.floor(totalSeconds / 60);
+    const s = totalSeconds % 60;
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  };
+
+  const ensureStructure = () => {
+    let timerEl = container.querySelector('.voice-call-timer');
+    let msgsEl = container.querySelector('.voice-call-msgs');
+    if (!timerEl || !msgsEl) {
+      container.innerHTML = '';
+      timerEl = document.createElement('div');
+      timerEl.className = 'voice-call-timer';
+      msgsEl = document.createElement('div');
+      msgsEl.className = 'voice-call-msgs';
+      container.appendChild(timerEl);
+      container.appendChild(msgsEl);
+    }
+    return { timerEl, msgsEl };
+  };
+
+  const { timerEl, msgsEl } = ensureStructure();
+
+  const renderTimer = () => {
+    timerEl.textContent = formatTime(elapsed);
+  };
+
+  const startTimer = () => {
+    window.clearInterval(timerId);
+    elapsed = startSeconds;
+    renderTimer();
+    timerId = window.setInterval(() => {
+      if (!running) return;
+      elapsed += 1;
+      renderTimer();
+    }, 1000);
+  };
+
+  const appendBubble = (line) => {
+    const row = document.createElement('div');
+    row.className = `voice-sub voice-sub-${line.side === 'me' ? 'me' : 'them'}`;
+    row.innerHTML = `
+      <div class="voice-sub-bubble">
+        <span class="voice-sub-label">${line.side === 'me' ? '我' : '对方'}</span>
+        <span class="voice-sub-origin"></span>
+        <span class="voice-sub-trans"></span>
+      </div>
+    `;
+    row.querySelector('.voice-sub-origin').textContent = line.origin;
+    row.querySelector('.voice-sub-trans').textContent = line.trans;
+    msgsEl.appendChild(row);
+
+    while (msgsEl.children.length > maxVisible) {
+      const oldest = msgsEl.firstElementChild;
+      if (!oldest) break;
+      oldest.remove();
+    }
+  };
+
+  const run = async () => {
+    while (running) {
+      msgsEl.innerHTML = '';
+      startTimer();
+      for (let i = 0; i < VOICE_CALL_LINES.length; i += 1) {
+        if (!running) return;
+        appendBubble(VOICE_CALL_LINES[i]);
+        await sleep(gapMs);
+        if (!running) return;
+      }
+      await sleep(holdMs);
+      if (!running) return;
+      msgsEl.innerHTML = '';
+      await sleep(resetMs);
+    }
+  };
+
+  run();
+
+  return () => {
+    running = false;
+    window.clearInterval(timerId);
+    container.innerHTML = '';
+  };
+}
+
+startVoiceCallSubsLoop(document.getElementById('voiceCallSubs'));
+
 // Image lightbox for gallery
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImage');
+const lightboxMedia = document.getElementById('lightboxMedia');
+let stopLightboxVoiceSubs = null;
 
 if (lightbox && lightboxImg) {
-  const openLightbox = (src) => {
+  const clearLightboxOverlay = () => {
+    if (typeof stopLightboxVoiceSubs === 'function') {
+      stopLightboxVoiceSubs();
+      stopLightboxVoiceSubs = null;
+    }
+    if (!lightboxMedia) return;
+    lightboxMedia.querySelectorAll('.voice-call-subs').forEach((node) => node.remove());
+    lightboxMedia.classList.remove('has-voice-subs');
+  };
+
+  const openLightbox = (src, withVoiceSubs) => {
+    clearLightboxOverlay();
     lightboxImg.src = src;
+
+    if (withVoiceSubs && lightboxMedia) {
+      const overlay = document.createElement('div');
+      overlay.className = 'voice-call-subs';
+      lightboxMedia.appendChild(overlay);
+      lightboxMedia.classList.add('has-voice-subs');
+      stopLightboxVoiceSubs = startVoiceCallSubsLoop(overlay, {
+        gapMs: 3000,
+        holdMs: 2400,
+      });
+    }
+
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
   };
@@ -91,6 +305,7 @@ if (lightbox && lightboxImg) {
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     lightboxImg.src = '';
+    clearLightboxOverlay();
   };
 
   document.querySelectorAll('[data-full-image]').forEach((el) => {
@@ -98,7 +313,7 @@ if (lightbox && lightboxImg) {
       const src = el.getAttribute('data-full-image');
       if (!src) return;
       e.preventDefault();
-      openLightbox(src);
+      openLightbox(src, Boolean(el.querySelector('.voice-call-subs')));
     });
   });
 
